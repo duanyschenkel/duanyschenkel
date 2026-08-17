@@ -71,20 +71,23 @@ img {
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
 .brand-avatar {
-    width: 50px;
-    height: 50px;
+    width: 58px;
+    height: 58px;
+
     border-radius: 50%;
     overflow: hidden;
+
     flex-shrink: 0;
 }
 
 .brand-avatar img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
     display: block;
 }
@@ -92,7 +95,7 @@ img {
 .brand-text {
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: 2px;
 }
 
 .brand-text strong {
@@ -119,6 +122,7 @@ img {
 .nav a {
     font-size: 12px;
     letter-spacing: 0.05em;
+
     transition: opacity 0.2s ease;
 }
 
@@ -226,30 +230,38 @@ img {
 }
 
 
-/* Card */
+/* Cada serviço */
 
 .service-card {
+    border-bottom: 1px solid rgba(243, 238, 232, 0.2);
+}
+
+.service-card > a {
     display: grid;
 
-    grid-template-columns: 80px 1fr 50px;
+    grid-template-columns: 55px minmax(0, 1fr) 50px;
 
     align-items: center;
 
-    gap: 30px;
+    gap: 25px;
 
     padding: 38px 10px;
-
-    border-bottom: 1px solid rgba(243, 238, 232, 0.2);
 
     transition:
         background 0.25s ease,
         padding 0.25s ease;
 }
 
-.service-card:hover {
+.service-card > a:hover {
     background: rgba(243, 238, 232, 0.04);
+
     padding-left: 22px;
     padding-right: 22px;
+}
+
+.service-card > a:hover .arrow {
+    background: var(--cream);
+    color: var(--deep);
 }
 
 .service-number {
@@ -286,6 +298,7 @@ img {
     height: 42px;
 
     border: 1px solid rgba(243, 238, 232, 0.3);
+
     border-radius: 50%;
 
     display: flex;
@@ -297,11 +310,6 @@ img {
     transition:
         background 0.25s ease,
         color 0.25s ease;
-}
-
-.service-card:hover .arrow {
-    background: var(--cream);
-    color: var(--deep);
 }
 
 
@@ -324,6 +332,7 @@ img {
 
 .unsure p {
     color: rgba(243, 238, 232, 0.6);
+
     font-size: 14px;
 }
 
@@ -356,6 +365,7 @@ img {
     padding: 140px 32px;
 
     display: grid;
+
     grid-template-columns: 0.35fr 1fr;
 
     gap: 80px;
@@ -430,6 +440,7 @@ img {
 
 .button {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -453,6 +464,7 @@ img {
 
 .button:hover {
     background: var(--deep);
+
     transform: translateY(-2px);
 }
 
@@ -510,6 +522,55 @@ img {
 
 
 /* =========================================================
+   REDES SOCIAIS
+   ========================================================= */
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 40px;
+}
+
+.social-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border: 1px solid rgba(63, 46, 46, 0.25);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.social-link:hover {
+    background: var(--deep);
+    color: var(--cream);
+}
+
+.social-icon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+/* =========================================================
    FOOTER
    ========================================================= */
 
@@ -517,28 +578,90 @@ img {
     background: var(--deep);
     color: var(--cream);
 
+    padding: 55px 32px 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr auto;
+
+    gap: 40px;
+
     max-width: none;
-
-    padding: 45px 32px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    gap: 30px;
 }
 
-.footer strong {
-    font-size: 12px;
+.footer-brand strong {
+    font-size: 13px;
+
     letter-spacing: 0.1em;
 }
 
-.footer p {
-    margin-top: 5px;
+.footer-brand p {
+    margin-top: 6px;
 
     font-size: 11px;
 
-    color: rgba(243, 238, 232, 0.5);
+    color: rgba(243, 238, 232, 0.55);
+}
+
+.footer-contacts {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    color: rgba(243, 238, 232, 0.7);
+}
+
+.footer-contacts a:hover {
+    color: var(--cream);
+}
+
+.footer-social {
+    display: flex;
+
+    gap: 10px;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba(243, 238, 232, 0.25);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.footer-social a:hover {
+    background: var(--cream);
+    color: var(--deep);
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(243, 238, 232, 0.15);
+}
+
+.footer-bottom p {
+    font-size: 10px;
+
+    color: rgba(243, 238, 232, 0.4);
 }
 
 
@@ -550,6 +673,11 @@ img {
 
     .header {
         padding: 20px;
+    }
+
+    .brand-avatar {
+        width: 54px;
+        height: 54px;
     }
 
     .nav {
@@ -582,7 +710,7 @@ img {
         font-size: 42px;
     }
 
-    .service-card {
+    .service-card > a {
         grid-template-columns: 35px 1fr 35px;
 
         gap: 12px;
@@ -590,7 +718,7 @@ img {
         padding: 30px 0;
     }
 
-    .service-card:hover {
+    .service-card > a:hover {
         padding-left: 8px;
         padding-right: 8px;
     }
@@ -612,6 +740,7 @@ img {
 
     .unsure {
         flex-direction: column;
+
         align-items: flex-start;
 
         margin-top: 45px;
@@ -651,107 +780,13 @@ img {
         font-size: 48px;
     }
 
-    .footer {
-        padding: 35px 20px;
-
-        flex-direction: column;
-    }
-
-}
-
-
-/* =========================================================
-   TELAS MUITO PEQUENAS
-   ========================================================= */
-
-@media (max-width: 420px) {
-
-   .brand-avatar {
-    width: 46px;
-    height: 46px;
-}
-
-    .brand-text strong {
-        font-size: 11px;
-    }
-
-    .brand-text span {
-        font-size: 7px;
-    }
-
-    .hero h1 {
-        font-size: 50px;
-    }
-
-    .service-card {
-        grid-template-columns: 25px 1fr;
-    }
-
-    .arrow {
-        display: none;
-    }
-
-}
-
-/* =========================================================
-   REDES SOCIAIS
-   ========================================================= */
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 14px;
-
-    margin-top: 40px;
-}
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    min-height: 48px;
-
-    padding: 0 22px;
-
-    border: 1px solid rgba(63, 46, 46, 0.25);
-
-    font-size: 12px;
-    font-weight: 700;
-
-    letter-spacing: 0.06em;
-
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
-}
-
-.social-link:hover {
-    background: var(--deep);
-    color: var(--cream);
-}
-
-.social-icon {
-    font-size: 18px;
-    line-height: 1;
-}
-
-
-
-
-/* =========================================================
-   RESPONSIVO – REDES E FOOTER
-   ========================================================= */
-
-@media (max-width: 800px) {
-
     .social-links {
         flex-direction: column;
+
         align-items: stretch;
 
         max-width: 280px;
+
         margin-left: auto;
         margin-right: auto;
     }
@@ -775,5 +810,37 @@ img {
     .footer-bottom {
         order: 3;
     }
+}
 
+
+/* =========================================================
+   TELAS MUITO PEQUENAS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .brand-avatar {
+        width: 52px;
+        height: 52px;
+    }
+
+    .brand-text strong {
+        font-size: 11px;
+    }
+
+    .brand-text span {
+        font-size: 7px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .service-card > a {
+        grid-template-columns: 25px 1fr;
+    }
+
+    .arrow {
+        display: none;
+    }
 }
