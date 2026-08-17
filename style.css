@@ -782,11 +782,10 @@ img {
 
     /* HERO */
 
-    .hero {
-        min-height: 70vh;
-
-        padding: 75px 20px 80px;
-    }
+.hero {
+    min-height: auto;
+    padding: 45px 20px 55px;
+}
 
     .hero h1 {
         font-size: clamp(48px, 14vw, 72px);
@@ -833,14 +832,60 @@ img {
 
     /* Seta */
 
-    .arrow {
-        width: 34px;
-        height: 34px;
+.arrow {
+    width: 42px;
+    height: 42px;
 
-        font-size: 17px;
+    border: 1px solid rgba(243, 238, 232, 0.3);
+    border-radius: 50%;
 
-        border-radius: 50%;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.arrow::before {
+    content: "";
+
+    width: 9px;
+    height: 9px;
+
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+
+    position: absolute;
+
+    top: 13px;
+    right: 12px;
+}
+
+.arrow::after {
+    content: "";
+
+    width: 14px;
+    height: 1.5px;
+
+    background: currentColor;
+
+    position: absolute;
+
+    transform: rotate(-45deg);
+
+    top: 20px;
+    left: 13px;
+}
+
+.service-card:hover .arrow {
+    background: var(--cream);
+    color: var(--deep);
+    border-color: var(--cream);
+}
 
 
     /* TRIAGEM */
@@ -982,15 +1027,25 @@ img {
         font-size: 13px;
     }
 
-    .arrow {
-        display: flex;
+   .arrow {
+    width: 34px;
+    height: 34px;
+}
 
-        width: 30px;
-        height: 30px;
+.arrow::before {
+    width: 8px;
+    height: 8px;
 
-        font-size: 15px;
-    }
+    top: 10px;
+    right: 9px;
+}
 
+.arrow::after {
+    width: 12px;
+
+    top: 16px;
+    left: 10px;
+}
 
     .about-photo {
         width: 150px;
