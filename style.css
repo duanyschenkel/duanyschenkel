@@ -1335,7 +1335,7 @@ img {
    ========================================================= */
 
 .alvara-services .service-card:hover {
-    background: #3F2E2E;
+    background: #9C5A3C;
     color: #F3EEE8;
 }
 
@@ -1344,13 +1344,9 @@ img {
     color: #F3EEE8;
 }
 
-.alvara-services .service-card:hover .service-number,
-.alvara-services .service-card:hover .arrow {
+.alvara-services .service-card:hover .service-number {
     color: #F3EEE8;
-    border-color: #F3EEE8;
 }
-
-/* ALVARÁ | SETA NO HOVER */
 
 .alvara-services .service-card:hover .arrow {
     color: #F3EEE8 !important;
