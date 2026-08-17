@@ -1,270 +1,699 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+/* =========================================================
+   DUANY SCHENKEL | DIREITO DIGITAL
+   ========================================================= */
 
 :root {
---marrom: #3F2E2E;
---terracota: #9C5A3C;
---terracota-claro: #C48A76;
---creme: #F3EEE8;
---bege: #D8CFC6;
---branco: #FFFFFF;
+    --deep: #3F2E2E;
+    --cream: #F3EEE8;
+    --neutral: #D8CFC6;
+    --terracotta: #9C5A3C;
+    --soft-terracotta: #C48A76;
+    --white: #FFFFFF;
+
+    --max-width: 1180px;
 }
 
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-background: var(--creme);
-color: var(--marrom);
-font-family: 'DM Sans', sans-serif;
-line-height: 1.7;
+    background: var(--cream);
+    color: var(--deep);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
 a {
-color: inherit;
-text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
-header {
-width: 100%;
-padding: 28px 7%;
-background: var(--creme);
+img {
+    max-width: 100%;
+    display: block;
 }
 
-nav {
-max-width: 1200px;
-margin: 0 auto;
-display: flex;
-align-items: center;
-justify-content: space-between;
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    padding: 24px 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 10;
 }
 
-nav > a {
-font-family: 'Playfair Display', serif;
-font-size: 1.35rem;
-font-weight: 600;
+
+/* Marca */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-nav div {
-display: flex;
-gap: 32px;
+.brand-avatar {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: var(--terracotta);
+    color: var(--cream);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
 }
 
-nav div a {
-font-size: 0.9rem;
-transition: color 0.2s ease;
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
 }
 
-nav div a:hover {
-color: var(--terracota);
+.brand-text strong {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    font-weight: 700;
 }
 
-section {
-max-width: 1200px;
-margin: 0 auto;
-padding: 110px 7%;
+.brand-text span {
+    font-size: 9px;
+    letter-spacing: 0.13em;
+    opacity: 0.7;
 }
 
-#inicio {
-min-height: 78vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
+
+/* Navegação */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
-#inicio > p:first-child,
-section > p:first-child {
-color: var(--terracota);
-font-size: 0.75rem;
-font-weight: 600;
-letter-spacing: 2px;
-margin-bottom: 22px;
+.nav a {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s ease;
 }
 
-h1,
-h2 {
-font-family: 'Playfair Display', serif;
-font-weight: 500;
-line-height: 1.15;
+.nav a:hover {
+    opacity: 0.55;
 }
 
-h1 {
-max-width: 850px;
-font-size: clamp(3.2rem, 7vw, 6.5rem);
-letter-spacing: -2px;
-margin-bottom: 32px;
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 72vh;
+
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    padding: 110px 32px 120px;
+
+    display: flex;
+    align-items: center;
 }
 
-h2 {
-font-size: clamp(2.4rem, 5vw, 4.5rem);
-margin-bottom: 30px;
+.hero-content {
+    max-width: 760px;
 }
 
-h3 {
-font-family: 'Playfair Display', serif;
-font-size: 1.5rem;
-font-weight: 500;
-margin-bottom: 15px;
+.eyebrow {
+    margin-bottom: 22px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color: var(--terracotta);
 }
 
-#inicio > p:nth-of-type(2) {
-max-width: 620px;
-font-size: 1.15rem;
-color: #654f4b;
-margin-bottom: 38px;
+.hero h1 {
+    margin-bottom: 30px;
+
+    font-size: clamp(56px, 8vw, 100px);
+
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+
+    font-weight: 500;
 }
 
-#inicio > a,
-#contato > a,
-#conteudo > a {
-display: inline-block;
-background: var(--terracota);
-color: var(--branco);
-padding: 15px 28px;
-border-radius: 2px;
-font-size: 0.9rem;
-font-weight: 600;
-transition: background 0.2s ease, transform 0.2s ease;
+.hero h1 em {
+    color: var(--terracotta);
+    font-style: normal;
 }
 
-#inicio > a:hover,
-#contato > a:hover,
-#conteudo > a:hover {
-background: var(--marrom);
-transform: translateY(-2px);
+.hero-text {
+    max-width: 550px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: rgba(63, 46, 46, 0.75);
 }
 
-#atuacao {
-border-top: 1px solid var(--bege);
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.services {
+    background: var(--deep);
+    color: var(--cream);
+
+    padding: 120px 32px;
 }
 
-#atuacao > div {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 1px;
-background: var(--bege);
-margin-top: 55px;
-border: 1px solid var(--bege);
+.section-intro {
+    max-width: var(--max-width);
+    margin: 0 auto 65px;
 }
 
-article {
-background: var(--creme);
-padding: 45px;
-min-height: 230px;
+.section-intro .eyebrow {
+    color: var(--soft-terracotta);
 }
 
-article p {
-color: #654f4b;
-max-width: 430px;
+.section-intro h2 {
+    max-width: 700px;
+
+    font-size: clamp(38px, 5vw, 64px);
+
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+
+    font-weight: 500;
 }
 
-#sobre {
-max-width: 1000px;
+
+/* Lista */
+
+.service-list {
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    border-top: 1px solid rgba(243, 238, 232, 0.2);
 }
 
-#sobre p:not(:first-child) {
-max-width: 720px;
-color: #654f4b;
-margin-bottom: 22px;
-font-size: 1.05rem;
+
+/* Card */
+
+.service-card {
+    display: grid;
+
+    grid-template-columns: 80px 1fr 50px;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 38px 10px;
+
+    border-bottom: 1px solid rgba(243, 238, 232, 0.2);
+
+    transition:
+        background 0.25s ease,
+        padding 0.25s ease;
 }
 
-#conteudo {
-background: var(--marrom);
-color: var(--creme);
-max-width: none;
-padding-left: calc((100% - 1060px) / 2);
-padding-right: calc((100% - 1060px) / 2);
+.service-card:hover {
+    background: rgba(243, 238, 232, 0.04);
+    padding-left: 22px;
+    padding-right: 22px;
 }
 
-#conteudo > p:first-child {
-color: var(--terracota-claro);
+.service-number {
+    font-size: 12px;
+
+    color: var(--soft-terracotta);
+
+    letter-spacing: 0.08em;
 }
 
-#conteudo p:not(:first-child) {
-max-width: 650px;
-color: var(--bege);
-margin-bottom: 35px;
+.service-content h3 {
+    max-width: 650px;
+
+    font-size: clamp(24px, 3vw, 38px);
+
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
 }
 
-#conteudo > a {
-background: var(--terracota-claro);
+.service-content p {
+    max-width: 620px;
+
+    color: rgba(243, 238, 232, 0.65);
+
+    font-size: 15px;
 }
 
-#contato {
-text-align: center;
-max-width: 850px;
+.arrow {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(243, 238, 232, 0.3);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
 }
 
-#contato p:not(:first-child) {
-max-width: 600px;
-margin: 0 auto 35px;
-color: #654f4b;
+.service-card:hover .arrow {
+    background: var(--cream);
+    color: var(--deep);
 }
 
-footer {
-background: var(--marrom);
-color: var(--bege);
-padding: 35px 7%;
-text-align: center;
-font-size: 0.8rem;
+
+/* =========================================================
+   TRIAGEM
+   ========================================================= */
+
+.unsure {
+    max-width: var(--max-width);
+    margin: 55px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 25px 0;
 }
 
-footer p:first-child {
-margin-bottom: 5px;
+.unsure p {
+    color: rgba(243, 238, 232, 0.6);
+    font-size: 14px;
 }
 
-@media (max-width: 768px) {
+.text-link {
+    color: var(--cream);
 
-```
-header {
-    padding: 22px 6%;
+    font-size: 14px;
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--soft-terracotta);
+
+    padding-bottom: 3px;
+
+    transition: color 0.2s ease;
 }
 
-nav {
+.text-link:hover {
+    color: var(--soft-terracotta);
+}
+
+
+/* =========================================================
+   SOBRE
+   ========================================================= */
+
+.about {
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    padding: 140px 32px;
+
+    display: grid;
+    grid-template-columns: 0.35fr 1fr;
+
+    gap: 80px;
+}
+
+.about-content {
+    max-width: 760px;
+}
+
+.about-content h2 {
+    font-size: clamp(38px, 5vw, 62px);
+
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+
+    font-weight: 500;
+
+    margin-bottom: 45px;
+}
+
+.about-content p {
+    max-width: 680px;
+
+    margin-bottom: 22px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: rgba(63, 46, 46, 0.75);
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.content-section {
+    background: var(--neutral);
+
+    padding: 120px 32px;
+
+    text-align: center;
+}
+
+.content-section h2 {
+    max-width: 760px;
+
+    margin: 0 auto 28px;
+
+    font-size: clamp(40px, 5vw, 68px);
+
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+
+    font-weight: 500;
+}
+
+.content-section > p:not(.eyebrow) {
+    max-width: 600px;
+
+    margin: 0 auto 40px;
+
+    font-size: 17px;
+
+    color: rgba(63, 46, 46, 0.7);
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 0 28px;
+
+    background: var(--terracotta);
+    color: var(--cream);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.button:hover {
+    background: var(--deep);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTATO
+   ========================================================= */
+
+.contact {
+    background: var(--terracotta);
+    color: var(--cream);
+
+    padding: 130px 32px;
+
+    text-align: center;
+}
+
+.contact .eyebrow {
+    color: var(--cream);
+    opacity: 0.7;
+}
+
+.contact h2 {
+    max-width: 750px;
+
+    margin: 0 auto 25px;
+
+    font-size: clamp(42px, 6vw, 78px);
+
+    line-height: 1;
+    letter-spacing: -0.045em;
+
+    font-weight: 500;
+}
+
+.contact p:not(.eyebrow) {
+    max-width: 580px;
+
+    margin: 0 auto 40px;
+
+    color: rgba(243, 238, 232, 0.85);
+
+    font-size: 17px;
+}
+
+.button-light {
+    background: var(--cream);
+    color: var(--deep);
+}
+
+.button-light:hover {
+    background: var(--deep);
+    color: var(--cream);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    background: var(--deep);
+    color: var(--cream);
+
+    max-width: none;
+
+    padding: 45px 32px;
+
+    display: flex;
+    justify-content: space-between;
     align-items: flex-start;
+
+    gap: 30px;
 }
 
-nav div {
-    display: none;
+.footer strong {
+    font-size: 12px;
+    letter-spacing: 0.1em;
 }
 
-section {
-    padding: 80px 7%;
+.footer p {
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    color: rgba(243, 238, 232, 0.5);
 }
 
-#inicio {
-    min-height: 80vh;
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 70vh;
+
+        padding: 80px 20px 90px;
+    }
+
+    .hero h1 {
+        font-size: clamp(52px, 15vw, 78px);
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .services {
+        padding: 85px 20px;
+    }
+
+    .section-intro {
+        margin-bottom: 45px;
+    }
+
+    .section-intro h2 {
+        font-size: 42px;
+    }
+
+    .service-card {
+        grid-template-columns: 35px 1fr 35px;
+
+        gap: 12px;
+
+        padding: 30px 0;
+    }
+
+    .service-card:hover {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .service-content h3 {
+        font-size: 25px;
+    }
+
+    .service-content p {
+        font-size: 14px;
+    }
+
+    .arrow {
+        width: 34px;
+        height: 34px;
+
+        font-size: 15px;
+    }
+
+    .unsure {
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-top: 45px;
+    }
+
+    .about {
+        padding: 90px 20px;
+
+        display: block;
+    }
+
+    .about-label {
+        margin-bottom: 45px;
+    }
+
+    .about-content h2 {
+        font-size: 42px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    .content-section {
+        padding: 90px 20px;
+    }
+
+    .content-section h2 {
+        font-size: 43px;
+    }
+
+    .contact {
+        padding: 90px 20px;
+    }
+
+    .contact h2 {
+        font-size: 48px;
+    }
+
+    .footer {
+        padding: 35px 20px;
+
+        flex-direction: column;
+    }
+
 }
 
-h1 {
-    font-size: clamp(3rem, 15vw, 5rem);
-    letter-spacing: -1px;
-}
 
-#inicio > p:nth-of-type(2) {
-    font-size: 1rem;
-}
+/* =========================================================
+   TELAS MUITO PEQUENAS
+   ========================================================= */
 
-#atuacao > div {
-    grid-template-columns: 1fr;
-}
+@media (max-width: 420px) {
 
-article {
-    padding: 35px 28px;
-}
+    .brand-avatar {
+        width: 40px;
+        height: 40px;
 
-#conteudo {
-    padding-left: 7%;
-    padding-right: 7%;
-}
-```
+        font-size: 10px;
+    }
+
+    .brand-text strong {
+        font-size: 11px;
+    }
+
+    .brand-text span {
+        font-size: 7px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .service-card {
+        grid-template-columns: 25px 1fr;
+    }
+
+    .arrow {
+        display: none;
+    }
 
 }
