@@ -280,12 +280,6 @@ img {
    SETA DOS CARDS
    ========================================================= */
 
-/*
-   O símbolo ↗ continua no HTML por acessibilidade/fallback,
-   mas fica invisível. A seta visual é construída abaixo,
-   evitando que o navegador transforme o caractere em emoji.
-*/
-
 .arrow {
     width: 42px;
     height: 42px;
@@ -308,6 +302,13 @@ img {
         background 0.25s ease,
         color 0.25s ease,
         border-color 0.25s ease;
+}
+
+/* Remove completamente o ↗ do HTML */
+
+.arrow {
+    text-indent: -9999px;
+    overflow: hidden;
 }
 
 .arrow::before {
@@ -479,25 +480,43 @@ img {
    CONTEÚDO
    ========================================================= */
 
+/*
+   A seção inteira segue a mesma estrutura horizontal
+   da seção SOBRE.
+
+   SOBRE:
+   0.35fr | 80px | 1fr
+
+   CONTEÚDO:
+   0.35fr | 80px | 1fr
+
+   Assim, o título, texto e redes começam exatamente
+   no mesmo eixo vertical do texto do SOBRE.
+*/
+
 .content-section {
     background: var(--neutral);
 
     padding: 110px 32px;
+
+    display: grid;
+
+    grid-template-columns: 0.35fr 1fr;
+
+    column-gap: 80px;
 }
-
-
-/*
-   Mantém o mesmo eixo estrutural do SOBRE.
-*/
 
 .content-section > .eyebrow,
 .content-section > h2,
-.content-section > .content-description {
-    width: 100%;
-    max-width: 680px;
+.content-section > p:not(.eyebrow),
+.content-section > .social-links {
+    grid-column: 2;
 
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    max-width: 760px;
+
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .content-section > .eyebrow {
@@ -505,11 +524,9 @@ img {
 }
 
 .content-section h2 {
-    max-width: 760px;
+    margin-bottom: 38px;
 
-    margin-bottom: 28px;
-
-    font-size: clamp(40px, 5vw, 68px);
+    font-size: clamp(38px, 5vw, 62px);
 
     line-height: 1.05;
     letter-spacing: -0.045em;
@@ -517,15 +534,15 @@ img {
     font-weight: 500;
 }
 
-.content-description {
+.content-section > p:not(.eyebrow) {
     max-width: 680px;
 
-    margin-bottom: 40px;
+    margin-bottom: 22px;
 
     font-size: 17px;
     line-height: 1.8;
 
-    color: rgba(63, 46, 46, 0.7);
+    color: rgba(63, 46, 46, 0.75);
 }
 
 
@@ -534,16 +551,14 @@ img {
    ========================================================= */
 
 .social-links {
-    width: 100%;
-    max-width: 680px;
-
-    margin: 0 auto;
-
     display: flex;
-    justify-content: center;
+
+    justify-content: flex-start;
     align-items: center;
 
     gap: 12px;
+
+    margin-top: 35px;
 }
 
 .social-link {
@@ -576,6 +591,7 @@ img {
 
 .social-link:hover {
     background: var(--terracotta);
+    color: var(--cream);
 
     transform: translateY(-2px);
 }
@@ -584,15 +600,29 @@ img {
     width: 18px;
     height: 18px;
 
-    display: block;
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
 
     flex-shrink: 0;
-
-    fill: var(--cream);
 }
 
-.social-icon-play {
-    fill: var(--deep);
+/* SVGs / imagens dos ícones */
+
+.social-icon img {
+    width: 18px;
+    height: 18px;
+
+    display: block;
+
+    object-fit: contain;
+
+    /*
+       Os arquivos SVG/PNG escuros ficam claros
+       dentro dos botões escuros.
+    */
+    filter: brightness(0) invert(1);
 }
 
 
@@ -756,6 +786,11 @@ img {
     color: var(--cream);
 }
 
+
+/* =========================================================
+   ÍCONES DO RODAPÉ
+   ========================================================= */
+
 .footer-social a {
     width: 34px;
     height: 34px;
@@ -787,12 +822,19 @@ img {
 
     display: block;
 
-    fill: currentColor;
+    object-fit: contain;
+
+    filter: brightness(0) invert(1);
 }
 
-.footer-icon-play {
-    fill: var(--deep);
+.footer-social a:hover .footer-icon {
+    filter: brightness(0);
 }
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
 
 .footer-bottom {
     grid-column: 1 / -1;
@@ -914,7 +956,9 @@ img {
     }
 
 
-    /* SOBRE */
+    /* =====================================================
+       SOBRE
+    ====================================================== */
 
     .about {
         padding: 80px 20px;
@@ -944,40 +988,56 @@ img {
     }
 
 
-    /* CONTEÚDO */
+    /* =====================================================
+       CONTEÚDO
+       No mobile o SOBRE vira bloco, então o CONTEÚDO
+       também volta para o mesmo eixo de 20px.
+    ====================================================== */
 
     .content-section {
         padding: 80px 20px;
+
+        display: block;
     }
 
     .content-section > .eyebrow,
     .content-section > h2,
-    .content-section > .content-description {
-        max-width: 680px;
-        margin-left: auto;
-        margin-right: auto;
+    .content-section > p:not(.eyebrow),
+    .content-section > .social-links {
+        width: 100%;
+        max-width: 760px;
+
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .content-section h2 {
-        font-size: 42px;
+        font-size: 40px;
+
+        margin-bottom: 32px;
     }
 
-    .content-description {
-        font-size: 16px;
-    }
-
-
-    /* REDES */
-
-    .social-links {
+    .content-section > p:not(.eyebrow) {
         max-width: 680px;
 
-        flex-direction: row;
+        font-size: 16px;
+
+        margin-bottom: 22px;
+    }
+
+
+    /* =====================================================
+       REDES
+    ====================================================== */
+
+    .social-links {
+        justify-content: flex-start;
+
         flex-wrap: wrap;
 
-        justify-content: center;
-
         gap: 10px;
+
+        margin-top: 32px;
     }
 
     .social-link {
@@ -987,7 +1047,9 @@ img {
     }
 
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER
+    ====================================================== */
 
     .footer {
         padding: 40px 20px 25px;
@@ -1048,6 +1110,8 @@ img {
     }
 
 
+    /* HERO */
+
     .hero {
         padding-top: 32px;
         padding-bottom: 42px;
@@ -1058,7 +1122,7 @@ img {
     }
 
 
-    /* Cards */
+    /* CARDS */
 
     .service-card {
         grid-template-columns: 28px minmax(0, 1fr) 32px;
@@ -1075,7 +1139,7 @@ img {
     }
 
 
-    /* Seta */
+    /* SETA */
 
     .arrow {
         width: 34px;
@@ -1098,7 +1162,7 @@ img {
     }
 
 
-    /* Sobre */
+    /* SOBRE */
 
     .about-photo {
         width: 135px;
@@ -1106,7 +1170,7 @@ img {
     }
 
 
-    /* Redes */
+    /* REDES */
 
     .social-link {
         min-height: 42px;
@@ -1117,7 +1181,7 @@ img {
     }
 
 
-    /* Footer */
+    /* FOOTER */
 
     .footer {
         grid-template-columns: 1fr;
