@@ -65,9 +65,6 @@ img {
     z-index: 10;
 }
 
-
-/* Marca */
-
 .brand {
     display: flex;
     align-items: center;
@@ -110,9 +107,6 @@ img {
     opacity: 0.7;
 }
 
-
-/* Navegação */
-
 .nav {
     display: flex;
     align-items: center;
@@ -122,7 +116,6 @@ img {
 .nav a {
     font-size: 12px;
     letter-spacing: 0.05em;
-
     transition: opacity 0.2s ease;
 }
 
@@ -231,9 +224,6 @@ img {
     border-top: 1px solid rgba(243, 238, 232, 0.2);
 }
 
-
-/* Cada item */
-
 .service-card {
     display: grid;
 
@@ -252,15 +242,9 @@ img {
         padding 0.25s ease;
 }
 
-
-/* Evita qualquer comportamento estranho de links */
-
 .service-card:hover {
     background: rgba(243, 238, 232, 0.035);
 }
-
-
-/* Número */
 
 .service-number {
     font-size: 12px;
@@ -269,9 +253,6 @@ img {
 
     letter-spacing: 0.08em;
 }
-
-
-/* Conteúdo */
 
 .service-content h3 {
     max-width: 650px;
@@ -295,7 +276,15 @@ img {
 }
 
 
-/* Seta */
+/* =========================================================
+   SETA DOS CARDS
+   ========================================================= */
+
+/*
+   O símbolo ↗ continua no HTML por acessibilidade/fallback,
+   mas fica invisível. A seta visual é construída abaixo,
+   evitando que o navegador transforme o caractere em emoji.
+*/
 
 .arrow {
     width: 42px;
@@ -304,13 +293,14 @@ img {
     border: 1px solid rgba(243, 238, 232, 0.3);
     border-radius: 50%;
 
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 19px;
-    line-height: 1;
+    font-size: 0;
+    line-height: 0;
 
     color: var(--cream);
 
@@ -318,6 +308,37 @@ img {
         background 0.25s ease,
         color 0.25s ease,
         border-color 0.25s ease;
+}
+
+.arrow::before {
+    content: "";
+
+    width: 10px;
+    height: 10px;
+
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+
+    position: absolute;
+
+    top: 11px;
+    right: 10px;
+}
+
+.arrow::after {
+    content: "";
+
+    width: 17px;
+    height: 1.5px;
+
+    background: currentColor;
+
+    position: absolute;
+
+    transform: rotate(-45deg);
+
+    top: 20px;
+    left: 11px;
 }
 
 .service-card:hover .arrow {
@@ -392,12 +413,9 @@ img {
     max-width: 760px;
 }
 
-
-/* Foto */
-
 .about-photo {
-    width: 210px;
-    height: 260px;
+    width: 175px;
+    height: 215px;
 
     margin-bottom: 38px;
 
@@ -409,14 +427,18 @@ img {
     height: 100%;
 
     object-fit: cover;
+    object-position: center;
 
     image-rendering: auto;
 }
 
-
-/* Texto */
+.about-text {
+    max-width: 680px;
+}
 
 .about-content h2 {
+    max-width: 760px;
+
     font-size: clamp(38px, 5vw, 62px);
 
     line-height: 1.05;
@@ -437,9 +459,6 @@ img {
 
     color: rgba(63, 46, 46, 0.75);
 }
-
-
-/* Link da trajetória */
 
 .about-link {
     display: inline-block;
@@ -468,15 +487,14 @@ img {
 
 
 /*
-   O conteúdo agora segue o mesmo eixo horizontal
-   utilizado pelo bloco textual do SOBRE.
+   Mantém o mesmo eixo estrutural do SOBRE.
 */
 
 .content-section > .eyebrow,
 .content-section > h2,
-.content-section > p:not(.eyebrow) {
+.content-section > .content-description {
     width: 100%;
-    max-width: var(--max-width);
+    max-width: 680px;
 
     margin-left: auto;
     margin-right: auto;
@@ -499,7 +517,7 @@ img {
     font-weight: 500;
 }
 
-.content-section > p:not(.eyebrow) {
+.content-description {
     max-width: 680px;
 
     margin-bottom: 40px;
@@ -517,7 +535,7 @@ img {
 
 .social-links {
     width: 100%;
-    max-width: var(--max-width);
+    max-width: 680px;
 
     margin: 0 auto;
 
@@ -566,17 +584,15 @@ img {
     width: 18px;
     height: 18px;
 
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
+    display: block;
 
     flex-shrink: 0;
 
-    font-size: 14px;
-    font-weight: 700;
+    fill: var(--cream);
+}
 
-    line-height: 1;
+.social-icon-play {
+    fill: var(--deep);
 }
 
 
@@ -675,16 +691,44 @@ img {
     background: var(--deep);
     color: var(--cream);
 
-    max-width: none;
+    width: 100%;
 
-    padding: 45px 32px;
+    padding: 50px max(32px, calc((100% - var(--max-width)) / 2));
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr auto;
+    grid-template-rows: auto auto;
+
+    column-gap: 70px;
+    row-gap: 35px;
+
+    align-items: start;
+}
+
+.footer-brand {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.footer-contacts {
+    grid-column: 2;
+    grid-row: 1;
 
     display: flex;
+    flex-direction: column;
 
-    justify-content: space-between;
-    align-items: flex-start;
+    gap: 8px;
+}
 
-    gap: 30px;
+.footer-social {
+    grid-column: 3;
+    grid-row: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
 }
 
 .footer strong {
@@ -700,14 +744,6 @@ img {
     color: rgba(243, 238, 232, 0.5);
 }
 
-.footer-contacts {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 8px;
-}
-
 .footer-contacts a {
     font-size: 12px;
 
@@ -720,29 +756,20 @@ img {
     color: var(--cream);
 }
 
-
-/* Redes do rodapé */
-
-.footer-social {
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-}
-
 .footer-social a {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    font-size: 14px;
-
     border: 1px solid rgba(243, 238, 232, 0.25);
+
+    color: var(--cream);
+
+    font-size: 0;
 
     transition:
         background 0.2s ease,
@@ -754,8 +781,26 @@ img {
     color: var(--deep);
 }
 
+.footer-icon {
+    width: 17px;
+    height: 17px;
+
+    display: block;
+
+    fill: currentColor;
+}
+
+.footer-icon-play {
+    fill: var(--deep);
+}
+
 .footer-bottom {
-    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(243, 238, 232, 0.12);
 }
 
 .footer-bottom p {
@@ -782,13 +827,16 @@ img {
 
     /* HERO */
 
-.hero {
-    min-height: auto;
-    padding: 45px 20px 55px;
-}
+    .hero {
+        min-height: auto;
+
+        padding: 38px 20px 48px;
+    }
 
     .hero h1 {
         font-size: clamp(48px, 14vw, 72px);
+
+        margin-bottom: 24px;
     }
 
     .hero-text {
@@ -799,7 +847,7 @@ img {
     /* ATUAÇÃO */
 
     .services {
-        padding: 65px 20px 75px;
+        padding: 60px 20px 70px;
     }
 
     .section-intro {
@@ -811,7 +859,7 @@ img {
     }
 
 
-    /* Cards */
+    /* CARDS */
 
     .service-card {
         grid-template-columns: 38px minmax(0, 1fr) 38px;
@@ -830,62 +878,29 @@ img {
     }
 
 
-    /* Seta */
+    /* SETA */
 
-.arrow {
-    width: 42px;
-    height: 42px;
+    .arrow {
+        width: 40px;
+        height: 40px;
 
-    border: 1px solid rgba(243, 238, 232, 0.3);
-    border-radius: 50%;
+        font-size: 0;
+    }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .arrow::before {
+        width: 9px;
+        height: 9px;
 
-    position: relative;
+        top: 10px;
+        right: 10px;
+    }
 
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease;
-}
+    .arrow::after {
+        width: 16px;
 
-.arrow::before {
-    content: "";
-
-    width: 9px;
-    height: 9px;
-
-    border-top: 1.5px solid currentColor;
-    border-right: 1.5px solid currentColor;
-
-    position: absolute;
-
-    top: 13px;
-    right: 12px;
-}
-
-.arrow::after {
-    content: "";
-
-    width: 14px;
-    height: 1.5px;
-
-    background: currentColor;
-
-    position: absolute;
-
-    transform: rotate(-45deg);
-
-    top: 20px;
-    left: 13px;
-}
-
-.service-card:hover .arrow {
-    background: var(--cream);
-    color: var(--deep);
-    border-color: var(--cream);
-}
+        top: 19px;
+        left: 10px;
+    }
 
 
     /* TRIAGEM */
@@ -902,7 +917,7 @@ img {
     /* SOBRE */
 
     .about {
-        padding: 85px 20px;
+        padding: 80px 20px;
 
         display: block;
     }
@@ -912,8 +927,8 @@ img {
     }
 
     .about-photo {
-        width: 170px;
-        height: 210px;
+        width: 150px;
+        height: 185px;
 
         margin-bottom: 32px;
     }
@@ -932,14 +947,22 @@ img {
     /* CONTEÚDO */
 
     .content-section {
-        padding: 85px 20px;
+        padding: 80px 20px;
+    }
+
+    .content-section > .eyebrow,
+    .content-section > h2,
+    .content-section > .content-description {
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .content-section h2 {
         font-size: 42px;
     }
 
-    .content-section > p:not(.eyebrow) {
+    .content-description {
         font-size: 16px;
     }
 
@@ -947,8 +970,9 @@ img {
     /* REDES */
 
     .social-links {
-        flex-direction: row;
+        max-width: 680px;
 
+        flex-direction: row;
         flex-wrap: wrap;
 
         justify-content: center;
@@ -968,17 +992,38 @@ img {
     .footer {
         padding: 40px 20px 25px;
 
-        flex-direction: column;
+        display: grid;
 
-        gap: 25px;
+        grid-template-columns: 1fr auto;
+
+        grid-template-rows: auto auto auto;
+
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .footer-contacts {
+        grid-column: 1;
+        grid-row: 2;
     }
 
     .footer-social {
-        order: 2;
+        grid-column: 2;
+        grid-row: 2;
+
+        justify-self: end;
     }
 
     .footer-bottom {
-        order: 3;
+        grid-column: 1 / -1;
+        grid-row: 3;
+
+        padding-top: 18px;
     }
 }
 
@@ -1003,15 +1048,17 @@ img {
     }
 
 
+    .hero {
+        padding-top: 32px;
+        padding-bottom: 42px;
+    }
+
     .hero h1 {
         font-size: 49px;
     }
 
 
-    /*
-       Mantemos três colunas para preservar
-       o número + conteúdo + seta.
-    */
+    /* Cards */
 
     .service-card {
         grid-template-columns: 28px minmax(0, 1fr) 32px;
@@ -1027,31 +1074,39 @@ img {
         font-size: 13px;
     }
 
-   .arrow {
-    width: 34px;
-    height: 34px;
-}
 
-.arrow::before {
-    width: 8px;
-    height: 8px;
+    /* Seta */
 
-    top: 10px;
-    right: 9px;
-}
-
-.arrow::after {
-    width: 12px;
-
-    top: 16px;
-    left: 10px;
-}
-
-    .about-photo {
-        width: 150px;
-        height: 185px;
+    .arrow {
+        width: 34px;
+        height: 34px;
     }
 
+    .arrow::before {
+        width: 8px;
+        height: 8px;
+
+        top: 8px;
+        right: 8px;
+    }
+
+    .arrow::after {
+        width: 13px;
+
+        top: 16px;
+        left: 9px;
+    }
+
+
+    /* Sobre */
+
+    .about-photo {
+        width: 135px;
+        height: 170px;
+    }
+
+
+    /* Redes */
 
     .social-link {
         min-height: 42px;
@@ -1059,5 +1114,39 @@ img {
         padding: 0 13px;
 
         font-size: 11px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .footer-brand,
+    .footer-contacts,
+    .footer-social,
+    .footer-bottom {
+        grid-column: 1;
+    }
+
+    .footer-brand {
+        grid-row: 1;
+    }
+
+    .footer-contacts {
+        grid-row: 2;
+    }
+
+    .footer-social {
+        grid-row: 3;
+
+        justify-self: start;
+    }
+
+    .footer-bottom {
+        grid-row: 4;
     }
 }
