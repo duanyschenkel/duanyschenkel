@@ -1330,3 +1330,22 @@ img {
     color: #3F2E2E;
     border-color: #3F2E2E;
 }
+/* =========================================================
+   ALVARÁ | HOVER DOS CARDS
+   ========================================================= */
+
+.alvara-services .service-card:hover {
+    background: #3F2E2E;
+    color: #F3EEE8;
+}
+
+.alvara-services .service-card:hover .service-content h3,
+.alvara-services .service-card:hover .service-content p {
+    color: #F3EEE8;
+}
+
+.alvara-services .service-card:hover .service-number,
+.alvara-services .service-card:hover .arrow {
+    color: #F3EEE8;
+    border-color: #F3EEE8;
+}
