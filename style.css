@@ -116,6 +116,7 @@ img {
 .nav a {
     font-size: 12px;
     letter-spacing: 0.05em;
+
     transition: opacity 0.2s ease;
 }
 
@@ -476,19 +477,16 @@ img {
    CONTEÚDO
    ========================================================= */
 
-/*
-   A estrutura é intencionalmente igual à seção SOBRE:
-   mesma largura, mesmo grid, mesma coluna de conteúdo
-   e mesmo espaçamento vertical.
-*/
-
 .content-section {
     background: var(--neutral);
 
-    max-width: var(--max-width);
-    margin: 0 auto;
+    width: 100%;
 
-    padding: 110px 32px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    padding-left: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
+    padding-right: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
 
     display: grid;
 
@@ -497,15 +495,7 @@ img {
     gap: 80px;
 }
 
-.content-section .eyebrow {
-    grid-column: 1;
-    grid-row: 1;
-
-    padding-top: 5px;
-
-    margin-bottom: 0;
-}
-
+.content-section > .eyebrow,
 .content-section > h2,
 .content-section > p:not(.eyebrow),
 .content-section > .social-links {
@@ -518,8 +508,12 @@ img {
     margin-right: 0;
 }
 
-.content-section > h2 {
-    grid-row: 1;
+.content-section > .eyebrow {
+    margin-bottom: 22px;
+}
+
+.content-section h2 {
+    max-width: 760px;
 
     margin-bottom: 38px;
 
@@ -532,8 +526,6 @@ img {
 }
 
 .content-section > p:not(.eyebrow) {
-    grid-row: 2;
-
     max-width: 680px;
 
     margin-bottom: 22px;
@@ -544,18 +536,12 @@ img {
     color: rgba(63, 46, 46, 0.75);
 }
 
-.content-section > .social-links {
-    grid-row: 3;
-}
-
 
 /* =========================================================
    REDES SOCIAIS
    ========================================================= */
 
 .social-links {
-    width: 100%;
-
     display: flex;
 
     justify-content: center;
@@ -566,6 +552,8 @@ img {
     gap: 12px;
 
     margin-top: 35px;
+
+    width: 100%;
 }
 
 .social-link {
@@ -613,15 +601,22 @@ img {
     justify-content: center;
 
     flex-shrink: 0;
+
+    color: var(--white);
 }
 
-.social-icon img {
+.social-icon img,
+.social-icon svg {
     width: 17px;
     height: 17px;
 
     display: block;
 
     object-fit: contain;
+
+    color: var(--white);
+    fill: var(--white);
+    stroke: var(--white);
 
     filter: brightness(0) invert(1);
 }
@@ -760,7 +755,7 @@ img {
     align-items: center;
     justify-content: center;
 
-    gap: 14px;
+    gap: 12px;
 }
 
 .footer strong {
@@ -794,8 +789,8 @@ img {
    ========================================================= */
 
 .footer-social a {
-    width: auto;
-    height: auto;
+    width: 22px;
+    height: 22px;
 
     display: flex;
 
@@ -808,7 +803,11 @@ img {
 
     font-size: 0;
 
-    transition: opacity 0.2s ease;
+    background: transparent;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
 }
 
 .footer-social a:hover {
@@ -816,11 +815,13 @@ img {
     color: var(--cream);
 
     opacity: 0.65;
+
+    transform: translateY(-1px);
 }
 
 .footer-icon {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
 
     display: block;
 
@@ -849,12 +850,27 @@ img {
 
 
 /* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 1244px) and (min-width: 801px) {
+
+    .content-section {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+
+/* =========================================================
    RESPONSIVO
    ========================================================= */
 
 @media (max-width: 800px) {
 
-    /* HEADER */
+    /* =====================================================
+       HEADER
+    ====================================================== */
 
     .header {
         padding: 20px;
@@ -865,7 +881,9 @@ img {
     }
 
 
-    /* HERO */
+    /* =====================================================
+       HERO
+    ====================================================== */
 
     .hero {
         min-height: auto;
@@ -884,14 +902,16 @@ img {
     }
 
 
-    /* ATUAÇÃO */
+    /* =====================================================
+       ATUAÇÃO
+    ====================================================== */
 
     .services {
-        padding: 78px 20px 90px;
+        padding: 60px 20px 70px;
     }
 
     .section-intro {
-        margin-bottom: 48px;
+        margin-bottom: 40px;
     }
 
     .section-intro h2 {
@@ -899,7 +919,9 @@ img {
     }
 
 
-    /* CARDS */
+    /* =====================================================
+       CARDS
+    ====================================================== */
 
     .service-card {
         grid-template-columns: 38px minmax(0, 1fr) 38px;
@@ -918,7 +940,9 @@ img {
     }
 
 
-    /* SETA */
+    /* =====================================================
+       SETA
+    ====================================================== */
 
     .arrow {
         width: 40px;
@@ -943,7 +967,9 @@ img {
     }
 
 
-    /* TRIAGEM */
+    /* =====================================================
+       TRIAGEM
+    ====================================================== */
 
     .unsure {
         flex-direction: column;
@@ -956,7 +982,7 @@ img {
 
     /* =====================================================
        SOBRE
-       ====================================================== */
+    ====================================================== */
 
     .about {
         padding: 80px 20px;
@@ -988,30 +1014,33 @@ img {
 
     /* =====================================================
        CONTEÚDO
-       ====================================================== */
+    ====================================================== */
 
     .content-section {
-        max-width: none;
-
-        margin: 0;
-
-        padding: 80px 20px;
+        padding: 88px 20px;
 
         display: block;
     }
 
-    .content-section .eyebrow {
-        padding-top: 0;
+    .content-section > .eyebrow,
+    .content-section > h2,
+    .content-section > p:not(.eyebrow),
+    .content-section > .social-links {
+        width: 100%;
+        max-width: 760px;
 
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .content-section > .eyebrow {
         margin-bottom: 22px;
     }
 
-    .content-section > h2 {
-        max-width: 760px;
+    .content-section h2 {
+        font-size: 40px;
 
         margin-bottom: 32px;
-
-        font-size: 40px;
     }
 
     .content-section > p:not(.eyebrow) {
@@ -1023,13 +1052,12 @@ img {
     }
 
 
-    /* REDES */
+    /* =====================================================
+       REDES
+    ====================================================== */
 
     .social-links {
-        width: 100%;
-
         justify-content: center;
-        align-items: center;
 
         flex-wrap: wrap;
 
@@ -1044,16 +1072,10 @@ img {
         padding: 0 16px;
     }
 
-    .social-icon,
-    .social-icon img {
-        width: 17px;
-        height: 17px;
-    }
-
 
     /* =====================================================
        FOOTER
-       ====================================================== */
+    ====================================================== */
 
     .footer {
         padding: 40px 20px 25px;
@@ -1083,8 +1105,6 @@ img {
         grid-row: 2;
 
         justify-self: end;
-
-        gap: 12px;
     }
 
     .footer-bottom {
@@ -1092,11 +1112,6 @@ img {
         grid-row: 3;
 
         padding-top: 18px;
-    }
-
-    .footer-icon {
-        width: 12px;
-        height: 12px;
     }
 }
 
@@ -1106,6 +1121,8 @@ img {
    ========================================================= */
 
 @media (max-width: 420px) {
+
+    /* HEADER */
 
     .brand-avatar {
         width: 46px;
@@ -1183,22 +1200,12 @@ img {
 
     /* REDES */
 
-    .social-links {
-        gap: 8px;
-    }
-
     .social-link {
         min-height: 42px;
 
         padding: 0 13px;
 
         font-size: 11px;
-    }
-
-    .social-icon,
-    .social-icon img {
-        width: 16px;
-        height: 16px;
     }
 
 
@@ -1229,16 +1236,19 @@ img {
         grid-row: 3;
 
         justify-self: start;
-
-        gap: 12px;
     }
 
     .footer-bottom {
         grid-row: 4;
     }
 
+    .footer-social a {
+        width: 20px;
+        height: 20px;
+    }
+
     .footer-icon {
-        width: 11px;
-        height: 11px;
+        width: 13px;
+        height: 13px;
     }
 }
