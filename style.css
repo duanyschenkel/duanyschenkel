@@ -1349,3 +1349,11 @@ img {
     color: #F3EEE8;
     border-color: #F3EEE8;
 }
+
+/* ALVARÁ | SETA NO HOVER */
+
+.alvara-services .service-card:hover .arrow {
+    color: #F3EEE8 !important;
+    border-color: #F3EEE8 !important;
+    background: transparent;
+}
