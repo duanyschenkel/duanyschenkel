@@ -1313,3 +1313,20 @@ img {
 .alvara-services .text-link {
     color: #9C5A3C;
 }
+
+/* =========================================================
+   ALVARÁ | AJUSTES FINAIS
+   ========================================================= */
+
+/* Primeira linha dos cards */
+
+.alvara-services .service-card:first-child {
+    border-top-color: #D8CFC6;
+}
+
+/* Círculo da seta */
+
+.alvara-services .arrow {
+    color: #3F2E2E;
+    border-color: #3F2E2E;
+}
