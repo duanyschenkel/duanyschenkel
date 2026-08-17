@@ -480,31 +480,20 @@ img {
    CONTEÚDO
    ========================================================= */
 
-/*
-   A seção inteira segue a mesma estrutura horizontal
-   da seção SOBRE.
-
-   SOBRE:
-   0.35fr | 80px | 1fr
-
-   CONTEÚDO:
-   0.35fr | 80px | 1fr
-
-   Assim, o título, texto e redes começam exatamente
-   no mesmo eixo vertical do texto do SOBRE.
-*/
-
 .content-section {
     background: var(--neutral);
 
     padding: 110px 32px;
 
     display: grid;
-
     grid-template-columns: 0.35fr 1fr;
-
-    column-gap: 80px;
+    gap: 80px;
 }
+
+/*
+   O conteúdo começa exatamente no mesmo eixo
+   do texto da seção SOBRE.
+*/
 
 .content-section > .eyebrow,
 .content-section > h2,
@@ -524,6 +513,8 @@ img {
 }
 
 .content-section h2 {
+    max-width: 760px;
+
     margin-bottom: 38px;
 
     font-size: clamp(38px, 5vw, 62px);
@@ -553,8 +544,10 @@ img {
 .social-links {
     display: flex;
 
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+
+    flex-wrap: wrap;
 
     gap: 12px;
 
@@ -597,8 +590,8 @@ img {
 }
 
 .social-icon {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
 
     display: inline-flex;
 
@@ -608,23 +601,16 @@ img {
     flex-shrink: 0;
 }
 
-/* SVGs / imagens dos ícones */
-
 .social-icon img {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
 
     display: block;
 
     object-fit: contain;
 
-    /*
-       Os arquivos SVG/PNG escuros ficam claros
-       dentro dos botões escuros.
-    */
     filter: brightness(0) invert(1);
 }
-
 
 /* =========================================================
    BOTÕES
@@ -791,34 +777,43 @@ img {
    ÍCONES DO RODAPÉ
    ========================================================= */
 
+.footer-social {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+}
+
 .footer-social a {
-    width: 34px;
-    height: 34px;
+    width: auto;
+    height: auto;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(243, 238, 232, 0.25);
+    border: none;
 
     color: var(--cream);
 
     font-size: 0;
 
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 .footer-social a:hover {
-    background: var(--cream);
-    color: var(--deep);
+    background: transparent;
+    color: var(--cream);
+
+    opacity: 0.65;
 }
 
 .footer-icon {
-    width: 17px;
-    height: 17px;
+    width: 14px;
+    height: 14px;
 
     display: block;
 
@@ -828,9 +823,8 @@ img {
 }
 
 .footer-social a:hover .footer-icon {
-    filter: brightness(0);
+    filter: brightness(0) invert(1);
 }
-
 
 /* =========================================================
    FOOTER BOTTOM
@@ -988,63 +982,63 @@ img {
     }
 
 
-    /* =====================================================
-       CONTEÚDO
-       No mobile o SOBRE vira bloco, então o CONTEÚDO
-       também volta para o mesmo eixo de 20px.
-    ====================================================== */
+/* =====================================================
+   CONTEÚDO
+===================================================== */
 
-    .content-section {
-        padding: 80px 20px;
+.content-section {
+    padding: 80px 20px;
 
-        display: block;
-    }
+    display: block;
+}
 
-    .content-section > .eyebrow,
-    .content-section > h2,
-    .content-section > p:not(.eyebrow),
-    .content-section > .social-links {
-        width: 100%;
-        max-width: 760px;
+.content-section > .eyebrow,
+.content-section > h2,
+.content-section > p:not(.eyebrow),
+.content-section > .social-links {
+    width: 100%;
+    max-width: 760px;
 
-        margin-left: 0;
-        margin-right: 0;
-    }
+    margin-left: 0;
+    margin-right: 0;
+}
 
-    .content-section h2 {
-        font-size: 40px;
+.content-section > .eyebrow {
+    margin-bottom: 22px;
+}
 
-        margin-bottom: 32px;
-    }
+.content-section h2 {
+    font-size: 40px;
 
-    .content-section > p:not(.eyebrow) {
-        max-width: 680px;
+    margin-bottom: 32px;
+}
 
-        font-size: 16px;
+.content-section > p:not(.eyebrow) {
+    max-width: 680px;
 
-        margin-bottom: 22px;
-    }
+    font-size: 16px;
+
+    margin-bottom: 22px;
+}
 
 
-    /* =====================================================
-       REDES
-    ====================================================== */
+/* REDES */
 
-    .social-links {
-        justify-content: flex-start;
+.social-links {
+    justify-content: center;
 
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 
-        gap: 10px;
+    gap: 10px;
 
-        margin-top: 32px;
-    }
+    margin-top: 32px;
+}
 
-    .social-link {
-        min-height: 44px;
+.social-link {
+    min-height: 44px;
 
-        padding: 0 16px;
-    }
+    padding: 0 16px;
+}
 
 
     /* =====================================================
@@ -1171,6 +1165,8 @@ img {
 
 
     /* REDES */
+
+   
 
     .social-link {
         min-height: 42px;
