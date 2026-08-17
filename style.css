@@ -1254,22 +1254,62 @@ img {
 }
 
 /* =========================================================
-   PÁGINA ALVARÁ | SEÇÃO PRINCIPAL
+   PÁGINA ALVARÁ | VERSÃO CLARA
    ========================================================= */
 
 .alvara-services {
-    background: var(--cream);
-    color: var(--deep);
+    background: #F3EEE8;
+    color: #3F2E2E;
 }
 
 .alvara-services .section-intro {
-    color: var(--deep);
+    color: #3F2E2E;
 }
 
 .alvara-services .section-intro .eyebrow {
-    color: var(--terracotta);
+    color: #9C5A3C;
 }
 
 .alvara-services .section-intro h2 {
-    color: var(--deep);
+    color: #3F2E2E;
+}
+
+
+/* CARDS */
+
+.alvara-services .service-card {
+    background: #F3EEE8;
+    color: #3F2E2E;
+    border-color: #D8CFC6;
+}
+
+.alvara-services .service-number {
+    color: #9C5A3C;
+}
+
+.alvara-services .service-content h3 {
+    color: #3F2E2E;
+}
+
+.alvara-services .service-content p {
+    color: #3F2E2E;
+}
+
+.alvara-services .arrow {
+    color: #9C5A3C;
+}
+
+
+/* CTA */
+
+.alvara-services .unsure {
+    color: #3F2E2E;
+}
+
+.alvara-services .unsure p {
+    color: #3F2E2E;
+}
+
+.alvara-services .text-link {
+    color: #9C5A3C;
 }
