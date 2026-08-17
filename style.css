@@ -122,7 +122,6 @@ img {
 .nav a {
     font-size: 12px;
     letter-spacing: 0.05em;
-
     transition: opacity 0.2s ease;
 }
 
@@ -165,7 +164,7 @@ img {
 .hero h1 {
     margin-bottom: 30px;
 
-    font-size: clamp(56px, 8vw, 100px);
+    font-size: clamp(50px, 7vw, 88px);
 
     line-height: 0.98;
     letter-spacing: -0.055em;
@@ -201,7 +200,7 @@ img {
 
 .section-intro {
     max-width: var(--max-width);
-    margin: 0 auto 42px;
+    margin: 0 auto 50px;
 }
 
 .section-intro .eyebrow {
@@ -211,7 +210,7 @@ img {
 .section-intro h2 {
     max-width: 700px;
 
-    font-size: clamp(38px, 5vw, 64px);
+    font-size: clamp(36px, 4.5vw, 58px);
 
     line-height: 1.05;
     letter-spacing: -0.04em;
@@ -230,15 +229,7 @@ img {
 }
 
 
-/* =========================================================
-   CARDS
-   ========================================================= */
-
-/*
-   IMPORTANTE:
-   O .service-card é o próprio <a>.
-   Por isso o grid precisa estar diretamente aqui.
-*/
+/* Cada item */
 
 .service-card {
     display: grid;
@@ -249,7 +240,7 @@ img {
 
     gap: 25px;
 
-    padding: 30px 10px;
+    padding: 38px 10px;
 
     border-bottom: 1px solid rgba(243, 238, 232, 0.2);
 
@@ -309,10 +300,9 @@ img {
     align-items: center;
     justify-content: center;
 
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1;
-
-    flex-shrink: 0;
 
     transition:
         background 0.25s ease,
@@ -331,7 +321,7 @@ img {
 
 .unsure {
     max-width: var(--max-width);
-    margin: 40px auto 0;
+    margin: 45px auto 0;
 
     display: flex;
     align-items: center;
@@ -339,7 +329,7 @@ img {
 
     gap: 30px;
 
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 .unsure p {
@@ -357,9 +347,7 @@ img {
 
     padding-bottom: 3px;
 
-    transition:
-        color 0.2s ease,
-        opacity 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .text-link:hover {
@@ -375,35 +363,30 @@ img {
     max-width: var(--max-width);
     margin: 0 auto;
 
-    padding: 110px 32px;
+    padding: 120px 32px;
 
     display: grid;
-    grid-template-columns: 0.28fr 1fr;
+    grid-template-columns: 0.25fr 1fr;
 
     gap: 70px;
 }
 
-.about-content {
-    max-width: 760px;
-
-    display: grid;
-    grid-template-columns: 150px 1fr;
-
-    gap: 45px;
-
-    align-items: start;
+.about-label {
+    padding-top: 8px;
 }
 
-
-/* Foto minimalista */
+.about-content {
+    max-width: 760px;
+}
 
 .about-photo {
-    width: 150px;
-    height: 190px;
+    width: 210px;
+    height: 210px;
 
+    margin-bottom: 42px;
+
+    border-radius: 50%;
     overflow: hidden;
-
-    border-radius: 2px;
 }
 
 .about-photo img {
@@ -411,16 +394,12 @@ img {
     height: 100%;
 
     object-fit: cover;
+    object-position: center;
+
+    image-rendering: auto;
 }
 
-
-/* Texto */
-
-.about-text {
-    max-width: 680px;
-}
-
-.about-content h2 {
+.about-text h2 {
     font-size: clamp(38px, 5vw, 62px);
 
     line-height: 1.05;
@@ -428,10 +407,10 @@ img {
 
     font-weight: 500;
 
-    margin-bottom: 35px;
+    margin-bottom: 42px;
 }
 
-.about-content p {
+.about-text p {
     max-width: 680px;
 
     margin-bottom: 22px;
@@ -442,13 +421,10 @@ img {
     color: rgba(63, 46, 46, 0.75);
 }
 
-
-/* Link da trajetória */
-
 .about-link {
     display: inline-block;
 
-    margin-top: 8px;
+    margin-top: 12px;
 
     color: var(--terracotta);
 
@@ -467,24 +443,20 @@ img {
 .content-section {
     background: var(--neutral);
 
-    padding: 100px 32px;
-}
+    padding: 110px 32px;
 
-.content-section > * {
-    max-width: var(--max-width);
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
 }
 
 .content-section .eyebrow {
-    margin-bottom: 22px;
+    max-width: var(--max-width);
+    margin: 0 auto 22px;
 }
 
 .content-section h2 {
     max-width: 760px;
 
-    margin-top: 0;
-    margin-bottom: 28px;
+    margin: 0 auto 28px;
 
     font-size: clamp(40px, 5vw, 68px);
 
@@ -495,13 +467,12 @@ img {
 }
 
 .content-section > p:not(.eyebrow) {
-    max-width: 600px;
+    max-width: 680px;
 
-    margin-left: 0;
-    margin-right: auto;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
 
     font-size: 17px;
+    line-height: 1.8;
 
     color: rgba(63, 46, 46, 0.7);
 }
@@ -513,12 +484,12 @@ img {
 
 .social-links {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
-    gap: 14px;
+    gap: 12px;
 
-    margin-top: 40px;
+    margin-top: 38px;
 }
 
 .social-link {
@@ -526,42 +497,49 @@ img {
     align-items: center;
     justify-content: center;
 
-    gap: 10px;
+    gap: 9px;
 
-    min-height: 48px;
+    min-height: 46px;
 
-    padding: 0 22px;
+    padding: 0 18px;
 
-    border: 1px solid rgba(63, 46, 46, 0.25);
+    background: var(--deep);
+    color: var(--cream);
+
+    border: none;
+    border-radius: 2px;
 
     font-size: 12px;
     font-weight: 700;
 
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
 
     transition:
         background 0.2s ease,
-        color 0.2s ease;
+        transform 0.2s ease;
 }
 
 .social-link:hover {
-    background: var(--deep);
-    color: var(--cream);
+    background: var(--terracotta);
+
+    transform: translateY(-2px);
 }
 
 .social-icon {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
 
     width: 18px;
     height: 18px;
 
-    font-size: 13px;
-    font-weight: 700;
-
+    font-size: 14px;
     line-height: 1;
+    font-weight: 700;
+}
+
+.social-instagram {
+    font-size: 16px;
 }
 
 
@@ -571,7 +549,6 @@ img {
 
 .button {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
 
@@ -640,16 +617,6 @@ img {
     font-size: 17px;
 }
 
-.button-light {
-    background: var(--cream);
-    color: var(--deep);
-}
-
-.button-light:hover {
-    background: var(--deep);
-    color: var(--cream);
-}
-
 
 /* =========================================================
    FOOTER
@@ -662,6 +629,7 @@ img {
     padding: 55px 32px 30px;
 
     display: grid;
+
     grid-template-columns: 1fr 1fr auto;
 
     gap: 40px;
@@ -713,8 +681,7 @@ img {
     align-items: center;
     justify-content: center;
 
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 15px;
 
     transition:
         background 0.2s ease,
@@ -755,9 +722,6 @@ img {
         display: none;
     }
 
-
-    /* HERO */
-
     .hero {
         min-height: 70vh;
 
@@ -765,7 +729,7 @@ img {
     }
 
     .hero h1 {
-        font-size: clamp(52px, 15vw, 78px);
+        font-size: clamp(48px, 14vw, 72px);
     }
 
     .hero-text {
@@ -780,11 +744,11 @@ img {
     }
 
     .section-intro {
-        margin-bottom: 35px;
+        margin-bottom: 38px;
     }
 
     .section-intro h2 {
-        font-size: 42px;
+        font-size: 40px;
     }
 
     .service-card {
@@ -792,7 +756,7 @@ img {
 
         gap: 12px;
 
-        padding: 28px 0;
+        padding: 30px 0;
     }
 
     .service-card:hover {
@@ -808,11 +772,6 @@ img {
         font-size: 14px;
     }
 
-    /*
-       A seta continua aparecendo no mobile.
-       Não usar display:none aqui.
-    */
-
     .arrow {
         width: 34px;
         height: 34px;
@@ -820,14 +779,11 @@ img {
         font-size: 15px;
     }
 
-
-    /* TRIAGEM */
-
     .unsure {
         flex-direction: column;
         align-items: flex-start;
 
-        margin-top: 35px;
+        margin-top: 38px;
     }
 
 
@@ -840,27 +796,23 @@ img {
     }
 
     .about-label {
-        margin-bottom: 35px;
-    }
-
-    .about-content {
-        display: flex;
-        flex-direction: column;
-
-        gap: 30px;
+        margin-bottom: 38px;
     }
 
     .about-photo {
-        width: 115px;
-        height: 145px;
+        width: 170px;
+        height: 170px;
+
+        margin-bottom: 35px;
     }
 
-    .about-content h2 {
-        font-size: 42px;
-        margin-bottom: 30px;
+    .about-text h2 {
+        font-size: 40px;
+
+        margin-bottom: 35px;
     }
 
-    .about-content p {
+    .about-text p {
         font-size: 16px;
     }
 
@@ -868,41 +820,38 @@ img {
     /* CONTEÚDO */
 
     .content-section {
-        padding: 80px 20px;
+        padding: 85px 20px;
+
+        text-align: left;
     }
 
-    .content-section h2 {
-        font-size: 43px;
-    }
-
+    .content-section .eyebrow,
+    .content-section h2,
     .content-section > p:not(.eyebrow) {
         margin-left: 0;
         margin-right: 0;
     }
 
+    .content-section h2 {
+        font-size: 42px;
+    }
+
+    .content-section > p:not(.eyebrow) {
+        font-size: 16px;
+    }
+
     .social-links {
-        flex-direction: column;
-        align-items: stretch;
+        justify-content: center;
 
-        max-width: 280px;
+        flex-wrap: wrap;
 
-        margin-left: 0;
-        margin-right: 0;
+        width: 100%;
     }
 
     .social-link {
-        justify-content: center;
-    }
+        min-height: 44px;
 
-
-    /* CONTATO */
-
-    .contact {
-        padding: 90px 20px;
-    }
-
-    .contact h2 {
-        font-size: 48px;
+        padding: 0 16px;
     }
 
 
@@ -947,22 +896,30 @@ img {
     }
 
     .hero h1 {
-        font-size: 50px;
+        font-size: 48px;
     }
 
     .service-card {
-        grid-template-columns: 25px minmax(0, 1fr) 30px;
+        grid-template-columns: 28px minmax(0, 1fr) 32px;
     }
 
-    /*
-       A seta permanece visível.
-    */
-
     .arrow {
-        width: 30px;
-        height: 30px;
+        display: flex;
+    }
 
-        font-size: 14px;
+    .about-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-links {
+        gap: 8px;
+    }
+
+    .social-link {
+        padding: 0 13px;
+
+        font-size: 11px;
     }
 
 }
