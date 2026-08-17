@@ -1253,4 +1253,23 @@ img {
     }
 }
 
+/* =========================================================
+   PÁGINA ALVARÁ | SEÇÃO PRINCIPAL
+   ========================================================= */
 
+.alvara-services {
+    background: var(--cream);
+    color: var(--deep);
+}
+
+.alvara-services .section-intro {
+    color: var(--deep);
+}
+
+.alvara-services .section-intro .eyebrow {
+    color: var(--terracotta);
+}
+
+.alvara-services .section-intro h2 {
+    color: var(--deep);
+}
