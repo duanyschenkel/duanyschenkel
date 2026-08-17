@@ -1334,22 +1334,26 @@ img {
    ALVARÁ | HOVER DOS CARDS
    ========================================================= */
 
+.alvara-services .service-card {
+    transition: background-color 0.25s ease;
+}
+
 .alvara-services .service-card:hover {
-    background: #6B5652;
-    color: #F3EEE8;
+    background: #E8DED6;
+    color: #3F2E2E;
 }
 
 .alvara-services .service-card:hover .service-content h3,
 .alvara-services .service-card:hover .service-content p {
-    color: #F3EEE8;
+    color: #3F2E2E;
 }
 
 .alvara-services .service-card:hover .service-number {
-    color: #F3EEE8;
+    color: #9C5A3C;
 }
 
 .alvara-services .service-card:hover .arrow {
     color: #F3EEE8 !important;
-    border-color: #F3EEE8 !important;
-    background: transparent;
+    background: #3F2E2E;
+    border-color: #3F2E2E !important;
 }
