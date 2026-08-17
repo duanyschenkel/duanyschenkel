@@ -122,6 +122,7 @@ img {
 .nav a {
     font-size: 12px;
     letter-spacing: 0.05em;
+
     transition: opacity 0.2s ease;
 }
 
@@ -140,7 +141,7 @@ img {
     max-width: var(--max-width);
     margin: 0 auto;
 
-    padding: 110px 32px 120px;
+    padding: 100px 32px 105px;
 
     display: flex;
     align-items: center;
@@ -162,9 +163,9 @@ img {
 }
 
 .hero h1 {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 
-    font-size: clamp(50px, 7vw, 88px);
+    font-size: clamp(52px, 7vw, 88px);
 
     line-height: 0.98;
     letter-spacing: -0.055em;
@@ -195,7 +196,7 @@ img {
     background: var(--deep);
     color: var(--cream);
 
-    padding: 65px 32px;
+    padding: 70px 32px 85px;
 }
 
 .section-intro {
@@ -210,7 +211,7 @@ img {
 .section-intro h2 {
     max-width: 700px;
 
-    font-size: clamp(36px, 4.5vw, 58px);
+    font-size: clamp(36px, 4.7vw, 60px);
 
     line-height: 1.05;
     letter-spacing: -0.04em;
@@ -219,7 +220,9 @@ img {
 }
 
 
-/* Lista */
+/* =========================================================
+   LISTA DE SERVIÇOS
+   ========================================================= */
 
 .service-list {
     max-width: var(--max-width);
@@ -240,7 +243,7 @@ img {
 
     gap: 25px;
 
-    padding: 38px 10px;
+    padding: 32px 10px;
 
     border-bottom: 1px solid rgba(243, 238, 232, 0.2);
 
@@ -249,12 +252,15 @@ img {
         padding 0.25s ease;
 }
 
-.service-card:hover {
-    background: rgba(243, 238, 232, 0.04);
 
-    padding-left: 22px;
-    padding-right: 22px;
+/* Evita qualquer comportamento estranho de links */
+
+.service-card:hover {
+    background: rgba(243, 238, 232, 0.035);
 }
+
+
+/* Número */
 
 .service-number {
     font-size: 12px;
@@ -264,21 +270,20 @@ img {
     letter-spacing: 0.08em;
 }
 
-.service-content {
-    min-width: 0;
-}
+
+/* Conteúdo */
 
 .service-content h3 {
     max-width: 650px;
 
-    font-size: clamp(24px, 3vw, 38px);
+    font-size: clamp(23px, 2.8vw, 36px);
 
     line-height: 1.15;
     letter-spacing: -0.025em;
 
     font-weight: 500;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .service-content p {
@@ -288,6 +293,9 @@ img {
 
     font-size: 15px;
 }
+
+
+/* Seta */
 
 .arrow {
     width: 42px;
@@ -301,17 +309,21 @@ img {
     justify-content: center;
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1;
+
+    color: var(--cream);
 
     transition:
         background 0.25s ease,
-        color 0.25s ease;
+        color 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .service-card:hover .arrow {
     background: var(--cream);
     color: var(--deep);
+    border-color: var(--cream);
 }
 
 
@@ -321,7 +333,7 @@ img {
 
 .unsure {
     max-width: var(--max-width);
-    margin: 45px auto 0;
+    margin: 42px auto 0;
 
     display: flex;
     align-items: center;
@@ -329,7 +341,7 @@ img {
 
     gap: 30px;
 
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
 .unsure p {
@@ -363,29 +375,32 @@ img {
     max-width: var(--max-width);
     margin: 0 auto;
 
-    padding: 120px 32px;
+    padding: 110px 32px;
 
     display: grid;
-    grid-template-columns: 0.25fr 1fr;
 
-    gap: 70px;
+    grid-template-columns: 0.35fr 1fr;
+
+    gap: 80px;
 }
 
 .about-label {
-    padding-top: 8px;
+    padding-top: 5px;
 }
 
 .about-content {
     max-width: 760px;
 }
 
+
+/* Foto */
+
 .about-photo {
     width: 210px;
-    height: 210px;
+    height: 260px;
 
-    margin-bottom: 42px;
+    margin-bottom: 38px;
 
-    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -394,12 +409,14 @@ img {
     height: 100%;
 
     object-fit: cover;
-    object-position: center;
 
     image-rendering: auto;
 }
 
-.about-text h2 {
+
+/* Texto */
+
+.about-content h2 {
     font-size: clamp(38px, 5vw, 62px);
 
     line-height: 1.05;
@@ -407,7 +424,7 @@ img {
 
     font-weight: 500;
 
-    margin-bottom: 42px;
+    margin-bottom: 38px;
 }
 
 .about-text p {
@@ -421,10 +438,13 @@ img {
     color: rgba(63, 46, 46, 0.75);
 }
 
+
+/* Link da trajetória */
+
 .about-link {
     display: inline-block;
 
-    margin-top: 12px;
+    margin-top: 10px;
 
     color: var(--terracotta);
 
@@ -444,19 +464,32 @@ img {
     background: var(--neutral);
 
     padding: 110px 32px;
-
-    text-align: left;
 }
 
-.content-section .eyebrow {
+
+/*
+   O conteúdo agora segue o mesmo eixo horizontal
+   utilizado pelo bloco textual do SOBRE.
+*/
+
+.content-section > .eyebrow,
+.content-section > h2,
+.content-section > p:not(.eyebrow) {
+    width: 100%;
     max-width: var(--max-width);
-    margin: 0 auto 22px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-section > .eyebrow {
+    margin-bottom: 22px;
 }
 
 .content-section h2 {
     max-width: 760px;
 
-    margin: 0 auto 28px;
+    margin-bottom: 28px;
 
     font-size: clamp(40px, 5vw, 68px);
 
@@ -469,7 +502,7 @@ img {
 .content-section > p:not(.eyebrow) {
     max-width: 680px;
 
-    margin: 0 auto 40px;
+    margin-bottom: 40px;
 
     font-size: 17px;
     line-height: 1.8;
@@ -483,17 +516,21 @@ img {
    ========================================================= */
 
 .social-links {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
     gap: 12px;
-
-    margin-top: 38px;
 }
 
 .social-link {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -501,18 +538,18 @@ img {
 
     min-height: 46px;
 
-    padding: 0 18px;
+    padding: 0 20px;
 
     background: var(--deep);
     color: var(--cream);
 
     border: none;
-    border-radius: 2px;
+    border-radius: 0;
 
     font-size: 12px;
     font-weight: 700;
 
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
 
     transition:
         background 0.2s ease,
@@ -526,20 +563,20 @@ img {
 }
 
 .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
     width: 18px;
     height: 18px;
 
-    font-size: 14px;
-    line-height: 1;
-    font-weight: 700;
-}
+    display: inline-flex;
 
-.social-instagram {
-    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1;
 }
 
 
@@ -549,6 +586,7 @@ img {
 
 .button {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -572,7 +610,18 @@ img {
 
 .button:hover {
     background: var(--deep);
+
     transform: translateY(-2px);
+}
+
+.button-light {
+    background: var(--cream);
+    color: var(--deep);
+}
+
+.button-light:hover {
+    background: var(--deep);
+    color: var(--cream);
 }
 
 
@@ -626,62 +675,74 @@ img {
     background: var(--deep);
     color: var(--cream);
 
-    padding: 55px 32px 30px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr auto;
-
-    gap: 40px;
-
     max-width: none;
+
+    padding: 45px 32px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 30px;
 }
 
-.footer-brand strong {
-    font-size: 13px;
+.footer strong {
+    font-size: 12px;
     letter-spacing: 0.1em;
 }
 
-.footer-brand p {
-    margin-top: 6px;
+.footer p {
+    margin-top: 5px;
 
     font-size: 11px;
 
-    color: rgba(243, 238, 232, 0.55);
+    color: rgba(243, 238, 232, 0.5);
 }
 
 .footer-contacts {
     display: flex;
+
     flex-direction: column;
 
     gap: 8px;
+}
 
+.footer-contacts a {
     font-size: 12px;
 
-    color: rgba(243, 238, 232, 0.7);
+    color: rgba(243, 238, 232, 0.75);
+
+    transition: color 0.2s ease;
 }
 
 .footer-contacts a:hover {
     color: var(--cream);
 }
 
+
+/* Redes do rodapé */
+
 .footer-social {
     display: flex;
-    gap: 10px;
+
+    align-items: center;
+
+    gap: 12px;
 }
 
 .footer-social a {
-    width: 38px;
-    height: 38px;
-
-    border: 1px solid rgba(243, 238, 232, 0.25);
-    border-radius: 50%;
+    width: 32px;
+    height: 32px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    font-size: 15px;
+    font-size: 14px;
+
+    border: 1px solid rgba(243, 238, 232, 0.25);
 
     transition:
         background 0.2s ease,
@@ -694,17 +755,11 @@ img {
 }
 
 .footer-bottom {
-    grid-column: 1 / -1;
-
-    padding-top: 25px;
-
-    border-top: 1px solid rgba(243, 238, 232, 0.15);
+    width: 100%;
 }
 
 .footer-bottom p {
-    font-size: 10px;
-
-    color: rgba(243, 238, 232, 0.4);
+    margin-top: 0;
 }
 
 
@@ -714,6 +769,8 @@ img {
 
 @media (max-width: 800px) {
 
+    /* HEADER */
+
     .header {
         padding: 20px;
     }
@@ -722,10 +779,13 @@ img {
         display: none;
     }
 
+
+    /* HERO */
+
     .hero {
         min-height: 70vh;
 
-        padding: 80px 20px 90px;
+        padding: 75px 20px 80px;
     }
 
     .hero h1 {
@@ -740,47 +800,54 @@ img {
     /* ATUAÇÃO */
 
     .services {
-        padding: 55px 20px;
+        padding: 65px 20px 75px;
     }
 
     .section-intro {
-        margin-bottom: 38px;
+        margin-bottom: 40px;
     }
 
     .section-intro h2 {
         font-size: 40px;
     }
 
+
+    /* Cards */
+
     .service-card {
-        grid-template-columns: 35px minmax(0, 1fr) 35px;
+        grid-template-columns: 38px minmax(0, 1fr) 38px;
 
         gap: 12px;
 
-        padding: 30px 0;
-    }
-
-    .service-card:hover {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding: 27px 0;
     }
 
     .service-content h3 {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .service-content p {
         font-size: 14px;
     }
 
+
+    /* Seta */
+
     .arrow {
         width: 34px;
         height: 34px;
 
-        font-size: 15px;
+        font-size: 17px;
+
+        border-radius: 50%;
     }
+
+
+    /* TRIAGEM */
 
     .unsure {
         flex-direction: column;
+
         align-items: flex-start;
 
         margin-top: 38px;
@@ -801,15 +868,15 @@ img {
 
     .about-photo {
         width: 170px;
-        height: 170px;
+        height: 210px;
 
-        margin-bottom: 35px;
+        margin-bottom: 32px;
     }
 
-    .about-text h2 {
+    .about-content h2 {
         font-size: 40px;
 
-        margin-bottom: 35px;
+        margin-bottom: 32px;
     }
 
     .about-text p {
@@ -821,15 +888,6 @@ img {
 
     .content-section {
         padding: 85px 20px;
-
-        text-align: left;
-    }
-
-    .content-section .eyebrow,
-    .content-section h2,
-    .content-section > p:not(.eyebrow) {
-        margin-left: 0;
-        margin-right: 0;
     }
 
     .content-section h2 {
@@ -840,12 +898,17 @@ img {
         font-size: 16px;
     }
 
+
+    /* REDES */
+
     .social-links {
-        justify-content: center;
+        flex-direction: row;
 
         flex-wrap: wrap;
 
-        width: 100%;
+        justify-content: center;
+
+        gap: 10px;
     }
 
     .social-link {
@@ -858,11 +921,11 @@ img {
     /* FOOTER */
 
     .footer {
-        grid-template-columns: 1fr;
+        padding: 40px 20px 25px;
 
-        padding: 45px 20px 25px;
+        flex-direction: column;
 
-        gap: 28px;
+        gap: 25px;
     }
 
     .footer-social {
@@ -872,7 +935,6 @@ img {
     .footer-bottom {
         order: 3;
     }
-
 }
 
 
@@ -895,31 +957,52 @@ img {
         font-size: 7px;
     }
 
+
     .hero h1 {
-        font-size: 48px;
+        font-size: 49px;
     }
+
+
+    /*
+       Mantemos três colunas para preservar
+       o número + conteúdo + seta.
+    */
 
     .service-card {
         grid-template-columns: 28px minmax(0, 1fr) 32px;
+
+        gap: 9px;
+    }
+
+    .service-content h3 {
+        font-size: 22px;
+    }
+
+    .service-content p {
+        font-size: 13px;
     }
 
     .arrow {
         display: flex;
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 15px;
     }
+
 
     .about-photo {
         width: 150px;
-        height: 150px;
+        height: 185px;
     }
 
-    .social-links {
-        gap: 8px;
-    }
 
     .social-link {
+        min-height: 42px;
+
         padding: 0 13px;
 
         font-size: 11px;
     }
-
 }
