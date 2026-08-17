@@ -116,6 +116,7 @@ img {
 .nav a {
     font-size: 12px;
     letter-spacing: 0.05em;
+
     transition: opacity 0.2s ease;
 }
 
@@ -298,17 +299,13 @@ img {
 
     color: var(--cream);
 
+    text-indent: -9999px;
+    overflow: hidden;
+
     transition:
         background 0.25s ease,
         color 0.25s ease,
         border-color 0.25s ease;
-}
-
-/* Remove completamente o ↗ do HTML */
-
-.arrow {
-    text-indent: -9999px;
-    overflow: hidden;
 }
 
 .arrow::before {
@@ -480,20 +477,34 @@ img {
    CONTEÚDO
    ========================================================= */
 
+/*
+   A estrutura horizontal é propositalmente igual à seção SOBRE:
+   mesma largura máxima,
+   mesmo padding lateral,
+   mesmas duas colunas,
+   mesmo gap.
+
+   Assim, o conteúdo começa exatamente no mesmo eixo
+   em que começa o texto do SOBRE.
+*/
+
 .content-section {
     background: var(--neutral);
 
-    padding: 110px 32px;
+    width: 100%;
+
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    padding-left: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
+    padding-right: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
 
     display: grid;
+
     grid-template-columns: 0.35fr 1fr;
+
     gap: 80px;
 }
-
-/*
-   O conteúdo começa exatamente no mesmo eixo
-   do texto da seção SOBRE.
-*/
 
 .content-section > .eyebrow,
 .content-section > h2,
@@ -611,6 +622,7 @@ img {
 
     filter: brightness(0) invert(1);
 }
+
 
 /* =========================================================
    BOTÕES
@@ -743,8 +755,9 @@ img {
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    gap: 10px;
+    gap: 12px;
 }
 
 .footer strong {
@@ -777,18 +790,9 @@ img {
    ÍCONES DO RODAPÉ
    ========================================================= */
 
-.footer-social {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 14px;
-}
-
 .footer-social a {
-    width: auto;
-    height: auto;
+    width: 22px;
+    height: 22px;
 
     display: flex;
 
@@ -801,7 +805,11 @@ img {
 
     font-size: 0;
 
-    transition: opacity 0.2s ease;
+    background: transparent;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
 }
 
 .footer-social a:hover {
@@ -809,6 +817,8 @@ img {
     color: var(--cream);
 
     opacity: 0.65;
+
+    transform: translateY(-1px);
 }
 
 .footer-icon {
@@ -822,9 +832,6 @@ img {
     filter: brightness(0) invert(1);
 }
 
-.footer-social a:hover .footer-icon {
-    filter: brightness(0) invert(1);
-}
 
 /* =========================================================
    FOOTER BOTTOM
@@ -845,12 +852,27 @@ img {
 
 
 /* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 1244px) and (min-width: 801px) {
+
+    .content-section {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+
+/* =========================================================
    RESPONSIVO
    ========================================================= */
 
 @media (max-width: 800px) {
 
-    /* HEADER */
+    /* =====================================================
+       HEADER
+    ====================================================== */
 
     .header {
         padding: 20px;
@@ -861,7 +883,9 @@ img {
     }
 
 
-    /* HERO */
+    /* =====================================================
+       HERO
+    ====================================================== */
 
     .hero {
         min-height: auto;
@@ -880,7 +904,9 @@ img {
     }
 
 
-    /* ATUAÇÃO */
+    /* =====================================================
+       ATUAÇÃO
+    ====================================================== */
 
     .services {
         padding: 60px 20px 70px;
@@ -895,7 +921,9 @@ img {
     }
 
 
-    /* CARDS */
+    /* =====================================================
+       CARDS
+    ====================================================== */
 
     .service-card {
         grid-template-columns: 38px minmax(0, 1fr) 38px;
@@ -914,7 +942,9 @@ img {
     }
 
 
-    /* SETA */
+    /* =====================================================
+       SETA
+    ====================================================== */
 
     .arrow {
         width: 40px;
@@ -939,7 +969,9 @@ img {
     }
 
 
-    /* TRIAGEM */
+    /* =====================================================
+       TRIAGEM
+    ====================================================== */
 
     .unsure {
         flex-direction: column;
@@ -982,63 +1014,65 @@ img {
     }
 
 
-/* =====================================================
-   CONTEÚDO
-===================================================== */
+    /* =====================================================
+       CONTEÚDO
+    ====================================================== */
 
-.content-section {
-    padding: 80px 20px;
+    .content-section {
+        padding: 80px 20px;
 
-    display: block;
-}
+        display: block;
+    }
 
-.content-section > .eyebrow,
-.content-section > h2,
-.content-section > p:not(.eyebrow),
-.content-section > .social-links {
-    width: 100%;
-    max-width: 760px;
+    .content-section > .eyebrow,
+    .content-section > h2,
+    .content-section > p:not(.eyebrow),
+    .content-section > .social-links {
+        width: 100%;
+        max-width: 760px;
 
-    margin-left: 0;
-    margin-right: 0;
-}
+        margin-left: 0;
+        margin-right: 0;
+    }
 
-.content-section > .eyebrow {
-    margin-bottom: 22px;
-}
+    .content-section > .eyebrow {
+        margin-bottom: 22px;
+    }
 
-.content-section h2 {
-    font-size: 40px;
+    .content-section h2 {
+        font-size: 40px;
 
-    margin-bottom: 32px;
-}
+        margin-bottom: 32px;
+    }
 
-.content-section > p:not(.eyebrow) {
-    max-width: 680px;
+    .content-section > p:not(.eyebrow) {
+        max-width: 680px;
 
-    font-size: 16px;
+        font-size: 16px;
 
-    margin-bottom: 22px;
-}
+        margin-bottom: 22px;
+    }
 
 
-/* REDES */
+    /* =====================================================
+       REDES
+    ====================================================== */
 
-.social-links {
-    justify-content: center;
+    .social-links {
+        justify-content: center;
 
-    flex-wrap: wrap;
+        flex-wrap: wrap;
 
-    gap: 10px;
+        gap: 10px;
 
-    margin-top: 32px;
-}
+        margin-top: 32px;
+    }
 
-.social-link {
-    min-height: 44px;
+    .social-link {
+        min-height: 44px;
 
-    padding: 0 16px;
-}
+        padding: 0 16px;
+    }
 
 
     /* =====================================================
@@ -1089,6 +1123,8 @@ img {
    ========================================================= */
 
 @media (max-width: 420px) {
+
+    /* HEADER */
 
     .brand-avatar {
         width: 46px;
@@ -1166,8 +1202,6 @@ img {
 
     /* REDES */
 
-   
-
     .social-link {
         min-height: 42px;
 
@@ -1208,5 +1242,15 @@ img {
 
     .footer-bottom {
         grid-row: 4;
+    }
+
+    .footer-social a {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-icon {
+        width: 13px;
+        height: 13px;
     }
 }
