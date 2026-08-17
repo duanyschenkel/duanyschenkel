@@ -1357,3 +1357,19 @@ img {
     background: #3F2E2E;
     border-color: #3F2E2E !important;
 }
+
+
+/* =========================================================
+   ALVARÁ | LINK "FALE COMIGO"
+   ========================================================= */
+
+.alvara-services .text-link {
+    color: #3F2E2E;
+    border-bottom: 1px solid #9C5A3C;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.alvara-services .text-link:hover {
+    color: #9C5A3C;
+    border-bottom-color: #9C5A3C;
+}
