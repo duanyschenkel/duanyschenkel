@@ -896,10 +896,42 @@ img {
     padding-top: 20px;
 
     border-top: 1px solid rgba(243, 238, 232, 0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
 }
 
 .footer-bottom p {
     margin-top: 0;
+}
+
+
+/* =========================================================
+   LINKS JURÍDICOS
+   ========================================================= */
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    flex-wrap: wrap;
+}
+
+.footer-legal a {
+    font-size: 11px;
+
+    color: rgba(243, 238, 232, 0.55);
+
+    transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--cream);
 }
 
 
@@ -1176,6 +1208,18 @@ img {
         grid-row: 3;
 
         padding-top: 18px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 12px;
+    }
+
+    .footer-legal {
+        gap: 16px;
     }
 }
 
@@ -1186,7 +1230,9 @@ img {
 
 @media (max-width: 420px) {
 
-    /* HEADER */
+    /* =====================================================
+       HEADER
+    ====================================================== */
 
     .brand-avatar {
         width: 46px;
@@ -1202,7 +1248,9 @@ img {
     }
 
 
-    /* HERO */
+    /* =====================================================
+       HERO
+    ====================================================== */
 
     .hero {
         padding-top: 32px;
@@ -1214,7 +1262,9 @@ img {
     }
 
 
-    /* CARDS */
+    /* =====================================================
+       CARDS
+    ====================================================== */
 
     .service-card {
         grid-template-columns: 28px minmax(0, 1fr) 32px;
@@ -1231,7 +1281,9 @@ img {
     }
 
 
-    /* SETA */
+    /* =====================================================
+       SETA
+    ====================================================== */
 
     .arrow {
         width: 34px;
@@ -1254,7 +1306,9 @@ img {
     }
 
 
-    /* SOBRE */
+    /* =====================================================
+       SOBRE
+    ====================================================== */
 
     .about-photo {
         width: 135px;
@@ -1262,7 +1316,9 @@ img {
     }
 
 
-    /* REDES */
+    /* =====================================================
+       REDES
+    ====================================================== */
 
     .social-link {
         min-height: 42px;
@@ -1273,7 +1329,9 @@ img {
     }
 
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER
+    ====================================================== */
 
     .footer {
         grid-template-columns: 1fr;
@@ -1304,6 +1362,12 @@ img {
 
     .footer-bottom {
         grid-row: 4;
+
+        gap: 14px;
+    }
+
+    .footer-legal {
+        gap: 12px 18px;
     }
 
     .footer-social a {
@@ -1537,7 +1601,7 @@ img {
 .trajectory-section .button {
     grid-column: 2;
 
-    justify-self: left;
+    justify-self: center;
 
     margin-top: 18px;
 }
