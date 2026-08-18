@@ -1549,3 +1549,15 @@ img {
         margin-bottom: 22px;
     }
 }
+
+/* =========================================================
+   TRAJETÓRIA | CTA FINAL
+   ========================================================= */
+
+.trajectory-section .button {
+    grid-column: 2;
+
+    justify-self: start;
+
+    margin-top: 18px;
+}
