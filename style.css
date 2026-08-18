@@ -477,8 +477,16 @@ img {
    CONTEÚDO
    ========================================================= */
 
+/*
+   IMPORTANTE:
+   O bloco D8CFC6 utiliza a mesma lógica espacial do bloco
+   F3EEE8. O espaçamento entre os elementos internos é
+   controlado individualmente, e não pelo gap vertical do grid.
+*/
+
 .content-section {
     background: var(--neutral);
+    color: var(--deep);
 
     width: 100%;
 
@@ -492,10 +500,29 @@ img {
 
     grid-template-columns: 0.35fr 1fr;
 
-    gap: 80px;
+    column-gap: 80px;
+    row-gap: 0;
 }
 
-.content-section > .eyebrow,
+
+/*
+   EYEBROW FICA NA COLUNA ESQUERDA
+*/
+
+.content-section > .eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+
+    margin: 5px 0 0;
+
+    align-self: start;
+}
+
+
+/*
+   CONTEÚDO FICA NA COLUNA DIREITA
+*/
+
 .content-section > h2,
 .content-section > p:not(.eyebrow),
 .content-section > .social-links {
@@ -508,14 +535,15 @@ img {
     margin-right: 0;
 }
 
-.content-section > .eyebrow {
-    margin-bottom: 22px;
-}
 
-.content-section h2 {
-    max-width: 760px;
+/*
+   TÍTULO
+*/
 
-    margin-bottom: 38px;
+.content-section > h2 {
+    grid-row: 1;
+
+    margin: 0 0 38px;
 
     font-size: clamp(38px, 5vw, 62px);
 
@@ -525,15 +553,29 @@ img {
     font-weight: 500;
 }
 
-.content-section > p:not(.eyebrow) {
-    max-width: 680px;
 
-    margin-bottom: 22px;
+/*
+   PARÁGRAFOS
+*/
+
+.content-section > p:not(.eyebrow) {
+    margin: 0 0 22px;
+
+    max-width: 680px;
 
     font-size: 17px;
     line-height: 1.8;
 
     color: rgba(63, 46, 46, 0.75);
+}
+
+
+/*
+   REDES DENTRO DO BLOCO
+*/
+
+.content-section > .social-links {
+    margin-top: 13px;
 }
 
 
@@ -550,8 +592,6 @@ img {
     flex-wrap: wrap;
 
     gap: 12px;
-
-    margin-top: 35px;
 
     width: 100%;
 }
@@ -830,8 +870,6 @@ img {
     filter: brightness(0) invert(1);
 }
 
-/* Ícones das redes sociais do footer em branco */
-
 .footer-social img {
     width: 14px;
     height: 14px;
@@ -842,6 +880,7 @@ img {
 
     filter: brightness(0) invert(1);
 }
+
 
 /* =========================================================
    FOOTER BOTTOM
@@ -897,12 +936,12 @@ img {
        HERO
     ====================================================== */
 
-.hero {
-    min-height: auto;
+    .hero {
+        min-height: auto;
 
-    padding: 48px 20px 58px;
-}
-   
+        padding: 48px 20px 58px;
+    }
+
     .hero h1 {
         font-size: clamp(48px, 14vw, 72px);
 
@@ -1029,7 +1068,7 @@ img {
     ====================================================== */
 
     .content-section {
-        padding: 88px 20px;
+        padding: 80px 20px 88px;
 
         display: block;
     }
@@ -1046,7 +1085,7 @@ img {
     }
 
     .content-section > .eyebrow {
-        margin-bottom: 22px;
+        margin-bottom: 38px;
     }
 
     .content-section h2 {
@@ -1063,6 +1102,10 @@ img {
         margin-bottom: 22px;
     }
 
+    .content-section > .social-links {
+        margin-top: 32px;
+    }
+
 
     /* =====================================================
        REDES
@@ -1074,8 +1117,6 @@ img {
         flex-wrap: wrap;
 
         gap: 10px;
-
-        margin-top: 32px;
     }
 
     .social-link {
@@ -1265,6 +1306,7 @@ img {
     }
 }
 
+
 /* =========================================================
    PÁGINA ALVARÁ | VERSÃO CLARA
    ========================================================= */
@@ -1326,22 +1368,21 @@ img {
     color: #9C5A3C;
 }
 
+
 /* =========================================================
    ALVARÁ | AJUSTES FINAIS
    ========================================================= */
-
-/* Primeira linha dos cards */
 
 .alvara-services .service-card:first-child {
     border-top-color: #D8CFC6;
 }
 
-/* Círculo da seta */
-
 .alvara-services .arrow {
     color: #3F2E2E;
     border-color: #3F2E2E;
 }
+
+
 /* =========================================================
    ALVARÁ | HOVER DOS CARDS
    ========================================================= */
@@ -1378,19 +1419,31 @@ img {
 .alvara-services .text-link {
     color: #3F2E2E;
     border-bottom: 1px solid #9C5A3C;
-    transition: color 0.25s ease, border-color 0.25s ease;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .alvara-services .text-link:hover {
     color: #9C5A3C;
     border-bottom-color: #9C5A3C;
 }
+
+
 /* =========================================================
    TRAJETÓRIA | SEÇÕES INTERNAS
    ========================================================= */
 
+/*
+   As seções da trajetória que usam D8CFC6 seguem a mesma
+   estrutura espacial das seções claras, sem gap vertical
+   artificial entre título e parágrafos.
+*/
+
 .trajectory-section {
     background: var(--neutral);
+    color: var(--deep);
 
     width: 100%;
 
@@ -1404,28 +1457,45 @@ img {
 
     grid-template-columns: 0.35fr 1fr;
 
-    gap: 80px;
+    column-gap: 80px;
+    row-gap: 0;
 }
 
-/* O conteúdo fica na segunda coluna */
+
+/* =========================================================
+   TRAJETÓRIA | LABEL
+   ========================================================= */
 
 .trajectory-section > .eyebrow {
     grid-column: 1;
     grid-row: 1;
-    
+
     margin: 5px 0 0;
+
+    align-self: start;
 }
+
+
+/* =========================================================
+   TRAJETÓRIA | CONTEÚDO
+   ========================================================= */
 
 .trajectory-section > h2,
 .trajectory-section > p:not(.eyebrow) {
     grid-column: 2;
+
     width: 100%;
     max-width: 680px;
 }
 
-/* Título */
+
+/* =========================================================
+   TRAJETÓRIA | TÍTULO
+   ========================================================= */
 
 .trajectory-section > h2 {
+    grid-row: 1;
+
     margin: 0 0 38px;
 
     font-size: clamp(38px, 5vw, 62px);
@@ -1436,7 +1506,10 @@ img {
     font-weight: 500;
 }
 
-/* Texto */
+
+/* =========================================================
+   TRAJETÓRIA | TEXTO
+   ========================================================= */
 
 .trajectory-section > p:not(.eyebrow) {
     margin: 0 0 22px;
