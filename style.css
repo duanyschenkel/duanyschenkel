@@ -1642,3 +1642,223 @@ img {
         margin: 18px auto 0;
     }
 }
+
+/* =========================================================
+   PÁGINAS JURÍDICAS | POLÍTICA DE PRIVACIDADE E TERMOS
+   ========================================================= */
+
+.legal-page {
+    width: 100%;
+    background: var(--cream);
+    color: var(--deep);
+}
+
+
+/* =========================================================
+   HERO DA PÁGINA
+   ========================================================= */
+
+.legal-hero {
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    padding: 95px 32px 75px;
+}
+
+.legal-hero .eyebrow {
+    margin-bottom: 22px;
+}
+
+.legal-hero h1 {
+    max-width: 850px;
+
+    margin-bottom: 28px;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 1;
+    letter-spacing: -0.05em;
+
+    font-weight: 500;
+}
+
+.legal-intro {
+    max-width: 650px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: rgba(63, 46, 46, 0.7);
+}
+
+
+/* =========================================================
+   CONTEÚDO JURÍDICO
+   ========================================================= */
+
+.legal-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    padding: 0 32px 110px;
+}
+
+.legal-block {
+    max-width: 760px;
+
+    padding: 42px 0;
+
+    border-top: 1px solid var(--neutral);
+}
+
+.legal-block h2 {
+    margin-bottom: 20px;
+
+    font-size: 24px;
+
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+
+    font-weight: 600;
+}
+
+.legal-block p {
+    max-width: 700px;
+
+    margin-bottom: 18px;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: rgba(63, 46, 46, 0.75);
+}
+
+.legal-block p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DATA
+   ========================================================= */
+
+.legal-date {
+    max-width: 760px;
+
+    padding-top: 28px;
+
+    border-top: 1px solid var(--neutral);
+}
+
+.legal-date p {
+    margin: 0;
+
+    font-size: 12px;
+
+    letter-spacing: 0.04em;
+
+    color: rgba(63, 46, 46, 0.5);
+}
+
+
+/* =========================================================
+   LINKS DENTRO DO TEXTO JURÍDICO
+   ========================================================= */
+
+.legal-content a {
+    color: var(--terracotta);
+
+    border-bottom: 1px solid var(--terracotta);
+}
+
+
+/* =========================================================
+   FOOTER – LINKS JURÍDICOS
+   ========================================================= */
+
+.footer-contacts a {
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.footer-contacts a:hover {
+    color: var(--cream);
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   PÁGINAS JURÍDICAS | MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .legal-hero {
+        padding: 70px 20px 55px;
+    }
+
+    .legal-hero .eyebrow {
+        margin-bottom: 32px;
+    }
+
+    .legal-hero h1 {
+        font-size: 42px;
+
+        margin-bottom: 24px;
+    }
+
+    .legal-intro {
+        font-size: 16px;
+    }
+
+    .legal-content {
+        padding: 0 20px 80px;
+    }
+
+    .legal-block {
+        padding: 34px 0;
+    }
+
+    .legal-block h2 {
+        font-size: 21px;
+
+        margin-bottom: 17px;
+    }
+
+    .legal-block p {
+        font-size: 15px;
+        line-height: 1.75;
+
+        margin-bottom: 17px;
+    }
+
+    .legal-date {
+        padding-top: 22px;
+    }
+}
+
+
+/* =========================================================
+   PÁGINAS JURÍDICAS | TELAS MUITO PEQUENAS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .legal-hero {
+        padding-top: 55px;
+        padding-bottom: 45px;
+    }
+
+    .legal-hero h1 {
+        font-size: 38px;
+    }
+
+    .legal-block h2 {
+        font-size: 20px;
+    }
+
+    .legal-block p {
+        font-size: 14px;
+    }
+}
