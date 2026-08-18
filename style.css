@@ -1548,7 +1548,15 @@ img {
 
         margin-bottom: 22px;
     }
+
+    .trajectory-section .button {
+        display: flex;
+        width: fit-content;
+
+        margin: 18px auto 0;
+    }
 }
+
 
 /* =========================================================
    TRAJETÓRIA | CTA FINAL
@@ -1557,7 +1565,7 @@ img {
 .trajectory-section .button {
     grid-column: 2;
 
-    justify-self: start;
+    justify-self: center;
 
     margin-top: 18px;
 }
