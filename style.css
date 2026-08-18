@@ -477,13 +477,6 @@ img {
    CONTEÚDO
    ========================================================= */
 
-/*
-   IMPORTANTE:
-   O bloco D8CFC6 utiliza a mesma lógica espacial do bloco
-   F3EEE8. O espaçamento entre os elementos internos é
-   controlado individualmente, e não pelo gap vertical do grid.
-*/
-
 .content-section {
     background: var(--neutral);
     color: var(--deep);
@@ -505,9 +498,9 @@ img {
 }
 
 
-/*
-   EYEBROW FICA NA COLUNA ESQUERDA
-*/
+/* =========================================================
+   CONTEÚDO | LABEL
+   ========================================================= */
 
 .content-section > .eyebrow {
     grid-column: 1;
@@ -519,9 +512,9 @@ img {
 }
 
 
-/*
-   CONTEÚDO FICA NA COLUNA DIREITA
-*/
+/* =========================================================
+   CONTEÚDO | ELEMENTOS PRINCIPAIS
+   ========================================================= */
 
 .content-section > h2,
 .content-section > p:not(.eyebrow),
@@ -536,9 +529,9 @@ img {
 }
 
 
-/*
-   TÍTULO
-*/
+/* =========================================================
+   CONTEÚDO | TÍTULO
+   ========================================================= */
 
 .content-section > h2 {
     grid-row: 1;
@@ -554,9 +547,9 @@ img {
 }
 
 
-/*
-   PARÁGRAFOS
-*/
+/* =========================================================
+   CONTEÚDO | TEXTO
+   ========================================================= */
 
 .content-section > p:not(.eyebrow) {
     margin: 0 0 22px;
@@ -570,9 +563,9 @@ img {
 }
 
 
-/*
-   REDES DENTRO DO BLOCO
-*/
+/* =========================================================
+   CONTEÚDO | REDES
+   ========================================================= */
 
 .content-section > .social-links {
     margin-top: 13px;
@@ -608,8 +601,8 @@ img {
 
     padding: 0 20px;
 
-    background: var(--deep);
-    color: var(--cream);
+    background: var(--white);
+    color: var(--deep);
 
     border: none;
     border-radius: 0;
@@ -621,12 +614,13 @@ img {
 
     transition:
         background 0.2s ease,
+        color 0.2s ease,
         transform 0.2s ease;
 }
 
 .social-link:hover {
-    background: var(--terracotta);
-    color: var(--cream);
+    background: var(--deep);
+    color: var(--white);
 
     transform: translateY(-2px);
 }
@@ -642,7 +636,7 @@ img {
 
     flex-shrink: 0;
 
-    color: var(--white);
+    color: currentColor;
 }
 
 .social-icon img,
@@ -654,11 +648,20 @@ img {
 
     object-fit: contain;
 
-    color: var(--white);
-    fill: var(--white);
-    stroke: var(--white);
+    color: currentColor;
+    fill: currentColor;
+    stroke: currentColor;
 
-    filter: brightness(0) invert(1);
+    filter: none;
+}
+
+.social-icon-play {
+    fill: var(--white);
+    stroke: none;
+}
+
+.social-link:hover .social-icon-play {
+    fill: var(--deep);
 }
 
 
@@ -1123,6 +1126,14 @@ img {
         min-height: 44px;
 
         padding: 0 16px;
+
+        background: var(--white);
+        color: var(--deep);
+    }
+
+    .social-link:hover {
+        background: var(--deep);
+        color: var(--white);
     }
 
 
@@ -1329,7 +1340,9 @@ img {
 }
 
 
-/* CARDS */
+/* =========================================================
+   ALVARÁ | CARDS
+   ========================================================= */
 
 .alvara-services .service-card {
     background: #F3EEE8;
@@ -1354,7 +1367,9 @@ img {
 }
 
 
-/* CTA */
+/* =========================================================
+   ALVARÁ | CTA
+   ========================================================= */
 
 .alvara-services .unsure {
     color: #3F2E2E;
@@ -1434,12 +1449,6 @@ img {
 /* =========================================================
    TRAJETÓRIA | SEÇÕES INTERNAS
    ========================================================= */
-
-/*
-   As seções da trajetória que usam D8CFC6 seguem a mesma
-   estrutura espacial das seções claras, sem gap vertical
-   artificial entre título e parágrafos.
-*/
 
 .trajectory-section {
     background: var(--neutral);
@@ -1522,6 +1531,19 @@ img {
 
 
 /* =========================================================
+   TRAJETÓRIA | CTA FINAL
+   ========================================================= */
+
+.trajectory-section .button {
+    grid-column: 2;
+
+    justify-self: center;
+
+    margin-top: 18px;
+}
+
+
+/* =========================================================
    TRAJETÓRIA | MOBILE
    ========================================================= */
 
@@ -1555,17 +1577,4 @@ img {
 
         margin: 18px auto 0;
     }
-}
-
-
-/* =========================================================
-   TRAJETÓRIA | CTA FINAL
-   ========================================================= */
-
-.trajectory-section .button {
-    grid-column: 2;
-
-    justify-self: center;
-
-    margin-top: 18px;
 }
