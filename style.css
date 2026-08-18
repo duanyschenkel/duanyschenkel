@@ -830,6 +830,18 @@ img {
     filter: brightness(0) invert(1);
 }
 
+/* Ícones das redes sociais do footer em branco */
+
+.footer-social img {
+    width: 14px;
+    height: 14px;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter: brightness(0) invert(1);
+}
 
 /* =========================================================
    FOOTER BOTTOM
