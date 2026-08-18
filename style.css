@@ -1537,7 +1537,7 @@ img {
 .trajectory-section .button {
     grid-column: 2;
 
-    justify-self: center;
+    justify-self: left;
 
     margin-top: 18px;
 }
