@@ -1385,3 +1385,94 @@ img {
     color: #9C5A3C;
     border-bottom-color: #9C5A3C;
 }
+/* =========================================================
+   TRAJETÓRIA | SEÇÕES INTERNAS
+   ========================================================= */
+
+.trajectory-section {
+    background: var(--neutral);
+
+    width: 100%;
+
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    padding-left: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
+    padding-right: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
+
+    display: grid;
+
+    grid-template-columns: 0.35fr 1fr;
+
+    gap: 80px;
+}
+
+/* O conteúdo fica na segunda coluna */
+
+.trajectory-section > .eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+    
+    margin: 5px 0 0;
+}
+
+.trajectory-section > h2,
+.trajectory-section > p:not(.eyebrow) {
+    grid-column: 2;
+    width: 100%;
+    max-width: 680px;
+}
+
+/* Título */
+
+.trajectory-section > h2 {
+    margin: 0 0 38px;
+
+    font-size: clamp(38px, 5vw, 62px);
+
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+
+    font-weight: 500;
+}
+
+/* Texto */
+
+.trajectory-section > p:not(.eyebrow) {
+    margin: 0 0 22px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: rgba(63, 46, 46, 0.75);
+}
+
+
+/* =========================================================
+   TRAJETÓRIA | MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .trajectory-section {
+        padding: 80px 20px;
+
+        display: block;
+    }
+
+    .trajectory-section > .eyebrow {
+        margin-bottom: 38px;
+    }
+
+    .trajectory-section > h2 {
+        font-size: 40px;
+
+        margin-bottom: 32px;
+    }
+
+    .trajectory-section > p:not(.eyebrow) {
+        font-size: 16px;
+
+        margin-bottom: 22px;
+    }
+}
