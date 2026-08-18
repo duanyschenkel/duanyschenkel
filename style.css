@@ -1862,3 +1862,49 @@ img {
         font-size: 14px;
     }
 }
+
+/* =========================================================
+   FOOTER | LINKS LEGAIS
+   ========================================================= */
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    margin-top: 12px;
+}
+
+.footer-legal a {
+    font-size: 11px;
+
+    color: rgba(243, 238, 232, 0.55);
+
+    border-bottom: 1px solid transparent;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--cream);
+
+    border-bottom-color: var(--soft-terracotta);
+}
+
+
+/* =========================================================
+   FOOTER | LINKS LEGAIS | MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .footer-legal {
+        flex-wrap: wrap;
+
+        gap: 8px 18px;
+
+        margin-top: 10px;
+    }
+}
