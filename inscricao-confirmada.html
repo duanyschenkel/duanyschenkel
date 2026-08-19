@@ -1,216 +1,151 @@
-<!DOCTYPE html>
+/* =========================================================
+CONFIRMAÇÃO | CADASTRO E E-MAIL
+========================================================= */
 
-<html lang="pt-BR">
-
-<head>
-
-```
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta
-    name="description"
-    content="Confirmação de cadastro – Duany Schenkel, Advogada de Direito Digital."
->
-
-<title>Confira seu e-mail | Duany Schenkel</title>
-
-<link rel="stylesheet" href="style.css">
-```
-
-</head>
-
-<body>
+.confirmation-page {
+min-height: 62vh;
 
 ```
-<!-- =====================================================
-     HEADER
-====================================================== -->
+max-width: var(--max-width);
+margin: 0 auto;
 
-<header class="header">
+padding: 100px 32px 110px;
 
-    <a href="index.html" class="brand">
-
-        <div class="brand-avatar">
-            <img
-                src="https://i.ibb.co/mFt1FcRg/biopic01.jpg"
-                alt="Duany Schenkel"
-            >
-        </div>
-
-        <div class="brand-text">
-            <strong>DUANY SCHENKEL</strong>
-            <span>ADVOGADA | OAB/SC 42.321</span>
-        </div>
-
-    </a>
-
-</header>
-
-
-<main>
-
-    <!-- =====================================================
-         CONFIRMAÇÃO DE E-MAIL
-    ====================================================== -->
-
-    <section class="confirmation-page">
-
-        <div class="confirmation-content">
-
-            <p class="eyebrow">
-                QUASE LÁ
-            </p>
-
-            <h1>
-                Confira seu<br>
-                <em>e-mail.</em>
-            </h1>
-
-            <p class="confirmation-text">
-                Enviamos um e-mail para confirmar sua inscrição.
-                Abra a mensagem e clique no botão de confirmação
-                para concluir seu cadastro.
-            </p>
-
-            <p class="confirmation-note">
-                Se não encontrar a mensagem, verifique também
-                sua caixa de spam ou promoções.
-            </p>
-
-            <a
-                href="index.html"
-                class="confirmation-link"
-            >
-                Voltar para o site →
-            </a>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<!-- =====================================================
-     FOOTER
-====================================================== -->
-
-<footer class="footer">
-
-    <div class="footer-brand">
-
-        <strong>
-            DUANY SCHENKEL
-        </strong>
-
-        <p>
-            Advogada | OAB/SC nº 42.321
-        </p>
-
-        <p>
-            Direito Digital. Atendimento online para todo o Brasil.
-        </p>
-
-    </div>
-
-
-    <div class="footer-contacts">
-
-        <a href="mailto:contato@duanyschenkel.adv.br">
-            contato@duanyschenkel.adv.br
-        </a>
-
-        <a
-            href="https://wa.me/5549988133451"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            WhatsApp: (49) 98813-3451
-        </a>
-
-    </div>
-
-
-    <div class="footer-social">
-
-        <a
-            href="https://www.instagram.com/duany.adv"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-        >
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/3621/3621435.png"
-                alt=""
-            >
-        </a>
-
-
-        <a
-            href="https://www.tiktok.com/@duany.adv"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="TikTok"
-        >
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
-                alt=""
-            >
-        </a>
-
-
-        <a
-            href="https://www.youtube.com/@duanyadv"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-        >
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/174/174883.png"
-                alt=""
-            >
-        </a>
-
-
-        <a
-            href="https://wa.me/5549988133451"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-        >
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png"
-                alt=""
-            >
-        </a>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Duany Schenkel. Todos os direitos reservados.
-        </p>
-
-        <div class="footer-legal">
-
-            <a href="politica-de-privacidade.html">
-                Política de Privacidade
-            </a>
-
-            <a href="termos-de-uso.html">
-                Termos de Uso
-            </a>
-
-        </div>
-
-    </div>
-
-</footer>
+display: flex;
+align-items: center;
 ```
 
-</body>
+}
 
-</html>
+.confirmation-content {
+max-width: 760px;
+}
+
+.confirmation-content .eyebrow {
+margin-bottom: 22px;
+}
+
+.confirmation-content h1 {
+margin-bottom: 30px;
+
+```
+font-size: clamp(52px, 7vw, 88px);
+
+line-height: 0.98;
+letter-spacing: -0.055em;
+
+font-weight: 500;
+```
+
+}
+
+.confirmation-content h1 em {
+color: var(--terracotta);
+font-style: normal;
+}
+
+.confirmation-text {
+max-width: 620px;
+
+```
+margin-bottom: 20px;
+
+font-size: 18px;
+line-height: 1.7;
+
+color: rgba(63, 46, 46, 0.75);
+```
+
+}
+
+.confirmation-note {
+max-width: 620px;
+
+```
+margin-bottom: 34px;
+
+font-size: 14px;
+line-height: 1.7;
+
+color: rgba(63, 46, 46, 0.55);
+```
+
+}
+
+.confirmation-link {
+display: inline-block;
+
+```
+color: var(--terracotta);
+
+font-size: 14px;
+font-weight: 600;
+
+border-bottom: 1px solid var(--terracotta);
+
+padding-bottom: 3px;
+
+transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+```
+
+}
+
+.confirmation-link:hover {
+color: var(--deep);
+border-bottom-color: var(--deep);
+}
+
+/* =========================================================
+CONFIRMAÇÃO | MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+```
+.confirmation-page {
+    min-height: auto;
+
+    padding: 75px 20px 90px;
+}
+
+.confirmation-content h1 {
+    font-size: clamp(48px, 14vw, 72px);
+
+    margin-bottom: 26px;
+}
+
+.confirmation-text {
+    font-size: 16px;
+}
+
+.confirmation-note {
+    font-size: 14px;
+}
+```
+
+}
+
+/* =========================================================
+CONFIRMAÇÃO | TELAS MUITO PEQUENAS
+========================================================= */
+
+@media (max-width: 420px) {
+
+```
+.confirmation-page {
+    padding-top: 55px;
+    padding-bottom: 70px;
+}
+
+.confirmation-content h1 {
+    font-size: 49px;
+}
+
+.confirmation-text {
+    font-size: 15px;
+}
+```
+
+}
