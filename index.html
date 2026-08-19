@@ -919,208 +919,117 @@
 
 <section class="newsletter-section">
 
-    <div class="duany-newsletter">
+    <div class="newsletter-content">
+
+        <div class="newsletter-intro">
+
+            <p class="eyebrow">
+                CONTEÚDO DIRETO NO SEU E-MAIL
+            </p>
+
+            <h2>
+                Quer entender melhor o que acontece nas plataformas?
+            </h2>
+
+            <p>
+                Receba conteúdos sobre Direito Digital, redes sociais,
+                plataformas e os conflitos jurídicos que aparecem nesse ambiente.
+            </p>
+
+        </div>
 
 
-        <div id="sib-form-container" class="sib-form-container">
+        <form
+            id="sib-form"
+            method="POST"
+            action="https://6ed90395.sibforms.com/serve/MUIFAFt9jVHIqXUYBTo3IAt-a2oNRD1dTXTNhpMf764o-wjBD69uJoqbQjqbDZ7EC_1GUTBH6VyQc56B5vyyN8v6HUv1ALo4kj--wTZoGzVJtbYXuepD4gHKr9jH5dmRBcvzKTd5WKiDxYvo6Kt-I4wFueV7QeK3Dbwz0IXt-O6hqf0Rn-CVOTRphmIITEe2CmWMWTWVLUZFPyI9rw=="
+            class="newsletter-form"
+        >
 
-            <div id="sib-container">
+            <div class="newsletter-field">
 
+                <label for="EMAIL">
+                    Seu melhor e-mail
+                </label>
 
-                <form
-                    id="sib-form"
-                    method="POST"
-                    action="https://6ed90395.sibforms.com/serve/MUIFAFt9jVHIqXUYBTo3IAt-a2oNRD1dTXTNhpMf764o-wjBD69uJoqbQjqbDZ7EC_1GUTBH6VyQc56B5vyyN8v6HUv1ALo4kj--wTZoGzVJtbYXuepD4gHKr9jH5dmRBcvzKTd5WKiDxYvo6Kt-I4wFueV7QeK3Dbwz0IXt-O6hqf0Rn-CVOTRphmIITEe2CmWMWTWVLUZFPyI9rw=="
+                <input
+                    type="email"
+                    id="EMAIL"
+                    name="EMAIL"
+                    autocomplete="email"
+                    placeholder="seuemail@exemplo.com"
+                    required
                 >
-
-
-                    <!-- TÍTULO -->
-
-                    <div class="sib-form-block-title">
-
-                        <p>
-                            Quer entender melhor o que acontece nas plataformas?
-                        </p>
-
-                    </div>
-
-
-                    <!-- DESCRIÇÃO -->
-
-                    <div class="sib-form-block-text">
-
-                        <p>
-                            Receba conteúdos sobre Direito Digital, redes sociais,
-                            plataformas e os conflitos jurídicos que aparecem nesse ambiente.
-                        </p>
-
-                    </div>
-
-
-                    <!-- E-MAIL -->
-
-                    <div class="sib-input sib-form-block">
-
-                        <div class="form__entry entry_block">
-
-                            <div class="form__label-row">
-
-                                <label
-                                    class="entry__label"
-                                    for="EMAIL"
-                                    data-required=""
-                                >
-                                    Insira seu e-mail
-                                </label>
-
-
-                                <div class="entry__field">
-
-                                    <input
-                                        class="input"
-                                        type="email"
-                                        id="EMAIL"
-                                        name="EMAIL"
-                                        autocomplete="email"
-                                        value=""
-                                        placeholder="seuemail@exemplo.com"
-                                        data-required="true"
-                                        required
-                                    >
-
-                                </div>
-
-                            </div>
-
-
-                            <label
-                                class="entry__error entry__error--primary"
-                            ></label>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- CONSENTIMENTO -->
-
-                    <div class="sib-optin sib-form-block">
-
-                        <div class="form__entry entry_mcq">
-
-                            <div class="form__label-row">
-
-                                <div class="entry__choice">
-
-                                    <label>
-
-                                        <input
-                                            type="checkbox"
-                                            class="input_replaced"
-                                            value="1"
-                                            id="OPT_IN"
-                                            name="OPT_IN"
-                                            required
-                                        >
-
-                                        <span class="checkbox checkbox_tick_positive"></span>
-
-                                        <span>
-
-                                            <p>
-                                                Quero receber conteúdos e comunicações
-                                                da Duany Schenkel por e-mail. Estou ciente
-                                                de que posso cancelar minha inscrição
-                                                a qualquer momento.
-                                            </p>
-
-                                        </span>
-
-                                    </label>
-
-                                </div>
-
-                            </div>
-
-
-                            <label
-                                class="entry__error entry__error--primary"
-                            ></label>
-
-
-                            <label class="entry__specification">
-
-                                Ao se cadastrar, você concorda com o tratamento do
-                                seu e-mail para essa finalidade, conforme nossa
-
-                                <a
-                                    href="politica-de-privacidade.html"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Política de Privacidade
-                                </a>.
-
-                            </label>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- BOTÃO -->
-
-                    <div class="sib-form-block">
-
-                        <button
-                            class="sib-form-block__button sib-form-block__button-with-loader"
-                            form="sib-form"
-                            type="submit"
-                        >
-
-                            <svg
-                                class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
-                                viewBox="0 0 512 512"
-                                aria-hidden="true"
-                            >
-
-                                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/>
-
-                            </svg>
-
-                            QUERO RECEBER
-
-                        </button>
-
-                    </div>
-
-
-                    <!-- CAMPOS OCULTOS DA BREVO -->
-
-                    <input
-                        type="text"
-                        name="email_address_check"
-                        value=""
-                        class="input--hidden"
-                    >
-
-                    <input
-                        type="hidden"
-                        name="locale"
-                        value="pt"
-                    >
-
-                    <input
-                        type="hidden"
-                        name="html_type"
-                        value="simple"
-                    >
-
-                </form>
 
             </div>
 
-        </div>
+
+            <div class="newsletter-consent">
+
+                <label class="consent-label">
+
+                    <input
+                        type="checkbox"
+                        id="OPT_IN"
+                        name="OPT_IN"
+                        value="1"
+                        required
+                    >
+
+                    <span>
+                        Quero receber conteúdos e comunicações da
+                        Duany Schenkel por e-mail. Estou ciente de que
+                        posso cancelar minha inscrição a qualquer momento.
+                    </span>
+
+                </label>
+
+
+                <p class="consent-note">
+                    Ao se cadastrar, você concorda com o tratamento do
+                    seu e-mail para essa finalidade, conforme nossa
+                    <a
+                        href="politica-de-privacidade.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Política de Privacidade
+                    </a>.
+                </p>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="newsletter-button"
+            >
+                QUERO RECEBER
+            </button>
+
+
+            <input
+                type="text"
+                name="email_address_check"
+                value=""
+                class="input--hidden"
+                tabindex="-1"
+                autocomplete="off"
+            >
+
+            <input
+                type="hidden"
+                name="locale"
+                value="pt"
+            >
+
+            <input
+                type="hidden"
+                name="html_type"
+                value="simple"
+            >
+
+        </form>
 
     </div>
 
