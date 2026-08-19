@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,7 +5,6 @@
 
     <!-- =====================================================
          GOOGLE CONSENT MODE
-         Deve ser executado ANTES do Google Tag Manager
     ====================================================== -->
 
     <script>
@@ -16,10 +14,8 @@
             dataLayer.push(arguments);
         }
 
-        var savedConsent = localStorage.getItem('duany_cookie_consent');
-
         gtag('consent', 'default', {
-            analytics_storage: savedConsent === 'accepted' ? 'granted' : 'denied',
+            analytics_storage: 'denied',
             ad_storage: 'denied',
             ad_user_data: 'denied',
             ad_personalization: 'denied',
@@ -71,11 +67,6 @@
     <title>
         Alvará Judicial | Duany Schenkel
     </title>
-
-
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
 
     <link
         rel="stylesheet"
@@ -131,7 +122,7 @@
             </strong>
 
             <span>
-                ADVOGADA | OAB/SC 42.321
+                ADVOGADA | OAB/SC 42.331
             </span>
 
         </div>
@@ -187,7 +178,7 @@
 
 
         <!-- =================================================
-             01 – CONSULTA
+             01
         ================================================== -->
 
         <a
@@ -226,7 +217,7 @@
 
 
         <!-- =================================================
-             02 – PEDIDO DE ALVARÁ
+             02
         ================================================== -->
 
         <a
@@ -265,7 +256,7 @@
 
 
         <!-- =================================================
-             03 – REVISÃO
+             03
         ================================================== -->
 
         <a
@@ -303,26 +294,27 @@
         </a>
 
 
-        <!-- =================================================
-             DÚVIDAS
-        ================================================== -->
+    </div>
 
-        <div class="unsure">
 
-            <p>
-                Não sabe qual caminho se aplica ao seu caso?
-            </p>
+    <!-- =====================================================
+         DÚVIDA
+    ====================================================== -->
 
-            <a
-                href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20seu%20site%20e%20gostaria%20de%20explicar%20uma%20situa%C3%A7%C3%A3o%20envolvendo%20crian%C3%A7a%20ou%20adolescente%20no%20ambiente%20digital%20para%20entender%20qual%20medida%20jur%C3%ADdica%20%C3%A9%20necess%C3%A1ria."
-                class="text-link"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Fale comigo →
-            </a>
+    <div class="unsure">
 
-        </div>
+        <p>
+            Não sabe qual caminho se aplica ao seu caso?
+        </p>
+
+        <a
+            href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20seu%20site%20e%20gostaria%20de%20explicar%20uma%20situa%C3%A7%C3%A3o%20envolvendo%20crian%C3%A7a%20ou%20adolescente%20no%20ambiente%20digital%20para%20entender%20qual%20medida%20jur%C3%ADdica%20%C3%A9%20necess%C3%A1ria."
+            class="text-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Fale comigo →
+        </a>
 
     </div>
 
@@ -358,9 +350,7 @@
 
     <div class="footer-contacts">
 
-        <a
-            href="mailto:contato@duanyschenkel.adv.br"
-        >
+        <a href="mailto:contato@duanyschenkel.adv.br">
             contato@duanyschenkel.adv.br
         </a>
 
@@ -381,7 +371,7 @@
         <!-- INSTAGRAM -->
 
         <a
-            href="https://www.instagram.com/dudablinda"
+            href="https://www.instagram.com/duany.adv"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -398,7 +388,7 @@
         <!-- TIKTOK -->
 
         <a
-            href="https://www.tiktok.com/@duda.blinda"
+            href="https://www.tiktok.com/@duany.adv"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="TikTok"
@@ -415,7 +405,7 @@
         <!-- YOUTUBE -->
 
         <a
-            href="https://www.youtube.com/dudablinda"
+            href="https://www.youtube.com/@duanyadv"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
@@ -454,6 +444,18 @@
             © 2026 Duany Schenkel. Todos os direitos reservados.
         </p>
 
+        <div class="footer-legal">
+
+            <a href="politica-de-privacidade.html">
+                Política de Privacidade
+            </a>
+
+            <a href="termos-de-uso.html">
+                Termos de Uso
+            </a>
+
+        </div>
+
     </div>
 
 </footer>
@@ -462,4 +464,3 @@
 </body>
 
 </html>
-
