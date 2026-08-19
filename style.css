@@ -2314,3 +2314,239 @@ img {
     }
 
 }
+
+
+/* =====================================================
+   ATENDIMENTO PRIORITÁRIO
+====================================================== */
+
+.priority-section {
+
+    background: #9C5A3C;
+
+    margin: 0;
+
+    padding: 70px 6vw;
+
+}
+
+
+.priority-content {
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+}
+
+
+.priority-text {
+
+    max-width: 680px;
+
+}
+
+
+.priority-section .eyebrow {
+
+    color: #F3EEE8;
+
+    margin-bottom: 18px;
+
+}
+
+
+.priority-section h2 {
+
+    color: #F3EEE8;
+
+    margin: 0 0 18px;
+
+}
+
+
+.priority-section p:not(.eyebrow) {
+
+    color: #F3EEE8;
+
+    max-width: 650px;
+
+    margin: 0;
+
+    line-height: 1.7;
+
+}
+
+
+.priority-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+
+    padding: 15px 22px;
+
+    border: 1px solid #F3EEE8;
+
+    color: #F3EEE8;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+
+}
+
+
+.priority-button:hover {
+
+    background: #F3EEE8;
+
+    color: #9C5A3C;
+
+}
+
+
+.priority-button span {
+
+    font-size: 18px;
+
+    line-height: 1;
+
+}
+
+
+/* =====================================================
+   OUTRAS SITUAÇÕES
+====================================================== */
+
+.other-case {
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 55px 6vw 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-top: 1px solid #D8CFC6;
+
+}
+
+
+.other-case p {
+
+    margin: 0;
+
+    color: #3F2E2E;
+
+    font-size: 16px;
+
+}
+
+
+.other-case-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #3F2E2E;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+
+.other-case-link span {
+
+    font-size: 18px;
+
+    transition: transform .2s ease;
+
+}
+
+
+.other-case-link:hover span {
+
+    transform: translateX(4px);
+
+}
+
+
+/* =====================================================
+   RESPONSIVO
+====================================================== */
+
+@media (max-width: 760px) {
+
+    .priority-section {
+
+        padding: 50px 24px;
+
+    }
+
+
+    .priority-content {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+
+    }
+
+
+    .priority-button {
+
+        width: 100%;
+
+    }
+
+
+    .other-case {
+
+        padding: 45px 24px 60px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+
+    }
+
+}
