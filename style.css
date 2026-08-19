@@ -1908,3 +1908,198 @@ img {
         margin-top: 10px;
     }
 }
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+
+.newsletter-section {
+    padding: 110px 8%;
+    background: #F3EEE8;
+}
+
+.newsletter-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.newsletter-intro {
+    max-width: 520px;
+}
+
+.newsletter-intro .eyebrow {
+    margin-bottom: 18px;
+}
+
+.newsletter-intro h2 {
+    margin: 0 0 24px;
+    color: #3F2E2E;
+}
+
+.newsletter-intro p:not(.eyebrow) {
+    margin: 0;
+    color: #5A4A4A;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.newsletter-form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.newsletter-field {
+    margin-bottom: 24px;
+}
+
+.newsletter-field label {
+    display: block;
+    margin-bottom: 9px;
+    color: #3F2E2E;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.newsletter-field input[type="email"] {
+    box-sizing: border-box;
+    width: 100%;
+    height: 52px;
+    padding: 0 16px;
+    border: 1px solid #D8CFC6;
+    border-radius: 2px;
+    background: #FFFFFF;
+    color: #3F2E2E;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.newsletter-field input[type="email"]::placeholder {
+    color: #9A8D86;
+}
+
+.newsletter-field input[type="email"]:focus {
+    border-color: #9C5A3C;
+    box-shadow: 0 0 0 1px #9C5A3C;
+}
+
+
+/* =========================================================
+   CONSENTIMENTO
+   ========================================================= */
+
+.newsletter-consent {
+    margin-bottom: 26px;
+}
+
+.consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.consent-label input[type="checkbox"] {
+    flex: 0 0 auto;
+    width: 17px;
+    height: 17px;
+    margin: 2px 0 0;
+    accent-color: #9C5A3C;
+    cursor: pointer;
+}
+
+.consent-label span {
+    color: #4F4141;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.consent-note {
+    margin: 10px 0 0 27px;
+    color: #756762;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.consent-note a {
+    color: #3F2E2E;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   BOTÃO
+   ========================================================= */
+
+.newsletter-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    height: 50px;
+    padding: 0 26px;
+    border: 0;
+    border-radius: 2px;
+    background: #3F2E2E;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.newsletter-button:hover {
+    background: #9C5A3C;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .newsletter-section {
+        padding: 80px 6%;
+    }
+
+    .newsletter-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .newsletter-form {
+        max-width: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .newsletter-section {
+        padding: 70px 6%;
+    }
+
+    .newsletter-intro h2 {
+        font-size: 28px;
+    }
+
+    .newsletter-button {
+        width: 100%;
+    }
+
+}
