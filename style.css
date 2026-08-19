@@ -33,6 +33,7 @@ body {
     color: var(--deep);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
@@ -802,17 +803,24 @@ img {
     line-height: 1.7;
 }
 
+
+/* =========================================================
+   BOTÃO PRIORITÁRIO
+   ========================================================= */
+
 .priority-button {
+    position: relative;
+
     display: inline-flex;
 
     align-items: center;
     justify-content: center;
 
-    gap: 12px;
-
     flex-shrink: 0;
 
-    padding: 15px 22px;
+    min-height: 52px;
+
+    padding: 0 52px 0 22px;
 
     border: 1px solid var(--cream);
 
@@ -827,60 +835,40 @@ img {
         color 0.2s ease;
 }
 
-.priority-button:hover {
-    background: var(--cream);
-    color: var(--terracotta);
-}
-
-
-/* =========================================================
-   SETA DO ATENDIMENTO PRIORITÁRIO
-   ========================================================= */
-
-.priority-button span {
-    width: 12px;
-    height: 12px;
-
-    position: relative;
-
-    display: block;
-
-    flex-shrink: 0;
-
-    font-size: 0;
-    line-height: 0;
-}
-
-.priority-button span::before {
+.priority-button::after {
     content: "";
 
     position: absolute;
 
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
 
-    top: 0;
-    right: 0;
+    right: 19px;
+    top: 17px;
 
     border-top: 1.5px solid currentColor;
     border-right: 1.5px solid currentColor;
 }
 
-.priority-button span::after {
+.priority-button::before {
     content: "";
 
     position: absolute;
 
-    width: 12px;
+    width: 15px;
     height: 1.5px;
 
-    top: 5px;
-    left: 0;
+    right: 16px;
+    top: 27px;
 
     background: currentColor;
 
     transform: rotate(-45deg);
-    transform-origin: center;
+}
+
+.priority-button:hover {
+    background: var(--cream);
+    color: var(--terracotta);
 }
 
 
@@ -892,8 +880,9 @@ img {
     width: 100%;
     max-width: var(--max-width);
 
-    margin: 42px auto 0;
-    padding: 28px 32px;
+    margin: 0 auto;
+
+    padding: 42px 0 0;
 
     display: flex;
 
@@ -901,18 +890,14 @@ img {
     justify-content: space-between;
 
     gap: 30px;
-
-    background: var(--deep);
-    color: var(--cream);
 }
 
 .other-case p {
     margin: 0;
 
-    color: var(--cream);
+    color: rgba(243, 238, 232, 0.6);
 
     font-size: 14px;
-    line-height: 1.5;
 }
 
 .other-case-link {
@@ -920,7 +905,7 @@ img {
 
     align-items: center;
 
-    gap: 10px;
+    gap: 8px;
 
     flex-shrink: 0;
 
@@ -932,14 +917,22 @@ img {
     border-bottom: 1px solid var(--soft-terracotta);
 
     padding-bottom: 3px;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .other-case-link span {
+    display: inline-block;
+
     transition: transform 0.2s ease;
 }
 
 .other-case-link:hover {
     color: var(--soft-terracotta);
+
+    border-bottom-color: var(--soft-terracotta);
 }
 
 .other-case-link:hover span {
@@ -1096,7 +1089,6 @@ img {
     border-top: 1px solid rgba(243, 238, 232, 0.12);
 
     display: flex;
-
     align-items: center;
     justify-content: space-between;
 
@@ -1114,7 +1106,6 @@ img {
 
 .footer-legal {
     display: flex;
-
     align-items: center;
 
     gap: 22px;
@@ -1138,6 +1129,681 @@ img {
     color: var(--cream);
 
     border-bottom-color: var(--soft-terracotta);
+}
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 1244px) and (min-width: 801px) {
+
+    .header {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .content-section {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .other-case {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .header {
+        padding: 18px 20px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero {
+        min-height: auto;
+
+        padding: 48px 20px 58px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 14vw, 72px);
+
+        margin-bottom: 24px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+
+    /* =====================================================
+       ATUAÇÃO
+       ===================================================== */
+
+    .services {
+        padding: 60px 20px 70px;
+    }
+
+    .section-intro {
+        margin-bottom: 40px;
+    }
+
+    .section-intro h2 {
+        font-size: 40px;
+    }
+
+
+    /* =====================================================
+       CARDS
+       ===================================================== */
+
+    .service-card {
+        grid-template-columns: 38px minmax(0, 1fr) 38px;
+
+        gap: 12px;
+
+        padding: 27px 0;
+    }
+
+    .service-content h3 {
+        font-size: 24px;
+    }
+
+    .service-content p {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       SETA
+       ===================================================== */
+
+    .arrow {
+        width: 40px;
+        height: 40px;
+
+        font-size: 0;
+    }
+
+    .arrow::before {
+        width: 9px;
+        height: 9px;
+
+        top: 10px;
+        right: 10px;
+    }
+
+    .arrow::after {
+        width: 16px;
+
+        top: 19px;
+        left: 10px;
+    }
+
+
+    /* =====================================================
+       TRIAGEM
+       ===================================================== */
+
+    .unsure {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 10px;
+
+        width: 100%;
+
+        margin: 38px 0 0;
+
+        padding: 0;
+    }
+
+    .unsure p,
+    .unsure .text-link {
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       OUTRAS SITUAÇÕES
+       ===================================================== */
+
+    .other-case {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 12px;
+
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+
+        padding: 38px 20px 0;
+    }
+
+    .other-case p {
+        max-width: 100%;
+
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .other-case-link {
+        max-width: 100%;
+
+        white-space: normal;
+    }
+
+
+    /* =====================================================
+       SOBRE
+       ===================================================== */
+
+    .about {
+        padding: 80px 20px;
+
+        display: block;
+    }
+
+    .about-label {
+        margin-bottom: 38px;
+    }
+
+    .about-photo {
+        width: 150px;
+        height: 185px;
+
+        margin-bottom: 32px;
+    }
+
+    .about-content h2 {
+        font-size: 40px;
+
+        margin-bottom: 32px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+
+    /* =====================================================
+       CONTEÚDO
+       ===================================================== */
+
+    .content-section {
+        padding: 80px 20px 88px;
+
+        display: block;
+    }
+
+    .content-section > .eyebrow,
+    .content-section > h2,
+    .content-section > p:not(.eyebrow),
+    .content-section > .social-links {
+        width: 100%;
+        max-width: 760px;
+
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .content-section > .eyebrow {
+        margin-bottom: 38px;
+    }
+
+    .content-section h2 {
+        font-size: 40px;
+
+        margin-bottom: 32px;
+    }
+
+    .content-section > p:not(.eyebrow) {
+        max-width: 680px;
+
+        font-size: 16px;
+
+        margin-bottom: 22px;
+    }
+
+    .content-section > .social-links {
+        margin-top: 32px;
+    }
+
+
+    /* =====================================================
+       REDES
+       ===================================================== */
+
+    .social-links {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    .social-link {
+        min-height: 44px;
+
+        padding: 0 16px;
+
+        background: var(--white);
+        color: var(--deep);
+    }
+
+    .social-link:hover {
+        background: var(--deep);
+        color: var(--white);
+    }
+
+
+    /* =====================================================
+       ATENDIMENTO PRIORITÁRIO
+       ===================================================== */
+
+    .priority-section {
+        padding: 55px 20px;
+    }
+
+    .priority-content {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 30px;
+    }
+
+    .priority-text {
+        width: 100%;
+        max-width: none;
+    }
+
+    .priority-section h2 {
+        font-size: 40px;
+    }
+
+    .priority-section p:not(.eyebrow) {
+        max-width: none;
+    }
+
+    .priority-button {
+        width: 100%;
+
+        justify-content: flex-start;
+    }
+
+
+    /* =====================================================
+       TRAJETÓRIA
+       ===================================================== */
+
+    .trajectory-section {
+        padding: 80px 20px;
+
+        display: block;
+    }
+
+    .trajectory-section > .eyebrow {
+        margin-bottom: 38px;
+    }
+
+    .trajectory-section > h2 {
+        font-size: 40px;
+
+        margin-bottom: 32px;
+    }
+
+    .trajectory-section > p:not(.eyebrow) {
+        font-size: 16px;
+
+        margin-bottom: 22px;
+    }
+
+    .trajectory-section .button {
+        display: flex;
+        width: fit-content;
+
+        margin: 18px auto 0;
+    }
+
+
+    /* =====================================================
+       NEWSLETTER
+       ===================================================== */
+
+    .newsletter-section {
+        width: 100%;
+
+        padding: 80px 20px;
+    }
+
+    .newsletter-content {
+        width: 100%;
+        max-width: none;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 42px;
+
+        align-items: stretch;
+    }
+
+    .newsletter-intro {
+        width: 100%;
+        max-width: none;
+    }
+
+    .newsletter-intro h2 {
+        font-size: 40px;
+    }
+
+    .newsletter-intro p:not(.eyebrow) {
+        max-width: 100%;
+    }
+
+    .newsletter-form {
+        width: 100%;
+        max-width: none;
+    }
+
+    .newsletter-field {
+        width: 100%;
+    }
+
+    .newsletter-field input[type="email"] {
+        width: 100%;
+    }
+
+    .newsletter-consent {
+        width: 100%;
+    }
+
+    .consent-label {
+        width: 100%;
+    }
+
+    .consent-note {
+        max-width: calc(100% - 27px);
+    }
+
+    .newsletter-button {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       PÁGINAS JURÍDICAS
+       ===================================================== */
+
+    .legal-hero {
+        padding: 70px 20px 55px;
+    }
+
+    .legal-hero .eyebrow {
+        margin-bottom: 32px;
+    }
+
+    .legal-hero h1 {
+        font-size: 42px;
+
+        margin-bottom: 24px;
+    }
+
+    .legal-intro {
+        font-size: 16px;
+    }
+
+    .legal-content {
+        padding: 0 20px 80px;
+    }
+
+    .legal-block {
+        padding: 34px 0;
+    }
+
+    .legal-block h2 {
+        font-size: 21px;
+
+        margin-bottom: 17px;
+    }
+
+    .legal-block p {
+        font-size: 15px;
+        line-height: 1.75;
+
+        margin-bottom: 17px;
+    }
+
+    .legal-date {
+        padding-top: 22px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .footer {
+        padding: 40px 20px 25px;
+
+        display: grid;
+
+        grid-template-columns: 1fr auto;
+
+        grid-template-rows: auto auto auto;
+
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .footer-contacts {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .footer-social {
+        grid-column: 2;
+        grid-row: 2;
+
+        justify-self: end;
+    }
+
+    .footer-bottom {
+        grid-column: 1 / -1;
+        grid-row: 3;
+
+        padding-top: 18px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 12px;
+    }
+
+    .footer-legal {
+        flex-wrap: wrap;
+
+        gap: 8px 18px;
+
+        margin-top: 10px;
+    }
+
+
+    /* =====================================================
+       CONFIRMAÇÃO
+       ===================================================== */
+
+    .confirmation-page {
+        min-height: auto;
+    }
+
+    .confirmation-content {
+        padding: 80px 20px 95px;
+    }
+
+    .confirmation-content .eyebrow {
+        margin-bottom: 30px;
+    }
+
+    .confirmation-content h1 {
+        font-size: 48px;
+
+        margin-bottom: 26px;
+    }
+
+    .confirmation-text {
+        max-width: 540px;
+
+        font-size: 16px;
+
+        margin-bottom: 32px;
+    }
+}
+
+
+/* =========================================================
+   PÁGINA ALVARÁ | VERSÃO CLARA
+   ========================================================= */
+
+.alvara-services {
+    background: #F3EEE8;
+    color: #3F2E2E;
+}
+
+.alvara-services .section-intro {
+    color: #3F2E2E;
+}
+
+.alvara-services .section-intro .eyebrow {
+    color: #9C5A3C;
+}
+
+.alvara-services .section-intro h2 {
+    color: #3F2E2E;
+}
+
+
+/* =========================================================
+   ALVARÁ | CARDS
+   ========================================================= */
+
+.alvara-services .service-card {
+    background: #F3EEE8;
+    color: #3F2E2E;
+    border-color: #D8CFC6;
+
+    transition: background-color 0.25s ease;
+}
+
+.alvara-services .service-number {
+    color: #9C5A3C;
+}
+
+.alvara-services .service-content h3 {
+    color: #3F2E2E;
+}
+
+.alvara-services .service-content p {
+    color: #3F2E2E;
+}
+
+.alvara-services .arrow {
+    color: #3F2E2E;
+    border-color: #3F2E2E;
+}
+
+
+/* =========================================================
+   ALVARÁ | HOVER
+   ========================================================= */
+
+.alvara-services .service-card:hover {
+    background: #E8DED6;
+    color: #3F2E2E;
+}
+
+.alvara-services .service-card:hover .service-content h3,
+.alvara-services .service-card:hover .service-content p {
+    color: #3F2E2E;
+}
+
+.alvara-services .service-card:hover .service-number {
+    color: #9C5A3C;
+}
+
+.alvara-services .service-card:hover .arrow {
+    color: #F3EEE8 !important;
+    background: #3F2E2E;
+    border-color: #3F2E2E !important;
+}
+
+.alvara-services .unsure {
+    color: #3F2E2E;
+}
+
+.alvara-services .unsure p {
+    color: #3F2E2E;
+}
+
+.alvara-services .text-link {
+    color: #3F2E2E;
+    border-bottom: 1px solid #9C5A3C;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.alvara-services .text-link:hover {
+    color: #9C5A3C;
+    border-bottom-color: #9C5A3C;
+}
+
+.alvara-services .service-card:first-child {
+    border-top-color: #D8CFC6;
 }
 
 
@@ -1219,7 +1885,6 @@ img {
 
 .legal-page {
     width: 100%;
-
     background: var(--cream);
     color: var(--deep);
 }
@@ -1328,18 +1993,22 @@ img {
    ========================================================= */
 
 .newsletter-section {
+    width: 100%;
+
     padding: 110px 8%;
 
     background: #F3EEE8;
 }
 
 .newsletter-content {
+    width: 100%;
     max-width: 1100px;
+
     margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 
     gap: 80px;
 
@@ -1347,6 +2016,7 @@ img {
 }
 
 .newsletter-intro {
+    width: 100%;
     max-width: 520px;
 }
 
@@ -1360,10 +2030,8 @@ img {
     color: #3F2E2E;
 
     font-size: clamp(38px, 5vw, 62px);
-
     line-height: 1.05;
     letter-spacing: -0.045em;
-
     font-weight: 500;
 }
 
@@ -1645,654 +2313,6 @@ img {
 
 
 /* =========================================================
-   ALVARÁ | VERSÃO CLARA
-   ========================================================= */
-
-.alvara-services {
-    background: #F3EEE8;
-    color: #3F2E2E;
-}
-
-.alvara-services .section-intro {
-    color: #3F2E2E;
-}
-
-.alvara-services .section-intro .eyebrow {
-    color: #9C5A3C;
-}
-
-.alvara-services .section-intro h2 {
-    color: #3F2E2E;
-}
-
-
-/* =========================================================
-   ALVARÁ | CARDS
-   ========================================================= */
-
-.alvara-services .service-card {
-    background: #F3EEE8;
-    color: #3F2E2E;
-    border-color: #D8CFC6;
-
-    transition: background-color 0.25s ease;
-}
-
-.alvara-services .service-number {
-    color: #9C5A3C;
-}
-
-.alvara-services .service-content h3 {
-    color: #3F2E2E;
-}
-
-.alvara-services .service-content p {
-    color: #3F2E2E;
-}
-
-.alvara-services .arrow {
-    color: #3F2E2E;
-    border-color: #3F2E2E;
-}
-
-
-/* =========================================================
-   ALVARÁ | HOVER
-   ========================================================= */
-
-.alvara-services .service-card:hover {
-    background: #E8DED6;
-    color: #3F2E2E;
-}
-
-.alvara-services .service-card:hover .service-content h3,
-.alvara-services .service-card:hover .service-content p {
-    color: #3F2E2E;
-}
-
-.alvara-services .service-card:hover .service-number {
-    color: #9C5A3C;
-}
-
-.alvara-services .service-card:hover .arrow {
-    color: #F3EEE8 !important;
-    background: #3F2E2E;
-    border-color: #3F2E2E !important;
-}
-
-.alvara-services .unsure {
-    color: #3F2E2E;
-}
-
-.alvara-services .unsure p {
-    color: #3F2E2E;
-}
-
-.alvara-services .text-link {
-    color: #3F2E2E;
-    border-bottom: 1px solid #9C5A3C;
-
-    transition:
-        color 0.25s ease,
-        border-color 0.25s ease;
-}
-
-.alvara-services .text-link:hover {
-    color: #9C5A3C;
-    border-bottom-color: #9C5A3C;
-}
-
-.alvara-services .service-card:first-child {
-    border-top-color: #D8CFC6;
-}
-
-
-/* =========================================================
-   TABLETS
-   ========================================================= */
-
-@media (max-width: 1244px) and (min-width: 801px) {
-
-    .header {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-
-    .content-section {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVO
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    /* =====================================================
-       HEADER
-       ===================================================== */
-
-    .header {
-        padding: 18px 20px;
-    }
-
-    .nav {
-        display: none;
-    }
-
-
-    /* =====================================================
-       HERO
-       ===================================================== */
-
-    .hero {
-        min-height: auto;
-
-        padding: 48px 20px 58px;
-    }
-
-    .hero h1 {
-        font-size: clamp(48px, 14vw, 72px);
-
-        margin-bottom: 24px;
-    }
-
-    .hero-text {
-        font-size: 16px;
-    }
-
-
-    /* =====================================================
-       ATUAÇÃO
-       ===================================================== */
-
-    .services {
-        padding: 60px 20px 70px;
-    }
-
-    .section-intro {
-        margin-bottom: 40px;
-    }
-
-    .section-intro h2 {
-        font-size: 40px;
-    }
-
-
-    /* =====================================================
-       CARDS
-       ===================================================== */
-
-    .service-card {
-        grid-template-columns: 38px minmax(0, 1fr) 38px;
-
-        gap: 12px;
-
-        padding: 27px 0;
-    }
-
-    .service-content h3 {
-        font-size: 24px;
-    }
-
-    .service-content p {
-        font-size: 14px;
-    }
-
-
-    /* =====================================================
-       SETA
-       ===================================================== */
-
-    .arrow {
-        width: 40px;
-        height: 40px;
-
-        font-size: 0;
-    }
-
-    .arrow::before {
-        width: 9px;
-        height: 9px;
-
-        top: 10px;
-        right: 10px;
-    }
-
-    .arrow::after {
-        width: 16px;
-
-        top: 19px;
-        left: 10px;
-    }
-
-
-    /* =====================================================
-       TRIAGEM
-       ===================================================== */
-
-    .unsure {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        margin-top: 38px;
-    }
-
-
-    /* =====================================================
-       OUTRAS SITUAÇÕES
-       ===================================================== */
-
-    .other-case {
-        margin-top: 38px;
-
-        padding: 26px 20px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-        justify-content: flex-start;
-
-        gap: 14px;
-    }
-
-    .other-case-link {
-        white-space: nowrap;
-    }
-
-
-    /* =====================================================
-       SOBRE
-       ===================================================== */
-
-    .about {
-        padding: 80px 20px;
-
-        display: block;
-    }
-
-    .about-label {
-        margin-bottom: 38px;
-    }
-
-    .about-photo {
-        width: 150px;
-        height: 185px;
-
-        margin-bottom: 32px;
-    }
-
-    .about-content h2 {
-        font-size: 40px;
-
-        margin-bottom: 32px;
-    }
-
-    .about-text p {
-        font-size: 16px;
-    }
-
-
-    /* =====================================================
-       CONTEÚDO
-       ===================================================== */
-
-    .content-section {
-        padding: 80px 20px 88px;
-
-        display: block;
-    }
-
-    .content-section > .eyebrow,
-    .content-section > h2,
-    .content-section > p:not(.eyebrow),
-    .content-section > .social-links {
-        width: 100%;
-        max-width: 760px;
-
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .content-section > .eyebrow {
-        margin-bottom: 38px;
-    }
-
-    .content-section h2 {
-        font-size: 40px;
-
-        margin-bottom: 32px;
-    }
-
-    .content-section > p:not(.eyebrow) {
-        max-width: 680px;
-
-        font-size: 16px;
-
-        margin-bottom: 22px;
-    }
-
-    .content-section > .social-links {
-        margin-top: 32px;
-    }
-
-
-    /* =====================================================
-       REDES
-       ===================================================== */
-
-    .social-links {
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 10px;
-    }
-
-    .social-link {
-        min-height: 44px;
-
-        padding: 0 16px;
-
-        background: var(--white);
-        color: var(--deep);
-    }
-
-    .social-link:hover {
-        background: var(--deep);
-        color: var(--white);
-    }
-
-
-    /* =====================================================
-       ATENDIMENTO PRIORITÁRIO
-       ===================================================== */
-
-    .priority-section {
-        padding: 55px 20px;
-    }
-
-    .priority-content {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 30px;
-    }
-
-    .priority-section h2 {
-        font-size: 40px;
-    }
-
-    .priority-button {
-        width: 100%;
-    }
-
-
-    /* =====================================================
-       TRAJETÓRIA
-       ===================================================== */
-
-    .trajectory-section {
-        padding: 80px 20px;
-
-        display: block;
-    }
-
-    .trajectory-section > .eyebrow {
-        margin-bottom: 38px;
-    }
-
-    .trajectory-section > h2 {
-        font-size: 40px;
-
-        margin-bottom: 32px;
-    }
-
-    .trajectory-section > p:not(.eyebrow) {
-        font-size: 16px;
-
-        margin-bottom: 22px;
-    }
-
-    .trajectory-section .button {
-        display: flex;
-
-        width: fit-content;
-
-        margin: 18px auto 0;
-    }
-
-
-    /* =====================================================
-       PÁGINAS JURÍDICAS
-       ===================================================== */
-
-    .legal-hero {
-        padding: 70px 20px 55px;
-    }
-
-    .legal-hero .eyebrow {
-        margin-bottom: 32px;
-    }
-
-    .legal-hero h1 {
-        font-size: 42px;
-
-        margin-bottom: 24px;
-    }
-
-    .legal-intro {
-        font-size: 16px;
-    }
-
-    .legal-content {
-        padding: 0 20px 80px;
-    }
-
-    .legal-block {
-        padding: 34px 0;
-    }
-
-    .legal-block h2 {
-        font-size: 21px;
-
-        margin-bottom: 17px;
-    }
-
-    .legal-block p {
-        font-size: 15px;
-        line-height: 1.75;
-
-        margin-bottom: 17px;
-    }
-
-    .legal-date {
-        padding-top: 22px;
-    }
-
-
-    /* =====================================================
-       NEWSLETTER
-       ===================================================== */
-
-    .newsletter-section {
-        padding: 75px 20px 85px;
-    }
-
-    .newsletter-content {
-        width: 100%;
-        max-width: 760px;
-
-        margin: 0 auto;
-
-        display: flex;
-        flex-direction: column;
-
-        gap: 42px;
-
-        align-items: stretch;
-    }
-
-    .newsletter-intro {
-        width: 100%;
-        max-width: none;
-    }
-
-    .newsletter-intro .eyebrow {
-        margin-bottom: 28px;
-    }
-
-    .newsletter-intro h2 {
-        width: 100%;
-
-        font-size: 40px;
-
-        line-height: 1.05;
-
-        margin-bottom: 24px;
-    }
-
-    .newsletter-intro p:not(.eyebrow) {
-        width: 100%;
-
-        font-size: 16px;
-        line-height: 1.7;
-    }
-
-    .newsletter-form {
-        width: 100%;
-        max-width: none;
-    }
-
-    .newsletter-field {
-        width: 100%;
-    }
-
-    .newsletter-field input[type="email"] {
-        width: 100%;
-    }
-
-    .newsletter-consent {
-        width: 100%;
-    }
-
-    .consent-label {
-        width: 100%;
-
-        align-items: flex-start;
-
-        gap: 10px;
-    }
-
-    .consent-label span {
-        flex: 1;
-    }
-
-    .consent-note {
-        margin-left: 27px;
-    }
-
-    .newsletter-button {
-        width: 100%;
-    }
-
-
-    /* =====================================================
-       FOOTER
-       ===================================================== */
-
-    .footer {
-        padding: 40px 20px 25px;
-
-        display: grid;
-
-        grid-template-columns: 1fr auto;
-
-        grid-template-rows: auto auto auto;
-
-        column-gap: 25px;
-        row-gap: 25px;
-    }
-
-    .footer-brand {
-        grid-column: 1 / -1;
-        grid-row: 1;
-    }
-
-    .footer-contacts {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .footer-social {
-        grid-column: 2;
-        grid-row: 2;
-
-        justify-self: end;
-    }
-
-    .footer-bottom {
-        grid-column: 1 / -1;
-        grid-row: 3;
-
-        padding-top: 18px;
-
-        display: flex;
-        flex-direction: column;
-
-        align-items: flex-start;
-        justify-content: flex-start;
-
-        gap: 12px;
-    }
-
-    .footer-legal {
-        flex-wrap: wrap;
-
-        gap: 8px 18px;
-
-        margin-top: 10px;
-    }
-
-
-    /* =====================================================
-       CONFIRMAÇÃO
-       ===================================================== */
-
-    .confirmation-page {
-        min-height: auto;
-    }
-
-    .confirmation-content {
-        padding: 80px 20px 95px;
-    }
-
-    .confirmation-content .eyebrow {
-        margin-bottom: 30px;
-    }
-
-    .confirmation-content h1 {
-        font-size: 48px;
-
-        margin-bottom: 26px;
-    }
-
-    .confirmation-text {
-        max-width: 540px;
-
-        font-size: 16px;
-
-        margin-bottom: 32px;
-    }
-}
-
-
-/* =========================================================
    TELAS MUITO PEQUENAS
    ========================================================= */
 
@@ -2371,76 +2391,12 @@ img {
         font-size: 11px;
     }
 
-    .footer {
-        grid-template-columns: 1fr;
-
-        gap: 22px;
-    }
-
-    .footer-brand,
-    .footer-contacts,
-    .footer-social,
-    .footer-bottom {
-        grid-column: 1;
-    }
-
-    .footer-brand {
-        grid-row: 1;
-    }
-
-    .footer-contacts {
-        grid-row: 2;
-    }
-
-    .footer-social {
-        grid-row: 3;
-
-        justify-self: start;
-    }
-
-    .footer-bottom {
-        grid-row: 4;
-
-        gap: 14px;
-    }
-
-    .footer-legal {
-        gap: 12px 18px;
-    }
-
-    .footer-social a {
-        width: 20px;
-        height: 20px;
-    }
-
-    .footer-icon {
-        width: 13px;
-        height: 13px;
-    }
-
-    .legal-hero {
-        padding-top: 55px;
-        padding-bottom: 45px;
-    }
-
-    .legal-hero h1 {
-        font-size: 38px;
-    }
-
-    .legal-block h2 {
-        font-size: 20px;
-    }
-
-    .legal-block p {
-        font-size: 14px;
-    }
-
     .newsletter-section {
-        padding: 70px 20px 80px;
+        padding: 70px 20px;
     }
 
     .newsletter-intro h2 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .newsletter-button {
@@ -2464,9 +2420,28 @@ img {
         padding: 50px 20px;
     }
 
-    .other-case {
-        margin-top: 34px;
+    .priority-button {
+        width: 100%;
 
-        padding: 24px 18px;
+        padding-left: 18px;
+        padding-right: 48px;
+    }
+
+    .other-case {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .other-case-link {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .consent-label {
+        font-size: 13px;
+    }
+
+    .consent-note {
+        font-size: 11px;
     }
 }
