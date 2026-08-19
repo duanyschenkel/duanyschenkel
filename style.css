@@ -2133,3 +2133,169 @@ img {
     }
 }
 
+
+
+/* =========================================================
+   PÁGINA DE CONFIRMAÇÃO
+   ========================================================= */
+
+.confirmation-page {
+    width: 100%;
+
+    min-height: 65vh;
+
+    background: var(--cream);
+    color: var(--deep);
+
+    display: flex;
+    align-items: center;
+}
+
+
+.confirmation-content {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 110px 32px 125px;
+}
+
+
+.confirmation-content .eyebrow {
+    margin-bottom: 24px;
+
+    color: var(--terracotta);
+}
+
+
+.confirmation-content h1 {
+    max-width: 850px;
+
+    margin-bottom: 30px;
+
+    font-size: clamp(52px, 7vw, 88px);
+
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+
+    font-weight: 500;
+}
+
+
+.confirmation-content h1 em {
+    color: var(--terracotta);
+    font-style: normal;
+}
+
+
+.confirmation-text {
+    max-width: 600px;
+
+    margin-bottom: 38px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: rgba(63, 46, 46, 0.75);
+}
+
+
+.confirmation-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--terracotta);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--terracotta);
+
+    padding-bottom: 4px;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.confirmation-link span {
+    transition: transform 0.2s ease;
+}
+
+
+.confirmation-link:hover {
+    color: var(--deep);
+
+    border-bottom-color: var(--deep);
+}
+
+
+.confirmation-link:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   CONFIRMAÇÃO | MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .confirmation-page {
+        min-height: auto;
+    }
+
+
+    .confirmation-content {
+        padding: 80px 20px 95px;
+    }
+
+
+    .confirmation-content .eyebrow {
+        margin-bottom: 30px;
+    }
+
+
+    .confirmation-content h1 {
+        font-size: 48px;
+
+        margin-bottom: 26px;
+    }
+
+
+    .confirmation-text {
+        max-width: 540px;
+
+        font-size: 16px;
+
+        margin-bottom: 32px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .confirmation-content {
+        padding-top: 65px;
+        padding-bottom: 80px;
+    }
+
+
+    .confirmation-content h1 {
+        font-size: 45px;
+    }
+
+
+    .confirmation-text {
+        font-size: 15px;
+    }
+
+}
+
+
