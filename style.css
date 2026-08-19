@@ -410,14 +410,19 @@ img {
     grid-template-columns: 0.35fr 1fr;
 
     gap: 80px;
+
+    background: var(--cream);
+    color: var(--deep);
 }
 
 .about-label {
     padding-top: 5px;
+    color: var(--deep);
 }
 
 .about-content {
     max-width: 760px;
+    color: var(--deep);
 }
 
 .about-photo {
@@ -441,6 +446,7 @@ img {
 
 .about-text {
     max-width: 680px;
+    color: var(--deep);
 }
 
 .about-content h2 {
@@ -454,6 +460,8 @@ img {
     font-weight: 500;
 
     margin-bottom: 38px;
+
+    color: var(--deep);
 }
 
 .about-text p {
@@ -473,8 +481,6 @@ img {
     margin-top: 10px;
 
     color: var(--terracotta);
-
-    border-bottom-color: var(--terracotta);
 }
 
 .about-link:hover {
@@ -506,11 +512,6 @@ img {
     row-gap: 0;
 }
 
-
-/* =========================================================
-   CONTEÚDO | LABEL
-   ========================================================= */
-
 .content-section > .eyebrow {
     grid-column: 1;
     grid-row: 1;
@@ -519,11 +520,6 @@ img {
 
     align-self: start;
 }
-
-
-/* =========================================================
-   CONTEÚDO | ELEMENTOS PRINCIPAIS
-   ========================================================= */
 
 .content-section > h2,
 .content-section > p:not(.eyebrow),
@@ -536,11 +532,6 @@ img {
     margin-left: 0;
     margin-right: 0;
 }
-
-
-/* =========================================================
-   CONTEÚDO | TÍTULO
-   ========================================================= */
 
 .content-section > h2 {
     grid-row: 1;
@@ -555,11 +546,6 @@ img {
     font-weight: 500;
 }
 
-
-/* =========================================================
-   CONTEÚDO | TEXTO
-   ========================================================= */
-
 .content-section > p:not(.eyebrow) {
     margin: 0 0 22px;
 
@@ -570,11 +556,6 @@ img {
 
     color: rgba(63, 46, 46, 0.75);
 }
-
-
-/* =========================================================
-   CONTEÚDO | REDES
-   ========================================================= */
 
 .content-section > .social-links {
     margin-top: 13px;
@@ -758,6 +739,183 @@ img {
     color: rgba(243, 238, 232, 0.85);
 
     font-size: 17px;
+}
+
+
+/* =========================================================
+   ATENDIMENTO PRIORITÁRIO
+   ========================================================= */
+
+.priority-section {
+    width: 100%;
+
+    background: var(--terracotta);
+    color: var(--cream);
+
+    padding: 70px 32px;
+}
+
+.priority-content {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.priority-text {
+    max-width: 680px;
+}
+
+.priority-section .eyebrow {
+    color: var(--cream);
+
+    margin-bottom: 18px;
+}
+
+.priority-section h2 {
+    color: var(--cream);
+
+    margin: 0 0 18px;
+
+    font-size: clamp(36px, 4.7vw, 60px);
+
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+
+    font-weight: 500;
+}
+
+.priority-section p:not(.eyebrow) {
+    color: var(--cream);
+
+    max-width: 650px;
+
+    margin: 0;
+
+    line-height: 1.7;
+}
+
+.priority-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+
+    padding: 15px 22px;
+
+    border: 1px solid var(--cream);
+
+    color: var(--cream);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.priority-button:hover {
+    background: var(--cream);
+    color: var(--terracotta);
+}
+
+.priority-button span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   OUTRAS SITUAÇÕES
+   ========================================================= */
+
+.other-case {
+    width: 100%;
+
+    background: var(--cream);
+    color: var(--deep);
+
+    border-top: 1px solid var(--neutral);
+
+    padding: 55px 32px 75px;
+}
+
+.other-case-inner {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.other-case p {
+    margin: 0;
+
+    color: var(--deep);
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.other-case-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    color: var(--terracotta);
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    border-bottom: 1px solid var(--terracotta);
+
+    padding-bottom: 3px;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.other-case-link span {
+    font-size: 18px;
+    line-height: 1;
+
+    transition: transform 0.2s ease;
+}
+
+.other-case-link:hover {
+    color: var(--deep);
+    border-bottom-color: var(--deep);
+}
+
+.other-case-link:hover span {
+    transform: translateX(4px);
 }
 
 
@@ -1193,6 +1351,153 @@ img {
 
 
     /* =====================================================
+       ATENDIMENTO PRIORITÁRIO
+       ===================================================== */
+
+    .priority-section {
+        padding: 55px 20px;
+    }
+
+    .priority-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
+    .priority-section h2 {
+        font-size: 40px;
+    }
+
+    .priority-button {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       OUTRAS SITUAÇÕES
+       ===================================================== */
+
+    .other-case {
+        padding: 45px 20px 60px;
+    }
+
+    .other-case-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+    .other-case-link {
+        white-space: normal;
+    }
+
+
+    /* =====================================================
+       TRAJETÓRIA
+       ===================================================== */
+
+    .trajectory-section {
+        padding: 80px 20px;
+
+        display: block;
+    }
+
+    .trajectory-section > .eyebrow {
+        margin-bottom: 38px;
+    }
+
+    .trajectory-section > h2 {
+        font-size: 40px;
+
+        margin-bottom: 32px;
+    }
+
+    .trajectory-section > p:not(.eyebrow) {
+        font-size: 16px;
+
+        margin-bottom: 22px;
+    }
+
+    .trajectory-section .button {
+        display: flex;
+        width: fit-content;
+
+        margin: 18px auto 0;
+    }
+
+
+    /* =====================================================
+       PÁGINAS JURÍDICAS
+       ===================================================== */
+
+    .legal-hero {
+        padding: 70px 20px 55px;
+    }
+
+    .legal-hero .eyebrow {
+        margin-bottom: 32px;
+    }
+
+    .legal-hero h1 {
+        font-size: 42px;
+
+        margin-bottom: 24px;
+    }
+
+    .legal-intro {
+        font-size: 16px;
+    }
+
+    .legal-content {
+        padding: 0 20px 80px;
+    }
+
+    .legal-block {
+        padding: 34px 0;
+    }
+
+    .legal-block h2 {
+        font-size: 21px;
+
+        margin-bottom: 17px;
+    }
+
+    .legal-block p {
+        font-size: 15px;
+        line-height: 1.75;
+
+        margin-bottom: 17px;
+    }
+
+    .legal-date {
+        padding-top: 22px;
+    }
+
+
+    /* =====================================================
+       NEWSLETTER
+       ===================================================== */
+
+    .newsletter-section {
+        padding: 80px 6%;
+    }
+
+    .newsletter-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .newsletter-form {
+        max-width: none;
+    }
+
+
+    /* =====================================================
        FOOTER
        ===================================================== */
 
@@ -1248,167 +1553,36 @@ img {
 
         margin-top: 10px;
     }
-}
-
-
-/* =========================================================
-   TELAS MUITO PEQUENAS
-   ========================================================= */
-
-@media (max-width: 420px) {
-
-    /* =====================================================
-       HEADER
-       ===================================================== */
-
-    .header {
-        padding: 16px 20px;
-    }
-
-    .brand-avatar {
-        width: 46px;
-        height: 46px;
-    }
-
-    .brand-text strong {
-        font-size: 11px;
-    }
-
-    .brand-text span {
-        font-size: 7px;
-    }
 
 
     /* =====================================================
-       HERO
+       CONFIRMAÇÃO
        ===================================================== */
 
-    .hero {
-        padding-top: 32px;
-        padding-bottom: 42px;
+    .confirmation-page {
+        min-height: auto;
     }
 
-    .hero h1 {
-        font-size: 49px;
+    .confirmation-content {
+        padding: 80px 20px 95px;
     }
 
-
-    /* =====================================================
-       CARDS
-       ===================================================== */
-
-    .service-card {
-        grid-template-columns: 28px minmax(0, 1fr) 32px;
-
-        gap: 9px;
+    .confirmation-content .eyebrow {
+        margin-bottom: 30px;
     }
 
-    .service-content h3 {
-        font-size: 22px;
+    .confirmation-content h1 {
+        font-size: 48px;
+
+        margin-bottom: 26px;
     }
 
-    .service-content p {
-        font-size: 13px;
-    }
+    .confirmation-text {
+        max-width: 540px;
 
+        font-size: 16px;
 
-    /* =====================================================
-       SETA
-       ===================================================== */
-
-    .arrow {
-        width: 34px;
-        height: 34px;
-    }
-
-    .arrow::before {
-        width: 8px;
-        height: 8px;
-
-        top: 8px;
-        right: 8px;
-    }
-
-    .arrow::after {
-        width: 13px;
-
-        top: 16px;
-        left: 9px;
-    }
-
-
-    /* =====================================================
-       SOBRE
-       ===================================================== */
-
-    .about-photo {
-        width: 135px;
-        height: 170px;
-    }
-
-
-    /* =====================================================
-       REDES
-       ===================================================== */
-
-    .social-link {
-        min-height: 42px;
-
-        padding: 0 13px;
-
-        font-size: 11px;
-    }
-
-
-    /* =====================================================
-       FOOTER
-       ===================================================== */
-
-    .footer {
-        grid-template-columns: 1fr;
-
-        gap: 22px;
-    }
-
-    .footer-brand,
-    .footer-contacts,
-    .footer-social,
-    .footer-bottom {
-        grid-column: 1;
-    }
-
-    .footer-brand {
-        grid-row: 1;
-    }
-
-    .footer-contacts {
-        grid-row: 2;
-    }
-
-    .footer-social {
-        grid-row: 3;
-
-        justify-self: start;
-    }
-
-    .footer-bottom {
-        grid-row: 4;
-
-        gap: 14px;
-    }
-
-    .footer-legal {
-        gap: 12px 18px;
-    }
-
-    .footer-social a {
-        width: 20px;
-        height: 20px;
-    }
-
-    .footer-icon {
-        width: 13px;
-        height: 13px;
+        margin-bottom: 32px;
     }
 }
 
@@ -1466,7 +1640,7 @@ img {
 
 
 /* =========================================================
-   ALVARÁ | HOVER DOS CARDS
+   ALVARÁ | HOVER
    ========================================================= */
 
 .alvara-services .service-card:hover {
@@ -1489,11 +1663,6 @@ img {
     border-color: #3F2E2E !important;
 }
 
-
-/* =========================================================
-   ALVARÁ | CTA
-   ========================================================= */
-
 .alvara-services .unsure {
     color: #3F2E2E;
 }
@@ -1515,11 +1684,6 @@ img {
     color: #9C5A3C;
     border-bottom-color: #9C5A3C;
 }
-
-
-/* =========================================================
-   ALVARÁ | PRIMEIRO CARD
-   ========================================================= */
 
 .alvara-services .service-card:first-child {
     border-top-color: #D8CFC6;
@@ -1550,11 +1714,6 @@ img {
     row-gap: 0;
 }
 
-
-/* =========================================================
-   TRAJETÓRIA | LABEL
-   ========================================================= */
-
 .trajectory-section > .eyebrow {
     grid-column: 1;
     grid-row: 1;
@@ -1564,11 +1723,6 @@ img {
     align-self: start;
 }
 
-
-/* =========================================================
-   TRAJETÓRIA | CONTEÚDO
-   ========================================================= */
-
 .trajectory-section > h2,
 .trajectory-section > p:not(.eyebrow) {
     grid-column: 2;
@@ -1576,11 +1730,6 @@ img {
     width: 100%;
     max-width: 680px;
 }
-
-
-/* =========================================================
-   TRAJETÓRIA | TÍTULO
-   ========================================================= */
 
 .trajectory-section > h2 {
     grid-row: 1;
@@ -1595,11 +1744,6 @@ img {
     font-weight: 500;
 }
 
-
-/* =========================================================
-   TRAJETÓRIA | TEXTO
-   ========================================================= */
-
 .trajectory-section > p:not(.eyebrow) {
     margin: 0 0 22px;
 
@@ -1608,11 +1752,6 @@ img {
 
     color: rgba(63, 46, 46, 0.75);
 }
-
-
-/* =========================================================
-   TRAJETÓRIA | CTA FINAL
-   ========================================================= */
 
 .trajectory-section .button {
     grid-column: 2;
@@ -1624,44 +1763,7 @@ img {
 
 
 /* =========================================================
-   TRAJETÓRIA | MOBILE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    .trajectory-section {
-        padding: 80px 20px;
-
-        display: block;
-    }
-
-    .trajectory-section > .eyebrow {
-        margin-bottom: 38px;
-    }
-
-    .trajectory-section > h2 {
-        font-size: 40px;
-
-        margin-bottom: 32px;
-    }
-
-    .trajectory-section > p:not(.eyebrow) {
-        font-size: 16px;
-
-        margin-bottom: 22px;
-    }
-
-    .trajectory-section .button {
-        display: flex;
-        width: fit-content;
-
-        margin: 18px auto 0;
-    }
-}
-
-
-/* =========================================================
-   PÁGINAS JURÍDICAS | POLÍTICA DE PRIVACIDADE E TERMOS
+   PÁGINAS JURÍDICAS
    ========================================================= */
 
 .legal-page {
@@ -1669,11 +1771,6 @@ img {
     background: var(--cream);
     color: var(--deep);
 }
-
-
-/* =========================================================
-   HERO DA PÁGINA
-   ========================================================= */
 
 .legal-hero {
     max-width: var(--max-width);
@@ -1707,11 +1804,6 @@ img {
 
     color: rgba(63, 46, 46, 0.7);
 }
-
-
-/* =========================================================
-   CONTEÚDO JURÍDICO
-   ========================================================= */
 
 .legal-content {
     max-width: var(--max-width);
@@ -1754,11 +1846,6 @@ img {
     margin-bottom: 0;
 }
 
-
-/* =========================================================
-   DATA
-   ========================================================= */
-
 .legal-date {
     max-width: 760px;
 
@@ -1777,91 +1864,10 @@ img {
     color: rgba(63, 46, 46, 0.5);
 }
 
-
-/* =========================================================
-   LINKS DENTRO DO TEXTO JURÍDICO
-   ========================================================= */
-
 .legal-content a {
     color: var(--terracotta);
 
     border-bottom: 1px solid var(--terracotta);
-}
-
-
-/* =========================================================
-   PÁGINAS JURÍDICAS | MOBILE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    .legal-hero {
-        padding: 70px 20px 55px;
-    }
-
-    .legal-hero .eyebrow {
-        margin-bottom: 32px;
-    }
-
-    .legal-hero h1 {
-        font-size: 42px;
-
-        margin-bottom: 24px;
-    }
-
-    .legal-intro {
-        font-size: 16px;
-    }
-
-    .legal-content {
-        padding: 0 20px 80px;
-    }
-
-    .legal-block {
-        padding: 34px 0;
-    }
-
-    .legal-block h2 {
-        font-size: 21px;
-
-        margin-bottom: 17px;
-    }
-
-    .legal-block p {
-        font-size: 15px;
-        line-height: 1.75;
-
-        margin-bottom: 17px;
-    }
-
-    .legal-date {
-        padding-top: 22px;
-    }
-}
-
-
-/* =========================================================
-   PÁGINAS JURÍDICAS | TELAS MUITO PEQUENAS
-   ========================================================= */
-
-@media (max-width: 420px) {
-
-    .legal-hero {
-        padding-top: 55px;
-        padding-bottom: 45px;
-    }
-
-    .legal-hero h1 {
-        font-size: 38px;
-    }
-
-    .legal-block h2 {
-        font-size: 20px;
-    }
-
-    .legal-block p {
-        font-size: 14px;
-    }
 }
 
 
@@ -1914,11 +1920,6 @@ img {
     line-height: 1.7;
 }
 
-
-/* =========================================================
-   NEWSLETTER | FORMULÁRIO
-   ========================================================= */
-
 .newsletter-form {
     width: 100%;
     max-width: 500px;
@@ -1926,11 +1927,6 @@ img {
     display: flex;
     flex-direction: column;
 }
-
-
-/* =========================================================
-   NEWSLETTER | CAMPO DE E-MAIL
-   ========================================================= */
 
 .newsletter-field {
     width: 100%;
@@ -1956,8 +1952,6 @@ img {
 
     width: 100%;
     height: 52px;
-
-    box-sizing: border-box;
 
     padding: 0 16px;
 
@@ -1987,11 +1981,6 @@ img {
 
     box-shadow: 0 0 0 1px #9C5A3C;
 }
-
-
-/* =========================================================
-   NEWSLETTER | CONSENTIMENTO
-   ========================================================= */
 
 .newsletter-consent {
     width: 100%;
@@ -2046,11 +2035,6 @@ img {
     text-decoration: underline;
 }
 
-
-/* =========================================================
-   NEWSLETTER | BOTÃO
-   ========================================================= */
-
 .newsletter-button {
     display: inline-flex;
 
@@ -2085,11 +2069,6 @@ img {
     background: #9C5A3C;
 }
 
-
-/* =========================================================
-   NEWSLETTER | CAMPO DE SEGURANÇA BREVO
-   ========================================================= */
-
 .newsletter-form .input--hidden,
 .newsletter-form input[name="email_address_check"] {
     position: absolute !important;
@@ -2115,44 +2094,6 @@ img {
 
 
 /* =========================================================
-   NEWSLETTER | RESPONSIVO
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    .newsletter-section {
-        padding: 80px 6%;
-    }
-
-    .newsletter-content {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .newsletter-form {
-        max-width: none;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .newsletter-section {
-        padding: 70px 6%;
-    }
-
-    .newsletter-intro h2 {
-        font-size: 28px;
-    }
-
-    .newsletter-button {
-        width: 100%;
-    }
-}
-
-
-/* =========================================================
    PÁGINA DE CONFIRMAÇÃO
    ========================================================= */
 
@@ -2168,7 +2109,6 @@ img {
     align-items: center;
 }
 
-
 .confirmation-content {
     width: 100%;
     max-width: var(--max-width);
@@ -2178,13 +2118,11 @@ img {
     padding: 110px 32px 125px;
 }
 
-
 .confirmation-content .eyebrow {
     margin-bottom: 24px;
 
     color: var(--terracotta);
 }
-
 
 .confirmation-content h1 {
     max-width: 850px;
@@ -2199,12 +2137,10 @@ img {
     font-weight: 500;
 }
 
-
 .confirmation-content h1 em {
     color: var(--terracotta);
     font-style: normal;
 }
-
 
 .confirmation-text {
     max-width: 600px;
@@ -2216,7 +2152,6 @@ img {
 
     color: rgba(63, 46, 46, 0.75);
 }
-
 
 .confirmation-link {
     display: inline-flex;
@@ -2239,11 +2174,9 @@ img {
         border-color 0.2s ease;
 }
 
-
 .confirmation-link span {
     transition: transform 0.2s ease;
 }
-
 
 .confirmation-link:hover {
     color: var(--deep);
@@ -2251,503 +2184,180 @@ img {
     border-bottom-color: var(--deep);
 }
 
-
 .confirmation-link:hover span {
     transform: translateX(4px);
 }
 
 
 /* =========================================================
-   CONFIRMAÇÃO | MOBILE
+   TELAS MUITO PEQUENAS
    ========================================================= */
 
-@media (max-width: 800px) {
-
-    .confirmation-page {
-        min-height: auto;
-    }
-
-
-    .confirmation-content {
-        padding: 80px 20px 95px;
-    }
-
-
-    .confirmation-content .eyebrow {
-        margin-bottom: 30px;
-    }
-
-
-    .confirmation-content h1 {
-        font-size: 48px;
-
-        margin-bottom: 26px;
-    }
-
-
-    .confirmation-text {
-        max-width: 540px;
-
-        font-size: 16px;
-
-        margin-bottom: 32px;
-    }
-
-}
-
-
 @media (max-width: 420px) {
+
+    .header {
+        padding: 16px 20px;
+    }
+
+    .brand-avatar {
+        width: 46px;
+        height: 46px;
+    }
+
+    .brand-text strong {
+        font-size: 11px;
+    }
+
+    .brand-text span {
+        font-size: 7px;
+    }
+
+    .hero {
+        padding-top: 32px;
+        padding-bottom: 42px;
+    }
+
+    .hero h1 {
+        font-size: 49px;
+    }
+
+    .service-card {
+        grid-template-columns: 28px minmax(0, 1fr) 32px;
+
+        gap: 9px;
+    }
+
+    .service-content h3 {
+        font-size: 22px;
+    }
+
+    .service-content p {
+        font-size: 13px;
+    }
+
+    .arrow {
+        width: 34px;
+        height: 34px;
+    }
+
+    .arrow::before {
+        width: 8px;
+        height: 8px;
+
+        top: 8px;
+        right: 8px;
+    }
+
+    .arrow::after {
+        width: 13px;
+
+        top: 16px;
+        left: 9px;
+    }
+
+    .about-photo {
+        width: 135px;
+        height: 170px;
+    }
+
+    .social-link {
+        min-height: 42px;
+
+        padding: 0 13px;
+
+        font-size: 11px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .footer-brand,
+    .footer-contacts,
+    .footer-social,
+    .footer-bottom {
+        grid-column: 1;
+    }
+
+    .footer-brand {
+        grid-row: 1;
+    }
+
+    .footer-contacts {
+        grid-row: 2;
+    }
+
+    .footer-social {
+        grid-row: 3;
+
+        justify-self: start;
+    }
+
+    .footer-bottom {
+        grid-row: 4;
+
+        gap: 14px;
+    }
+
+    .footer-legal {
+        gap: 12px 18px;
+    }
+
+    .footer-social a {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-icon {
+        width: 13px;
+        height: 13px;
+    }
+
+    .legal-hero {
+        padding-top: 55px;
+        padding-bottom: 45px;
+    }
+
+    .legal-hero h1 {
+        font-size: 38px;
+    }
+
+    .legal-block h2 {
+        font-size: 20px;
+    }
+
+    .legal-block p {
+        font-size: 14px;
+    }
+
+    .newsletter-section {
+        padding: 70px 6%;
+    }
+
+    .newsletter-intro h2 {
+        font-size: 28px;
+    }
+
+    .newsletter-button {
+        width: 100%;
+    }
 
     .confirmation-content {
         padding-top: 65px;
         padding-bottom: 80px;
     }
 
-
     .confirmation-content h1 {
         font-size: 45px;
     }
-
 
     .confirmation-text {
         font-size: 15px;
     }
 
-}
-
-
-/* =====================================================
-   ATENDIMENTO PRIORITÁRIO
-====================================================== */
-
-.priority-section {
-
-    background: #9C5A3C;
-
-    margin: 0;
-
-    padding: 70px 6vw;
-
-}
-
-
-.priority-content {
-
-    max-width: 1180px;
-
-    margin: 0 auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 50px;
-
-}
-
-
-.priority-text {
-
-    max-width: 680px;
-
-}
-
-
-.priority-section .eyebrow {
-
-    color: #F3EEE8;
-
-    margin-bottom: 18px;
-
-}
-
-
-.priority-section h2 {
-
-    color: #F3EEE8;
-
-    margin: 0 0 18px;
-
-}
-
-
-.priority-section p:not(.eyebrow) {
-
-    color: #F3EEE8;
-
-    max-width: 650px;
-
-    margin: 0;
-
-    line-height: 1.7;
-
-}
-
-
-.priority-button {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 12px;
-
-    flex-shrink: 0;
-
-    padding: 15px 22px;
-
-    border: 1px solid #F3EEE8;
-
-    color: #F3EEE8;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    transition:
-        background .2s ease,
-        color .2s ease;
-
-}
-
-
-.priority-button:hover {
-
-    background: #F3EEE8;
-
-    color: #9C5A3C;
-
-}
-
-
-.priority-button span {
-
-    font-size: 18px;
-
-    line-height: 1;
-
-}
-
-
-/* =====================================================
-   OUTRAS SITUAÇÕES
-====================================================== */
-
-.other-case {
-
-    max-width: 1180px;
-
-    margin: 0 auto;
-
-    padding: 55px 6vw 75px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 30px;
-
-    border-top: 1px solid #D8CFC6;
-
-}
-
-
-.other-case p {
-
-    margin: 0;
-
-    color: #3F2E2E;
-
-    font-size: 16px;
-
-}
-
-
-.other-case-link {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    color: #3F2E2E;
-
-    text-decoration: none;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
-    white-space: nowrap;
-
-}
-
-
-.other-case-link span {
-
-    font-size: 18px;
-
-    transition: transform .2s ease;
-
-}
-
-
-.other-case-link:hover span {
-
-    transform: translateX(4px);
-
-}
-
-
-/* =====================================================
-   RESPONSIVO
-====================================================== */
-
-@media (max-width: 760px) {
-
     .priority-section {
-
-        padding: 50px 24px;
-
-    }
-
-
-    .priority-content {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 30px;
-
-    }
-
-
-    .priority-button {
-
-        width: 100%;
-
-    }
-
-
-    .other-case {
-
-        padding: 45px 24px 60px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 18px;
-
-    }
-
-}
-
-/* =====================================================
-   CORREÇÕES FINAIS | SOBRE + OUTRAS SITUAÇÕES
-====================================================== */
-
-
-/* =====================================================
-   SOBRE A ADVOGADA
-====================================================== */
-
-.about {
-    background: var(--cream);
-    color: var(--deep);
-}
-
-.about-label {
-    color: var(--deep);
-}
-
-.about-content {
-    color: var(--deep);
-}
-
-.about-content h2 {
-    color: var(--deep);
-}
-
-.about-text {
-    color: var(--deep);
-}
-
-.about-text p {
-    color: rgba(63, 46, 46, 0.75);
-}
-
-.about-link {
-    color: var(--terracotta);
-}
-
-.about-link:hover {
-    color: var(--deep);
-}
-
-
-/* =====================================================
-   ATENDIMENTO PRIORITÁRIO
-====================================================== */
-
-.priority-section {
-    background: var(--terracotta);
-    color: var(--cream);
-}
-
-.priority-section .eyebrow {
-    color: var(--cream);
-}
-
-.priority-section h2 {
-    color: var(--cream);
-}
-
-.priority-section p:not(.eyebrow) {
-    color: var(--cream);
-}
-
-.priority-button {
-    color: var(--cream);
-    border-color: var(--cream);
-}
-
-.priority-button:hover {
-    background: var(--cream);
-    color: var(--terracotta);
-}
-
-
-/* =====================================================
-   OUTRAS SITUAÇÕES
-====================================================== */
-
-.other-case {
-    width: 100%;
-    max-width: 1180px;
-
-    margin: 0 auto;
-    padding: 55px 32px 75px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
-
-    background: var(--cream);
-    color: var(--deep);
-
-    border-top: 1px solid var(--neutral);
-}
-
-.other-case p {
-    margin: 0;
-
-    color: var(--deep);
-
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.other-case-link {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
-
-    color: var(--terracotta);
-
-    text-decoration: none;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    white-space: nowrap;
-
-    border-bottom: 1px solid var(--terracotta);
-
-    padding-bottom: 3px;
-
-    transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.other-case-link span {
-    font-size: 18px;
-    line-height: 1;
-
-    transition: transform 0.2s ease;
-}
-
-.other-case-link:hover {
-    color: var(--deep);
-    border-bottom-color: var(--deep);
-}
-
-.other-case-link:hover span {
-    transform: translateX(4px);
-}
-
-
-/* =====================================================
-   MOBILE | SOBRE
-====================================================== */
-
-@media (max-width: 800px) {
-
-    .about {
-        background: var(--cream);
-        color: var(--deep);
-    }
-
-    .about-content h2 {
-        color: var(--deep);
-    }
-
-    .about-text p {
-        color: rgba(63, 46, 46, 0.75);
-    }
-}
-
-
-/* =====================================================
-   MOBILE | OUTRAS SITUAÇÕES
-====================================================== */
-
-@media (max-width: 760px) {
-
-    .other-case {
-        padding: 45px 24px 60px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 18px;
-
-        background: var(--cream);
-    }
-
-    .other-case p {
-        color: var(--deep);
-    }
-
-    .other-case-link {
-        white-space: normal;
-
-        color: var(--terracotta);
-        border-bottom-color: var(--terracotta);
+        padding: 50px 20px;
     }
 }
