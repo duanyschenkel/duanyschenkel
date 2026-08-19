@@ -26,13 +26,20 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
+    width: 100%;
+    max-width: 100%;
+
     background: var(--cream);
     color: var(--deep);
+
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+
     overflow-x: hidden;
 }
 
@@ -43,7 +50,22 @@ a {
 
 img {
     max-width: 100%;
+    height: auto;
     display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3 {
+    overflow-wrap: break-word;
 }
 
 
@@ -70,8 +92,11 @@ img {
 }
 
 .brand {
+    min-width: 0;
+
     display: flex;
     align-items: center;
+
     gap: 12px;
 }
 
@@ -94,6 +119,8 @@ img {
 }
 
 .brand-text {
+    min-width: 0;
+
     display: flex;
     flex-direction: column;
     gap: 1px;
@@ -140,9 +167,11 @@ img {
    ========================================================= */
 
 .hero {
+    width: 100%;
+    max-width: var(--max-width);
+
     min-height: 72vh;
 
-    max-width: var(--max-width);
     margin: 0 auto;
 
     padding: 100px 32px 105px;
@@ -152,6 +181,7 @@ img {
 }
 
 .hero-content {
+    width: 100%;
     max-width: 760px;
 }
 
@@ -183,6 +213,7 @@ img {
 }
 
 .hero-text {
+    width: 100%;
     max-width: 550px;
 
     font-size: 18px;
@@ -197,6 +228,8 @@ img {
    ========================================================= */
 
 .services {
+    width: 100%;
+
     background: var(--deep);
     color: var(--cream);
 
@@ -204,7 +237,9 @@ img {
 }
 
 .section-intro {
+    width: 100%;
     max-width: var(--max-width);
+
     margin: 0 auto 50px;
 }
 
@@ -213,6 +248,7 @@ img {
 }
 
 .section-intro h2 {
+    width: 100%;
     max-width: 700px;
 
     font-size: clamp(36px, 4.7vw, 60px);
@@ -229,13 +265,18 @@ img {
    ========================================================= */
 
 .service-list {
+    width: 100%;
     max-width: var(--max-width);
+
     margin: 0 auto;
 
     border-top: 1px solid rgba(243, 238, 232, 0.2);
 }
 
 .service-card {
+    width: 100%;
+    min-width: 0;
+
     display: grid;
 
     grid-template-columns: 55px minmax(0, 1fr) 50px;
@@ -258,6 +299,8 @@ img {
 }
 
 .service-number {
+    min-width: 0;
+
     font-size: 12px;
 
     color: var(--soft-terracotta);
@@ -265,7 +308,12 @@ img {
     letter-spacing: 0.08em;
 }
 
+.service-content {
+    min-width: 0;
+}
+
 .service-content h3 {
+    width: 100%;
     max-width: 650px;
 
     font-size: clamp(23px, 2.8vw, 36px);
@@ -279,6 +327,7 @@ img {
 }
 
 .service-content p {
+    width: 100%;
     max-width: 620px;
 
     color: rgba(243, 238, 232, 0.65);
@@ -294,6 +343,8 @@ img {
 .arrow {
     width: 42px;
     height: 42px;
+
+    flex-shrink: 0;
 
     border: 1px solid rgba(243, 238, 232, 0.3);
     border-radius: 50%;
@@ -361,7 +412,9 @@ img {
    ========================================================= */
 
 .unsure {
+    width: 100%;
     max-width: var(--max-width);
+
     margin: 42px auto 0;
 
     display: flex;
@@ -374,11 +427,15 @@ img {
 }
 
 .unsure p {
+    min-width: 0;
+
     color: rgba(243, 238, 232, 0.6);
     font-size: 14px;
 }
 
 .text-link {
+    flex-shrink: 0;
+
     color: var(--cream);
 
     font-size: 14px;
@@ -397,18 +454,31 @@ img {
 
 
 /* =========================================================
-   SOBRE
+   SOBRE A ADVOGADA
    ========================================================= */
 
 .about {
-    max-width: var(--max-width);
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
 
-    padding: 110px 32px;
+    margin: 0;
+
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    padding-left: max(
+        32px,
+        calc((100% - var(--max-width)) / 2 + 32px)
+    );
+
+    padding-right: max(
+        32px,
+        calc((100% - var(--max-width)) / 2 + 32px)
+    );
 
     display: grid;
 
-    grid-template-columns: 0.35fr 1fr;
+    grid-template-columns: 0.35fr minmax(0, 1fr);
 
     gap: 80px;
 
@@ -418,11 +488,16 @@ img {
 
 .about-label {
     padding-top: 5px;
+
     color: var(--deep);
 }
 
 .about-content {
+    width: 100%;
     max-width: 760px;
+
+    min-width: 0;
+
     color: var(--deep);
 }
 
@@ -446,11 +521,14 @@ img {
 }
 
 .about-text {
+    width: 100%;
     max-width: 680px;
+
     color: var(--deep);
 }
 
 .about-content h2 {
+    width: 100%;
     max-width: 760px;
 
     font-size: clamp(38px, 5vw, 62px);
@@ -466,6 +544,7 @@ img {
 }
 
 .about-text p {
+    width: 100%;
     max-width: 680px;
 
     margin-bottom: 22px;
@@ -494,20 +573,27 @@ img {
    ========================================================= */
 
 .content-section {
+    width: 100%;
+
     background: var(--neutral);
     color: var(--deep);
-
-    width: 100%;
 
     padding-top: 110px;
     padding-bottom: 110px;
 
-    padding-left: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
-    padding-right: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
+    padding-left: max(
+        32px,
+        calc((100% - var(--max-width)) / 2 + 32px)
+    );
+
+    padding-right: max(
+        32px,
+        calc((100% - var(--max-width)) / 2 + 32px)
+    );
 
     display: grid;
 
-    grid-template-columns: 0.35fr 1fr;
+    grid-template-columns: 0.35fr minmax(0, 1fr);
 
     column-gap: 80px;
     row-gap: 0;
@@ -568,6 +654,8 @@ img {
    ========================================================= */
 
 .social-links {
+    width: 100%;
+
     display: flex;
 
     justify-content: center;
@@ -576,8 +664,6 @@ img {
     flex-wrap: wrap;
 
     gap: 12px;
-
-    width: 100%;
 }
 
 .social-link {
@@ -706,6 +792,8 @@ img {
    ========================================================= */
 
 .contact {
+    width: 100%;
+
     background: var(--terracotta);
     color: var(--cream);
 
@@ -720,6 +808,7 @@ img {
 }
 
 .contact h2 {
+    width: 100%;
     max-width: 750px;
 
     margin: 0 auto 25px;
@@ -733,6 +822,7 @@ img {
 }
 
 .contact p:not(.eyebrow) {
+    width: 100%;
     max-width: 580px;
 
     margin: 0 auto 40px;
@@ -771,7 +861,10 @@ img {
 }
 
 .priority-text {
+    width: 100%;
     max-width: 680px;
+
+    min-width: 0;
 }
 
 .priority-section .eyebrow {
@@ -796,6 +889,7 @@ img {
 .priority-section p:not(.eyebrow) {
     color: var(--cream);
 
+    width: 100%;
     max-width: 650px;
 
     margin: 0;
@@ -893,6 +987,8 @@ img {
 }
 
 .other-case p {
+    min-width: 0;
+
     margin: 0;
 
     color: rgba(243, 238, 232, 0.6);
@@ -945,10 +1041,10 @@ img {
    ========================================================= */
 
 .footer {
+    width: 100%;
+
     background: var(--deep);
     color: var(--cream);
-
-    width: 100%;
 
     padding: 50px max(32px, calc((100% - var(--max-width)) / 2));
 
@@ -1143,12 +1239,8 @@ img {
         padding-right: 32px;
     }
 
-    .content-section {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-
-    .other-case {
+    .content-section,
+    .about {
         padding-left: 32px;
         padding-right: 32px;
     }
@@ -1162,15 +1254,35 @@ img {
 @media (max-width: 800px) {
 
     /* =====================================================
+       BASE
+       ===================================================== */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
        HEADER
        ===================================================== */
 
     .header {
+        width: 100%;
+
         padding: 18px 20px;
+
+        min-width: 0;
     }
 
     .nav {
         display: none;
+    }
+
+    .brand {
+        max-width: 100%;
     }
 
 
@@ -1179,18 +1291,31 @@ img {
        ===================================================== */
 
     .hero {
+        width: 100%;
+        max-width: none;
+
         min-height: auto;
 
         padding: 48px 20px 58px;
     }
 
+    .hero-content {
+        width: 100%;
+        max-width: none;
+    }
+
     .hero h1 {
+        width: 100%;
+
         font-size: clamp(48px, 14vw, 72px);
 
         margin-bottom: 24px;
     }
 
     .hero-text {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 16px;
     }
 
@@ -1200,14 +1325,22 @@ img {
        ===================================================== */
 
     .services {
+        width: 100%;
+
         padding: 60px 20px 70px;
     }
 
     .section-intro {
+        width: 100%;
+        max-width: none;
+
         margin-bottom: 40px;
     }
 
     .section-intro h2 {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 40px;
     }
 
@@ -1216,20 +1349,46 @@ img {
        CARDS
        ===================================================== */
 
+    .service-list {
+        width: 100%;
+        max-width: none;
+    }
+
     .service-card {
-        grid-template-columns: 38px minmax(0, 1fr) 38px;
+        width: 100%;
+        min-width: 0;
+
+        grid-template-columns: 30px minmax(0, 1fr) 38px;
 
         gap: 12px;
 
         padding: 27px 0;
     }
 
+    .service-number {
+        font-size: 11px;
+    }
+
+    .service-content {
+        min-width: 0;
+    }
+
     .service-content h3 {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 24px;
+
+        line-height: 1.18;
     }
 
     .service-content p {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 14px;
+
+        line-height: 1.65;
     }
 
 
@@ -1238,8 +1397,8 @@ img {
        ===================================================== */
 
     .arrow {
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
 
         font-size: 0;
     }
@@ -1248,15 +1407,15 @@ img {
         width: 9px;
         height: 9px;
 
-        top: 10px;
-        right: 10px;
+        top: 9px;
+        right: 9px;
     }
 
     .arrow::after {
-        width: 16px;
+        width: 15px;
 
-        top: 19px;
-        left: 10px;
+        top: 18px;
+        left: 9px;
     }
 
 
@@ -1265,6 +1424,9 @@ img {
        ===================================================== */
 
     .unsure {
+        width: 100%;
+        max-width: none;
+
         display: flex;
 
         flex-direction: column;
@@ -1274,14 +1436,19 @@ img {
 
         gap: 10px;
 
-        width: 100%;
-
         margin: 38px 0 0;
 
         padding: 0;
     }
 
-    .unsure p,
+    .unsure p {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
     .unsure .text-link {
         max-width: 100%;
     }
@@ -1292,6 +1459,9 @@ img {
        ===================================================== */
 
     .other-case {
+        width: 100%;
+        max-width: none;
+
         display: flex;
 
         flex-direction: column;
@@ -1301,15 +1471,18 @@ img {
 
         gap: 12px;
 
-        width: 100%;
-        max-width: none;
-
         margin: 0;
 
-        padding: 38px 20px 0;
+        /*
+         * IMPORTANTE:
+         * .services já possui padding lateral de 20px.
+         * Não repetir padding aqui.
+         */
+        padding: 38px 0 0;
     }
 
     .other-case p {
+        width: 100%;
         max-width: 100%;
 
         font-size: 14px;
@@ -1320,21 +1493,42 @@ img {
         max-width: 100%;
 
         white-space: normal;
+
+        overflow-wrap: anywhere;
     }
 
 
     /* =====================================================
-       SOBRE
+       SOBRE A ADVOGADA
        ===================================================== */
 
     .about {
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+
         padding: 80px 20px;
 
         display: block;
+
+        background: var(--cream);
+        color: var(--deep);
     }
 
     .about-label {
+        width: 100%;
+
         margin-bottom: 38px;
+
+        padding-top: 0;
+    }
+
+    .about-content {
+        width: 100%;
+        max-width: none;
+
+        min-width: 0;
     }
 
     .about-photo {
@@ -1345,13 +1539,27 @@ img {
     }
 
     .about-content h2 {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 40px;
+
+        line-height: 1.05;
 
         margin-bottom: 32px;
     }
 
+    .about-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .about-text p {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 16px;
+        line-height: 1.75;
     }
 
 
@@ -1360,6 +1568,8 @@ img {
        ===================================================== */
 
     .content-section {
+        width: 100%;
+
         padding: 80px 20px 88px;
 
         display: block;
@@ -1370,7 +1580,7 @@ img {
     .content-section > p:not(.eyebrow),
     .content-section > .social-links {
         width: 100%;
-        max-width: 760px;
+        max-width: 100%;
 
         margin-left: 0;
         margin-right: 0;
@@ -1381,13 +1591,17 @@ img {
     }
 
     .content-section h2 {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 40px;
 
         margin-bottom: 32px;
     }
 
     .content-section > p:not(.eyebrow) {
-        max-width: 680px;
+        width: 100%;
+        max-width: 100%;
 
         font-size: 16px;
 
@@ -1404,6 +1618,8 @@ img {
        ===================================================== */
 
     .social-links {
+        width: 100%;
+
         justify-content: center;
 
         flex-wrap: wrap;
@@ -1413,6 +1629,8 @@ img {
 
     .social-link {
         min-height: 44px;
+
+        max-width: 100%;
 
         padding: 0 16px;
 
@@ -1431,10 +1649,15 @@ img {
        ===================================================== */
 
     .priority-section {
+        width: 100%;
+
         padding: 55px 20px;
     }
 
     .priority-content {
+        width: 100%;
+        max-width: none;
+
         display: flex;
 
         flex-direction: column;
@@ -1448,18 +1671,25 @@ img {
     .priority-text {
         width: 100%;
         max-width: none;
+
+        min-width: 0;
     }
 
     .priority-section h2 {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 40px;
     }
 
     .priority-section p:not(.eyebrow) {
+        width: 100%;
         max-width: none;
     }
 
     .priority-button {
         width: 100%;
+        max-width: 100%;
 
         justify-content: flex-start;
     }
@@ -1470,6 +1700,8 @@ img {
        ===================================================== */
 
     .trajectory-section {
+        width: 100%;
+
         padding: 80px 20px;
 
         display: block;
@@ -1480,12 +1712,18 @@ img {
     }
 
     .trajectory-section > h2 {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 40px;
 
         margin-bottom: 32px;
     }
 
     .trajectory-section > p:not(.eyebrow) {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 16px;
 
         margin-bottom: 22px;
@@ -1493,7 +1731,9 @@ img {
 
     .trajectory-section .button {
         display: flex;
+
         width: fit-content;
+        max-width: 100%;
 
         margin: 18px auto 0;
     }
@@ -1528,10 +1768,14 @@ img {
     }
 
     .newsletter-intro h2 {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 40px;
     }
 
     .newsletter-intro p:not(.eyebrow) {
+        width: 100%;
         max-width: 100%;
     }
 
@@ -1546,6 +1790,7 @@ img {
 
     .newsletter-field input[type="email"] {
         width: 100%;
+        max-width: 100%;
     }
 
     .newsletter-consent {
@@ -1554,14 +1799,17 @@ img {
 
     .consent-label {
         width: 100%;
+        max-width: 100%;
     }
 
     .consent-note {
+        width: auto;
         max-width: calc(100% - 27px);
     }
 
     .newsletter-button {
         width: 100%;
+        max-width: 100%;
     }
 
 
@@ -1570,6 +1818,8 @@ img {
        ===================================================== */
 
     .legal-hero {
+        width: 100%;
+
         padding: 70px 20px 55px;
     }
 
@@ -1578,30 +1828,46 @@ img {
     }
 
     .legal-hero h1 {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 42px;
 
         margin-bottom: 24px;
     }
 
     .legal-intro {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 16px;
     }
 
     .legal-content {
+        width: 100%;
+
         padding: 0 20px 80px;
     }
 
     .legal-block {
+        width: 100%;
+        max-width: 760px;
+
         padding: 34px 0;
     }
 
     .legal-block h2 {
+        width: 100%;
+
         font-size: 21px;
 
         margin-bottom: 17px;
     }
 
     .legal-block p {
+        width: 100%;
+        max-width: 700px;
+
         font-size: 15px;
         line-height: 1.75;
 
@@ -1609,6 +1875,9 @@ img {
     }
 
     .legal-date {
+        width: 100%;
+        max-width: 760px;
+
         padding-top: 22px;
     }
 
@@ -1618,11 +1887,13 @@ img {
        ===================================================== */
 
     .footer {
+        width: 100%;
+
         padding: 40px 20px 25px;
 
         display: grid;
 
-        grid-template-columns: 1fr auto;
+        grid-template-columns: minmax(0, 1fr) auto;
 
         grid-template-rows: auto auto auto;
 
@@ -1638,6 +1909,8 @@ img {
     .footer-contacts {
         grid-column: 1;
         grid-row: 2;
+
+        min-width: 0;
     }
 
     .footer-social {
@@ -1677,10 +1950,14 @@ img {
        ===================================================== */
 
     .confirmation-page {
+        width: 100%;
+
         min-height: auto;
     }
 
     .confirmation-content {
+        width: 100%;
+
         padding: 80px 20px 95px;
     }
 
@@ -1689,12 +1966,16 @@ img {
     }
 
     .confirmation-content h1 {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 48px;
 
         margin-bottom: 26px;
     }
 
     .confirmation-text {
+        width: 100%;
         max-width: 540px;
 
         font-size: 16px;
@@ -1709,6 +1990,8 @@ img {
    ========================================================= */
 
 .alvara-services {
+    width: 100%;
+
     background: #F3EEE8;
     color: #3F2E2E;
 }
@@ -1733,6 +2016,7 @@ img {
 .alvara-services .service-card {
     background: #F3EEE8;
     color: #3F2E2E;
+
     border-color: #D8CFC6;
 
     transition: background-color 0.25s ease;
@@ -1790,6 +2074,7 @@ img {
 
 .alvara-services .text-link {
     color: #3F2E2E;
+
     border-bottom: 1px solid #9C5A3C;
 
     transition:
@@ -1799,6 +2084,7 @@ img {
 
 .alvara-services .text-link:hover {
     color: #9C5A3C;
+
     border-bottom-color: #9C5A3C;
 }
 
@@ -1812,20 +2098,27 @@ img {
    ========================================================= */
 
 .trajectory-section {
+    width: 100%;
+
     background: var(--neutral);
     color: var(--deep);
-
-    width: 100%;
 
     padding-top: 110px;
     padding-bottom: 110px;
 
-    padding-left: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
-    padding-right: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
+    padding-left: max(
+        32px,
+        calc((100% - var(--max-width)) / 2 + 32px)
+    );
+
+    padding-right: max(
+        32px,
+        calc((100% - var(--max-width)) / 2 + 32px)
+    );
 
     display: grid;
 
-    grid-template-columns: 0.35fr 1fr;
+    grid-template-columns: 0.35fr minmax(0, 1fr);
 
     column-gap: 80px;
     row-gap: 0;
@@ -1885,12 +2178,15 @@ img {
 
 .legal-page {
     width: 100%;
+
     background: var(--cream);
     color: var(--deep);
 }
 
 .legal-hero {
+    width: 100%;
     max-width: var(--max-width);
+
     margin: 0 auto;
 
     padding: 95px 32px 75px;
@@ -1901,6 +2197,7 @@ img {
 }
 
 .legal-hero h1 {
+    width: 100%;
     max-width: 850px;
 
     margin-bottom: 28px;
@@ -1914,6 +2211,7 @@ img {
 }
 
 .legal-intro {
+    width: 100%;
     max-width: 650px;
 
     font-size: 18px;
@@ -1923,13 +2221,16 @@ img {
 }
 
 .legal-content {
+    width: 100%;
     max-width: var(--max-width);
+
     margin: 0 auto;
 
     padding: 0 32px 110px;
 }
 
 .legal-block {
+    width: 100%;
     max-width: 760px;
 
     padding: 42px 0;
@@ -1949,6 +2250,7 @@ img {
 }
 
 .legal-block p {
+    width: 100%;
     max-width: 700px;
 
     margin-bottom: 18px;
@@ -1964,6 +2266,7 @@ img {
 }
 
 .legal-date {
+    width: 100%;
     max-width: 760px;
 
     padding-top: 28px;
@@ -2248,6 +2551,7 @@ img {
 }
 
 .confirmation-content h1 {
+    width: 100%;
     max-width: 850px;
 
     margin-bottom: 30px;
@@ -2266,6 +2570,7 @@ img {
 }
 
 .confirmation-text {
+    width: 100%;
     max-width: 600px;
 
     margin-bottom: 38px;
@@ -2345,9 +2650,9 @@ img {
     }
 
     .service-card {
-        grid-template-columns: 28px minmax(0, 1fr) 32px;
+        grid-template-columns: 27px minmax(0, 1fr) 34px;
 
-        gap: 9px;
+        gap: 8px;
     }
 
     .service-content h3 {
@@ -2376,6 +2681,11 @@ img {
 
         top: 16px;
         left: 9px;
+    }
+
+    .about {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .about-photo {
@@ -2428,8 +2738,12 @@ img {
     }
 
     .other-case {
-        padding-left: 20px;
-        padding-right: 20px;
+        /*
+         * Continua sem padding lateral próprio.
+         * O espaçamento vem de .services.
+         */
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .other-case-link {
