@@ -1,3 +1,4 @@
+```css
 /* =========================================================
    DUANY SCHENKEL | DIREITO DIGITAL
    ========================================================= */
@@ -116,7 +117,6 @@ img {
 .nav a {
     font-size: 12px;
     letter-spacing: 0.05em;
-
     transition: opacity 0.2s ease;
 }
 
@@ -819,11 +819,14 @@ img {
 
     color: rgba(243, 238, 232, 0.75);
 
-    transition: color 0.2s ease;
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .footer-contacts a:hover {
     color: var(--cream);
+    opacity: 0.7;
 }
 
 
@@ -919,7 +922,7 @@ img {
 
     gap: 22px;
 
-    flex-wrap: wrap;
+    margin-top: 12px;
 }
 
 .footer-legal a {
@@ -927,11 +930,17 @@ img {
 
     color: rgba(243, 238, 232, 0.55);
 
-    transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .footer-legal a:hover {
     color: var(--cream);
+
+    border-bottom-color: var(--soft-terracotta);
 }
 
 
@@ -956,7 +965,7 @@ img {
 
     /* =====================================================
        HEADER
-    ====================================================== */
+       ===================================================== */
 
     .header {
         padding: 20px;
@@ -969,7 +978,7 @@ img {
 
     /* =====================================================
        HERO
-    ====================================================== */
+       ===================================================== */
 
     .hero {
         min-height: auto;
@@ -990,7 +999,7 @@ img {
 
     /* =====================================================
        ATUAÇÃO
-    ====================================================== */
+       ===================================================== */
 
     .services {
         padding: 60px 20px 70px;
@@ -1007,7 +1016,7 @@ img {
 
     /* =====================================================
        CARDS
-    ====================================================== */
+       ===================================================== */
 
     .service-card {
         grid-template-columns: 38px minmax(0, 1fr) 38px;
@@ -1028,7 +1037,7 @@ img {
 
     /* =====================================================
        SETA
-    ====================================================== */
+       ===================================================== */
 
     .arrow {
         width: 40px;
@@ -1055,7 +1064,7 @@ img {
 
     /* =====================================================
        TRIAGEM
-    ====================================================== */
+       ===================================================== */
 
     .unsure {
         flex-direction: column;
@@ -1068,7 +1077,7 @@ img {
 
     /* =====================================================
        SOBRE
-    ====================================================== */
+       ===================================================== */
 
     .about {
         padding: 80px 20px;
@@ -1100,7 +1109,7 @@ img {
 
     /* =====================================================
        CONTEÚDO
-    ====================================================== */
+       ===================================================== */
 
     .content-section {
         padding: 80px 20px 88px;
@@ -1144,7 +1153,7 @@ img {
 
     /* =====================================================
        REDES
-    ====================================================== */
+       ===================================================== */
 
     .social-links {
         justify-content: center;
@@ -1171,7 +1180,7 @@ img {
 
     /* =====================================================
        FOOTER
-    ====================================================== */
+       ===================================================== */
 
     .footer {
         padding: 40px 20px 25px;
@@ -1219,7 +1228,11 @@ img {
     }
 
     .footer-legal {
-        gap: 16px;
+        flex-wrap: wrap;
+
+        gap: 8px 18px;
+
+        margin-top: 10px;
     }
 }
 
@@ -1232,7 +1245,7 @@ img {
 
     /* =====================================================
        HEADER
-    ====================================================== */
+       ===================================================== */
 
     .brand-avatar {
         width: 46px;
@@ -1250,7 +1263,7 @@ img {
 
     /* =====================================================
        HERO
-    ====================================================== */
+       ===================================================== */
 
     .hero {
         padding-top: 32px;
@@ -1264,7 +1277,7 @@ img {
 
     /* =====================================================
        CARDS
-    ====================================================== */
+       ===================================================== */
 
     .service-card {
         grid-template-columns: 28px minmax(0, 1fr) 32px;
@@ -1283,7 +1296,7 @@ img {
 
     /* =====================================================
        SETA
-    ====================================================== */
+       ===================================================== */
 
     .arrow {
         width: 34px;
@@ -1308,7 +1321,7 @@ img {
 
     /* =====================================================
        SOBRE
-    ====================================================== */
+       ===================================================== */
 
     .about-photo {
         width: 135px;
@@ -1318,7 +1331,7 @@ img {
 
     /* =====================================================
        REDES
-    ====================================================== */
+       ===================================================== */
 
     .social-link {
         min-height: 42px;
@@ -1331,7 +1344,7 @@ img {
 
     /* =====================================================
        FOOTER
-    ====================================================== */
+       ===================================================== */
 
     .footer {
         grid-template-columns: 1fr;
@@ -1412,6 +1425,8 @@ img {
     background: #F3EEE8;
     color: #3F2E2E;
     border-color: #D8CFC6;
+
+    transition: background-color 0.25s ease;
 }
 
 .alvara-services .service-number {
@@ -1427,36 +1442,6 @@ img {
 }
 
 .alvara-services .arrow {
-    color: #9C5A3C;
-}
-
-
-/* =========================================================
-   ALVARÁ | CTA
-   ========================================================= */
-
-.alvara-services .unsure {
-    color: #3F2E2E;
-}
-
-.alvara-services .unsure p {
-    color: #3F2E2E;
-}
-
-.alvara-services .text-link {
-    color: #9C5A3C;
-}
-
-
-/* =========================================================
-   ALVARÁ | AJUSTES FINAIS
-   ========================================================= */
-
-.alvara-services .service-card:first-child {
-    border-top-color: #D8CFC6;
-}
-
-.alvara-services .arrow {
     color: #3F2E2E;
     border-color: #3F2E2E;
 }
@@ -1465,10 +1450,6 @@ img {
 /* =========================================================
    ALVARÁ | HOVER DOS CARDS
    ========================================================= */
-
-.alvara-services .service-card {
-    transition: background-color 0.25s ease;
-}
 
 .alvara-services .service-card:hover {
     background: #E8DED6;
@@ -1492,8 +1473,16 @@ img {
 
 
 /* =========================================================
-   ALVARÁ | LINK "FALE COMIGO"
+   ALVARÁ | CTA
    ========================================================= */
+
+.alvara-services .unsure {
+    color: #3F2E2E;
+}
+
+.alvara-services .unsure p {
+    color: #3F2E2E;
+}
 
 .alvara-services .text-link {
     color: #3F2E2E;
@@ -1507,6 +1496,15 @@ img {
 .alvara-services .text-link:hover {
     color: #9C5A3C;
     border-bottom-color: #9C5A3C;
+}
+
+
+/* =========================================================
+   ALVARÁ | PRIMEIRO CARD
+   ========================================================= */
+
+.alvara-services .service-card:first-child {
+    border-top-color: #D8CFC6;
 }
 
 
@@ -1643,6 +1641,7 @@ img {
     }
 }
 
+
 /* =========================================================
    PÁGINAS JURÍDICAS | POLÍTICA DE PRIVACIDADE E TERMOS
    ========================================================= */
@@ -1773,22 +1772,6 @@ img {
 
 
 /* =========================================================
-   FOOTER – LINKS JURÍDICOS
-   ========================================================= */
-
-.footer-contacts a {
-    transition:
-        color 0.2s ease,
-        opacity 0.2s ease;
-}
-
-.footer-contacts a:hover {
-    color: var(--cream);
-    opacity: 0.7;
-}
-
-
-/* =========================================================
    PÁGINAS JURÍDICAS | MOBILE
    ========================================================= */
 
@@ -1863,51 +1846,6 @@ img {
     }
 }
 
-/* =========================================================
-   FOOTER | LINKS LEGAIS
-   ========================================================= */
-
-.footer-legal {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-
-    margin-top: 12px;
-}
-
-.footer-legal a {
-    font-size: 11px;
-
-    color: rgba(243, 238, 232, 0.55);
-
-    border-bottom: 1px solid transparent;
-
-    transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.footer-legal a:hover {
-    color: var(--cream);
-
-    border-bottom-color: var(--soft-terracotta);
-}
-
-
-/* =========================================================
-   FOOTER | LINKS LEGAIS | MOBILE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    .footer-legal {
-        flex-wrap: wrap;
-
-        gap: 8px 18px;
-
-        margin-top: 10px;
-    }
-}
 
 /* =========================================================
    NEWSLETTER
@@ -1921,9 +1859,13 @@ img {
 .newsletter-content {
     max-width: 1100px;
     margin: 0 auto;
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 80px;
+
     align-items: start;
 }
 
@@ -1937,127 +1879,187 @@ img {
 
 .newsletter-intro h2 {
     margin: 0 0 24px;
+
     color: #3F2E2E;
+
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+    font-weight: 500;
 }
 
 .newsletter-intro p:not(.eyebrow) {
     margin: 0;
+
     color: #5A4A4A;
+
     line-height: 1.7;
 }
 
 
 /* =========================================================
-   FORMULÁRIO
+   NEWSLETTER | FORMULÁRIO
    ========================================================= */
 
 .newsletter-form {
     width: 100%;
     max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
 }
 
+
+/* =========================================================
+   NEWSLETTER | CAMPO DE E-MAIL
+   ========================================================= */
+
 .newsletter-field {
-    margin-bottom: 24px;
+    width: 100%;
+
+    margin-bottom: 22px;
 }
 
 .newsletter-field label {
     display: block;
-    margin-bottom: 9px;
+
+    margin-bottom: 8px;
+
     color: #3F2E2E;
+
     font-size: 14px;
     line-height: 1.5;
+
     font-weight: 700;
 }
 
 .newsletter-field input[type="email"] {
-    box-sizing: border-box;
+    display: block;
+
     width: 100%;
     height: 52px;
+
+    box-sizing: border-box;
+
     padding: 0 16px;
+
     border: 1px solid #D8CFC6;
     border-radius: 2px;
+
     background: #FFFFFF;
     color: #3F2E2E;
-    font-family: inherit;
+
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+
     outline: none;
-    transition: border-color 0.2s ease,
-                box-shadow 0.2s ease;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .newsletter-field input[type="email"]::placeholder {
     color: #9A8D86;
+    opacity: 1;
 }
 
 .newsletter-field input[type="email"]:focus {
     border-color: #9C5A3C;
+
     box-shadow: 0 0 0 1px #9C5A3C;
 }
 
 
 /* =========================================================
-   CONSENTIMENTO
+   NEWSLETTER | CONSENTIMENTO
    ========================================================= */
 
 .newsletter-consent {
-    margin-bottom: 26px;
+    width: 100%;
+
+    margin-bottom: 24px;
 }
 
 .consent-label {
     display: flex;
+
     align-items: flex-start;
+
     gap: 10px;
+
     cursor: pointer;
+
+    font-size: 14px;
+    line-height: 1.55;
+
+    color: #4F4141;
 }
 
 .consent-label input[type="checkbox"] {
     flex: 0 0 auto;
+
     width: 17px;
     height: 17px;
+
     margin: 2px 0 0;
+
     accent-color: #9C5A3C;
+
     cursor: pointer;
 }
 
 .consent-label span {
     color: #4F4141;
-    font-size: 14px;
-    line-height: 1.55;
 }
 
 .consent-note {
-    margin: 10px 0 0 27px;
+    margin: 9px 0 0 27px;
+
     color: #756762;
+
     font-size: 12px;
     line-height: 1.5;
 }
 
 .consent-note a {
     color: #3F2E2E;
+
     text-decoration: underline;
 }
 
 
 /* =========================================================
-   BOTÃO
+   NEWSLETTER | BOTÃO
    ========================================================= */
 
 .newsletter-button {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
+
+    width: auto;
     min-width: 180px;
     height: 50px;
+
+    margin: 0;
     padding: 0 26px;
+
     border: 0;
     border-radius: 2px;
+
     background: #3F2E2E;
     color: #FFFFFF;
-    font-family: inherit;
+
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 700;
+
     letter-spacing: 0.8px;
+
     cursor: pointer;
+
     transition: background-color 0.2s ease;
 }
 
@@ -2067,7 +2069,35 @@ img {
 
 
 /* =========================================================
-   RESPONSIVO
+   NEWSLETTER | CAMPO DE SEGURANÇA BREVO
+   ========================================================= */
+
+.newsletter-form .input--hidden,
+.newsletter-form input[name="email_address_check"] {
+    position: absolute !important;
+
+    width: 0 !important;
+    height: 0 !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: 0 !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+
+    pointer-events: none !important;
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   NEWSLETTER | RESPONSIVO
    ========================================================= */
 
 @media (max-width: 800px) {
@@ -2078,13 +2108,13 @@ img {
 
     .newsletter-content {
         grid-template-columns: 1fr;
+
         gap: 40px;
     }
 
     .newsletter-form {
         max-width: none;
     }
-
 }
 
 
@@ -2101,5 +2131,5 @@ img {
     .newsletter-button {
         width: 100%;
     }
-
 }
+```
