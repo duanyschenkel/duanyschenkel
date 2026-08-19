@@ -119,52 +119,6 @@
         href="style.css"
     >
 
-
-    <!-- =====================================================
-         AJUSTES DOS LINKS DE CTA
-    ====================================================== -->
-
-    <style>
-
-        /*
-         * Os links abaixo recebem estas regras para impedir
-         * que o texto fique branco sobre fundo claro.
-         */
-
-        .priority-button {
-            color: #F3EEE8 !important;
-            background: #3F2E2E !important;
-        }
-
-
-        .priority-button:hover {
-            color: #F3EEE8 !important;
-            background: #9C5A3C !important;
-        }
-
-
-        .other-case-link {
-            color: #3F2E2E !important;
-        }
-
-
-        .other-case-link:hover {
-            color: #9C5A3C !important;
-        }
-
-
-        /*
-         * As setas são controladas pelo CSS.
-         * O HTML não contém uma segunda seta.
-         */
-
-        .priority-button span,
-        .other-case-link span {
-            display: none !important;
-        }
-
-    </style>
-
 </head>
 
 
@@ -515,6 +469,7 @@
 
     </div>
 
+
 </section>
 
 
@@ -552,6 +507,7 @@
             rel="noopener noreferrer"
         >
             Solicitar análise prioritária
+            <span aria-hidden="true">↗</span>
         </a>
 
     </div>
@@ -576,9 +532,12 @@
         class="other-case-link"
     >
         Explique sua situação
+        <span aria-hidden="true">→</span>
     </a>
 
 </div>
+    
+</section>
 
 
 <!-- =====================================================
