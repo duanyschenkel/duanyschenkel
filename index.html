@@ -1,36 +1,46 @@
-
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
- 
+
+
     <!-- =====================================================
          GOOGLE CONSENT MODE
     ====================================================== -->
 
     <script>
+
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
             dataLayer.push(arguments);
         }
 
+
         var savedConsent =
             localStorage.getItem('duany_cookie_consent');
 
+
         gtag('consent', 'default', {
+
             analytics_storage:
                 savedConsent === 'accepted'
                     ? 'granted'
                     : 'denied',
 
             ad_storage: 'denied',
+
             ad_user_data: 'denied',
+
             ad_personalization: 'denied',
 
             wait_for_update: 500
+
         });
+
     </script>
+
 
 
     <!-- =====================================================
@@ -38,23 +48,57 @@
     ====================================================== -->
 
     <script>
+
         (function(w,d,s,l,i){
+
             w[l]=w[l]||[];
+
             w[l].push({
-                'gtm.start': new Date().getTime(),
-                event:'gtm.js'
+
+                'gtm.start':
+                    new Date().getTime(),
+
+                event:
+                    'gtm.js'
+
             });
 
-            var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),
-                dl=l!='dataLayer'?'&l='+l:'';
 
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            var f =
+                d.getElementsByTagName(s)[0],
+
+                j =
+                    d.createElement(s),
+
+                dl =
+                    l != 'dataLayer'
+                        ? '&l=' + l
+                        : '';
+
+
+            j.async = true;
+
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id='
+                + i
+                + dl;
+
 
             f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-5FSSFNDD');
+
+
+        })(
+
+            window,
+            document,
+            'script',
+            'dataLayer',
+            'GTM-5FSSFNDD'
+
+        );
+
     </script>
+
 
 
     <!-- =====================================================
@@ -63,19 +107,23 @@
 
     <meta charset="UTF-8">
 
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
+
 
     <meta
         name="description"
         content="Duany Schenkel – Advogada de Direito Digital aplicada às redes sociais, plataformas digitais e negócios digitais."
     >
 
+
     <title>
         Duany Schenkel | Advogada de Direito Digital
     </title>
+
 
 
     <!-- =====================================================
@@ -87,10 +135,13 @@
         href="style.css"
     >
 
+
 </head>
 
 
+
 <body>
+
 
 
 <!-- =====================================================
@@ -109,16 +160,19 @@
 </noscript>
 
 
+
 <!-- =====================================================
      HEADER
 ====================================================== -->
 
 <header class="header">
 
+
     <a
         href="index.html"
         class="brand"
     >
+
 
         <div class="brand-avatar">
 
@@ -129,11 +183,13 @@
 
         </div>
 
+
         <div class="brand-text">
 
             <strong>
                 DUANY SCHENKEL
             </strong>
+
 
             <span>
                 ADVOGADA | OAB/SC 42.321
@@ -141,29 +197,38 @@
 
         </div>
 
+
     </a>
 
 
+
     <nav class="nav">
+
 
         <a href="#atuacao">
             Atuação
         </a>
 
+
         <a href="#sobre">
             Sobre
         </a>
+
 
         <a href="#conteudo">
             Conteúdo
         </a>
 
+
     </nav>
+
 
 </header>
 
 
+
 <main>
+
 
 
 <!-- =====================================================
@@ -172,25 +237,32 @@
 
 <section class="hero">
 
+
     <div class="hero-content">
+
 
         <p class="eyebrow">
             ADVOGADA | DIREITO DIGITAL
         </p>
+
 
         <h1>
             O jurídico da sua presença<br>
             <em>digital.</em>
         </h1>
 
+
         <p class="hero-text">
             Orientação, prevenção e defesa em questões envolvendo
             redes sociais, plataformas digitais e negócios na internet.
         </p>
 
+
     </div>
 
+
 </section>
+
 
 
 <!-- =====================================================
@@ -202,47 +274,61 @@
     class="services"
 >
 
+
     <div class="section-intro">
+
 
         <p class="eyebrow">
             ATUAÇÃO
         </p>
+
 
         <h2>
             Escolha o assunto<br>
             que mais se aproxima do seu caso.
         </h2>
 
+
     </div>
+
 
 
     <div class="service-list">
 
 
-        <!-- 01 -->
+
+        <!-- =================================================
+             01
+        ================================================== -->
 
         <a
             href="alvara.html"
             class="service-card"
         >
 
+
             <div class="service-number">
                 01
             </div>
 
+
             <div class="service-content">
+
 
                 <h3>
                     Alvará judicial para
                     crianças e adolescentes
                 </h3>
 
+
                 <p>
                     Questões jurídicas envolvendo crianças,
                     adolescentes e atividades no ambiente digital.
                 </p>
 
+
             </div>
+
 
             <span
                 class="arrow"
@@ -251,33 +337,43 @@
                 ↗
             </span>
 
+
         </a>
 
 
-        <!-- 02 -->
+
+        <!-- =================================================
+             02
+        ================================================== -->
 
         <a
             href="plataformas.html"
             class="service-card"
         >
 
+
             <div class="service-number">
                 02
             </div>
 
+
             <div class="service-content">
+
 
                 <h3>
                     Redes sociais e
                     plataformas digitais
                 </h3>
 
+
                 <p>
                     Contas, restrições, remoções, bloqueios,
                     monetização e conflitos com plataformas.
                 </p>
 
+
             </div>
+
 
             <span
                 class="arrow"
@@ -286,32 +382,42 @@
                 ↗
             </span>
 
+
         </a>
 
 
-        <!-- 03 -->
+
+        <!-- =================================================
+             03
+        ================================================== -->
 
         <a
             href="criadores.html"
             class="service-card"
         >
 
+
             <div class="service-number">
                 03
             </div>
 
+
             <div class="service-content">
+
 
                 <h3>
                     Criadores de conteúdo
                 </h3>
+
 
                 <p>
                     Produção, publicidade, contratos,
                     imagem, monetização e atividade profissional.
                 </p>
 
+
             </div>
+
 
             <span
                 class="arrow"
@@ -320,33 +426,43 @@
                 ↗
             </span>
 
+
         </a>
 
 
-        <!-- 04 -->
+
+        <!-- =================================================
+             04
+        ================================================== -->
 
         <a
             href="contratos.html"
             class="service-card"
         >
 
+
             <div class="service-number">
                 04
             </div>
 
+
             <div class="service-content">
+
 
                 <h3>
                     Contratos e
                     publicidade digital
                 </h3>
 
+
                 <p>
                     Relações entre criadores, marcas,
                     agências e empresas.
                 </p>
 
+
             </div>
+
 
             <span
                 class="arrow"
@@ -355,26 +471,34 @@
                 ↗
             </span>
 
+
         </a>
 
 
-        <!-- 05 -->
+
+        <!-- =================================================
+             05
+        ================================================== -->
 
         <a
             href="ecommerce.html"
             class="service-card"
         >
 
+
             <div class="service-number">
                 05
             </div>
 
+
             <div class="service-content">
+
 
                 <h3>
                     E-commerce e
                     negócios digitais
                 </h3>
+
 
                 <p>
                     Questões jurídicas relacionadas à operação,
@@ -382,7 +506,9 @@
                     no ambiente digital.
                 </p>
 
+
             </div>
+
 
             <span
                 class="arrow"
@@ -391,25 +517,33 @@
                 ↗
             </span>
 
+
         </a>
 
 
-        <!-- 06 -->
+
+        <!-- =================================================
+             06
+        ================================================== -->
 
         <a
             href="consumidor.html"
             class="service-card"
         >
 
+
             <div class="service-number">
                 06
             </div>
 
+
             <div class="service-content">
+
 
                 <h3>
                     Direito do Consumidor
                 </h3>
+
 
                 <p>
                     Orientação e atuação em problemas envolvendo
@@ -417,7 +551,9 @@
                     que atuam no ambiente digital.
                 </p>
 
+
             </div>
+
 
             <span
                 class="arrow"
@@ -426,10 +562,14 @@
                 ↗
             </span>
 
+
         </a>
 
 
-        <!-- 07 -->
+
+        <!-- =================================================
+             07
+        ================================================== -->
 
         <a
             href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20seu%20site%20e%20tenho%20uma%20quest%C3%A3o%20relacionada%20ao%20ambiente%20digital%20que%20n%C3%A3o%20se%20encaixa%20nas%20%C3%A1reas%20apresentadas.%20Gostaria%20de%20explicar%20a%20situa%C3%A7%C3%A3o%20para%20saber%20se%20voc%C3%AA%20pode%20me%20orientar."
@@ -438,22 +578,28 @@
             rel="noopener noreferrer"
         >
 
+
             <div class="service-number">
                 07
             </div>
 
+
             <div class="service-content">
+
 
                 <h3>
                     Outras questões de Direito Digital
                 </h3>
+
 
                 <p>
                     Seu caso não se encaixa nas categorias acima?
                     Podemos identificar o caminho jurídico adequado.
                 </p>
 
+
             </div>
+
 
             <span
                 class="arrow"
@@ -462,11 +608,15 @@
                 ↗
             </span>
 
+
         </a>
+
 
     </div>
 
+
 </section>
+
 
 
 <!-- =====================================================
@@ -478,18 +628,24 @@
     class="about"
 >
 
+
     <div class="about-label">
+
 
         <p class="eyebrow">
             SOBRE A ADVOGADA
         </p>
 
+
     </div>
+
 
 
     <div class="about-content">
 
+
         <div class="about-photo">
+
 
             <img
                 src="https://i.ibb.co/mFt1FcRg/biopic01.jpg"
@@ -497,14 +653,18 @@
                 loading="lazy"
             >
 
+
         </div>
+
 
 
         <div class="about-text">
 
+
             <h2>
                 Duany Schenkel
             </h2>
+
 
             <p>
                 Advogada inscrita na OAB/SC desde 2015.
@@ -514,6 +674,7 @@
                 ambientes que ampliaram minha forma de compreender
                 o Direito, os negócios e as relações profissionais.
             </p>
+
 
             <p>
                 Hoje, concentro minha atuação em Direito Digital,
@@ -526,6 +687,7 @@
                 decisões tomadas nele.
             </p>
 
+
             <a
                 href="trajetoria.html"
                 class="text-link about-link"
@@ -533,11 +695,15 @@
                 Conheça minha trajetória →
             </a>
 
+
         </div>
+
 
     </div>
 
+
 </section>
+
 
 
 <!-- =====================================================
@@ -549,14 +715,17 @@
     class="content-section"
 >
 
+
     <p class="eyebrow">
         CONTEÚDO
     </p>
+
 
     <h2>
         Eu também estou nas redes,
         criando conteúdo.
     </h2>
+
 
     <p>
         Por lá, falo sobre Direito Digital, redes sociais,
@@ -565,7 +734,9 @@
     </p>
 
 
+
     <div class="social-links">
+
 
 
         <!-- TIKTOK -->
@@ -578,21 +749,27 @@
             aria-label="TikTok"
         >
 
+
             <svg
                 class="social-icon"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
             >
 
+
                 <path d="M19.589 7.64a4.78 4.78 0 0 1-2.808-.91 4.78 4.78 0 0 1-1.628-2.377h-3.07v11.05a2.75 2.75 0 1 1-1.887-2.612V9.67a5.83 5.83 0 1 0 4.957 5.733V9.803a7.78 7.78 0 0 0 4.436 1.38V8.12a4.8 4.8 0 0 1 0-.48z"/>
 
+
             </svg>
+
 
             <span>
                 TikTok
             </span>
 
+
         </a>
+
 
 
         <!-- INSTAGRAM -->
@@ -605,11 +782,13 @@
             aria-label="Instagram"
         >
 
+
             <svg
                 class="social-icon"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
             >
+
 
                 <rect
                     x="3"
@@ -620,11 +799,13 @@
                     ry="5"
                 />
 
+
                 <circle
                     cx="12"
                     cy="12"
                     r="4"
                 />
+
 
                 <circle
                     cx="17.5"
@@ -632,13 +813,17 @@
                     r="1"
                 />
 
+
             </svg>
+
 
             <span>
                 Instagram
             </span>
 
+
         </a>
+
 
 
         <!-- YOUTUBE -->
@@ -651,30 +836,39 @@
             aria-label="YouTube"
         >
 
+
             <svg
                 class="social-icon"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
             >
 
+
                 <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8z"/>
+
 
                 <path
                     class="social-icon-play"
                     d="m9.6 15.7 6.2-3.7-6.2-3.7v7.4z"
                 />
 
+
             </svg>
+
 
             <span>
                 YouTube
             </span>
 
+
         </a>
+
 
     </div>
 
+
 </section>
+
 
 
 <!-- =====================================================
@@ -683,41 +877,56 @@
 
 <section class="newsletter-section">
 
+
     <div class="newsletter-content">
 
+
         <div class="newsletter-intro">
+
 
             <p class="eyebrow">
                 CONTEÚDO DIRETO NO SEU E-MAIL
             </p>
 
+
             <h2>
                 Quer entender melhor o que acontece nas plataformas?
             </h2>
+
 
             <p>
                 Receba conteúdos sobre Direito Digital, redes sociais,
                 plataformas e os conflitos jurídicos que aparecem nesse ambiente.
             </p>
 
+
         </div>
 
+
+
+        <!-- =================================================
+             FORMULÁRIO BREVO
+        ================================================== -->
 
         <form
             id="sib-form"
             method="POST"
             action="https://6ed90395.sibforms.com/serve/MUIFAFt9jVHIqXUYBTo3IAt-a2oNRD1dTXTNhpMf764o-wjBD69uJoqbQjqbDZ7EC_1GUTBH6VyQc56B5vyyN8v6HUv1ALo4kj--wTZoGzVJtbYXuepD4gHKr9jH5dmRBcvzKTd5WKiDxYvo6Kt-I4wFueV7QeK3Dbwz0IXt-O6hqf0Rn-CVOTRphmIITEe2CmWMWTWVLUZFPyI9rw=="
             class="newsletter-form"
-            novalidate
         >
 
-            <!-- E-MAIL -->
+
+            <!-- =================================================
+                 E-MAIL
+            ================================================== -->
 
             <div class="newsletter-field">
+
 
                 <label for="EMAIL">
                     E-mail
                 </label>
+
 
                 <input
                     type="email"
@@ -728,14 +937,20 @@
                     required
                 >
 
+
             </div>
 
 
-            <!-- CONSENTIMENTO -->
+
+            <!-- =================================================
+                 CONSENTIMENTO
+            ================================================== -->
 
             <div class="newsletter-consent">
 
+
                 <label class="consent-label">
+
 
                     <input
                         type="checkbox"
@@ -745,19 +960,24 @@
                         required
                     >
 
+
                     <span>
                         Quero receber conteúdos e comunicações da
                         Duany Schenkel por e-mail. Estou ciente de que
                         posso cancelar minha inscrição a qualquer momento.
                     </span>
 
+
                 </label>
+
 
 
                 <p class="consent-note">
 
+
                     Ao se cadastrar, você concorda com o tratamento do
                     seu e-mail para essa finalidade, conforme nossa
+
 
                     <a
                         href="politica-de-privacidade.html"
@@ -767,14 +987,20 @@
                         Política de Privacidade
                     </a>.
 
+
                 </p>
+
 
             </div>
 
 
-            <!-- BOTÃO -->
+
+            <!-- =================================================
+                 BOTÃO
+            ================================================== -->
 
             <div class="newsletter-submit">
+
 
                 <button
                     type="submit"
@@ -783,12 +1009,13 @@
                     QUERO RECEBER
                 </button>
 
+
             </div>
 
 
+
             <!-- =================================================
-                 CAMPO ANTI-SPAM BREVO
-                 MANTIDO FORA DA ÁREA VISUAL DO FORMULÁRIO
+                 CAMPOS DA BREVO
             ================================================== -->
 
             <input
@@ -798,8 +1025,17 @@
                 tabindex="-1"
                 autocomplete="off"
                 aria-hidden="true"
-                style="position:absolute!important;left:-9999px!important;top:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important;"
+                style="
+                    position:absolute!important;
+                    left:-9999px!important;
+                    top:-9999px!important;
+                    width:1px!important;
+                    height:1px!important;
+                    opacity:0!important;
+                    pointer-events:none!important;
+                "
             >
+
 
             <input
                 type="hidden"
@@ -807,20 +1043,25 @@
                 value="pt"
             >
 
+
             <input
                 type="hidden"
                 name="html_type"
                 value="simple"
             >
 
+
         </form>
 
+
     </div>
+
 
 </section>
 
 
 </main>
+
 
 
 <!-- =====================================================
@@ -832,26 +1073,35 @@
 
     <div class="footer-brand">
 
+
         <strong>
             DUANY SCHENKEL
         </strong>
+
 
         <p>
             Advogada | OAB/SC nº 42.321
         </p>
 
+
         <p>
             Direito Digital. Atendimento online para todo o Brasil.
         </p>
 
+
     </div>
+
 
 
     <div class="footer-contacts">
 
-        <a href="mailto:contato@duanyschenkel.adv.br">
+
+        <a
+            href="mailto:contato@duanyschenkel.adv.br"
+        >
             contato@duanyschenkel.adv.br
         </a>
+
 
         <a
             href="https://wa.me/5549988133451"
@@ -861,7 +1111,9 @@
             WhatsApp: (49) 98813-3451
         </a>
 
+
     </div>
+
 
 
     <div class="footer-social">
@@ -876,12 +1128,15 @@
             aria-label="Instagram"
         >
 
+
             <img
                 src="https://cdn-icons-png.flaticon.com/512/3621/3621435.png"
                 alt=""
             >
 
+
         </a>
+
 
 
         <!-- TIKTOK -->
@@ -893,12 +1148,15 @@
             aria-label="TikTok"
         >
 
+
             <img
                 src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
                 alt=""
             >
 
+
         </a>
+
 
 
         <!-- YOUTUBE -->
@@ -910,12 +1168,15 @@
             aria-label="YouTube"
         >
 
+
             <img
                 src="https://cdn-icons-png.flaticon.com/512/174/174883.png"
                 alt=""
             >
 
+
         </a>
+
 
 
         <!-- WHATSAPP -->
@@ -927,41 +1188,551 @@
             aria-label="WhatsApp"
         >
 
+
             <img
                 src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png"
                 alt=""
             >
 
+
         </a>
+
 
     </div>
 
 
+
+    <!-- =====================================================
+         FOOTER BOTTOM
+    ====================================================== -->
+
     <div class="footer-bottom">
+
 
         <p>
             © 2026 Duany Schenkel. Todos os direitos reservados.
         </p>
 
 
+
         <div class="footer-legal">
+
 
             <a href="politica-de-privacidade.html">
                 Política de Privacidade
             </a>
 
+
             <a href="termos-de-uso.html">
                 Termos de Uso
             </a>
 
+
+            <a
+                href="#"
+                onclick="duanyOpenCookieSettings(event)"
+            >
+                Configurar cookies
+            </a>
+
+
         </div>
+
 
     </div>
 
+
 </footer>
+
+
+
+<!-- =====================================================
+     BANNER DE CONSENTIMENTO DE COOKIES
+====================================================== -->
+
+<style>
+
+    #cookie-consent-banner {
+
+        position: fixed;
+
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+
+        z-index: 999999;
+
+        background: #3F2E2E;
+        color: #F3EEE8;
+
+        padding: 20px 22px;
+
+        border-radius: 8px;
+
+        box-shadow:
+            0 8px 30px rgba(0,0,0,.18);
+
+        font-family: Arial, sans-serif;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+    }
+
+
+    #cookie-consent-banner .cookie-content {
+
+        max-width: 1100px;
+
+        margin: 0 auto;
+
+    }
+
+
+    #cookie-consent-banner strong {
+
+        display: block;
+
+        margin-bottom: 6px;
+
+        font-size: 16px;
+
+    }
+
+
+    #cookie-consent-banner p {
+
+        margin: 0 0 16px;
+
+    }
+
+
+    #cookie-consent-banner a {
+
+        color: #F3EEE8;
+
+        text-decoration: underline;
+
+        text-underline-offset: 2px;
+
+    }
+
+
+    #cookie-consent-banner .cookie-buttons {
+
+        display: flex;
+
+        gap: 10px;
+
+        align-items: center;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    #cookie-consent-banner button {
+
+        border: 1px solid #F3EEE8;
+
+        border-radius: 4px;
+
+        padding: 9px 18px;
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        cursor: pointer;
+
+        background: transparent;
+
+        color: #F3EEE8;
+
+    }
+
+
+    #cookie-consent-banner button.accept {
+
+        background: #F3EEE8;
+
+        color: #3F2E2E;
+
+    }
+
+
+    #cookie-consent-banner button:hover {
+
+        opacity: .9;
+
+    }
+
+
+    @media (max-width: 600px) {
+
+
+        #cookie-consent-banner {
+
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+
+            padding: 18px;
+
+        }
+
+
+        #cookie-consent-banner .cookie-buttons {
+
+            flex-direction: column;
+
+            align-items: stretch;
+
+        }
+
+
+        #cookie-consent-banner button {
+
+            width: 100%;
+
+        }
+
+    }
+
+</style>
+
+
+
+<div
+    id="cookie-consent-banner"
+    role="dialog"
+    aria-labelledby="cookie-consent-title"
+>
+
+
+    <div class="cookie-content">
+
+
+        <strong id="cookie-consent-title">
+            Privacidade e cookies
+        </strong>
+
+
+        <p>
+
+            Usamos cookies de análise para entender como o site é utilizado
+            e melhorar sua experiência. Você pode aceitar ou recusar essa finalidade.
+            Sua escolha pode ser alterada a qualquer momento em
+
+
+            <a
+                href="#"
+                id="cookie-settings-link"
+            >
+                Configurar cookies
+            </a>, no rodapé do site.
+
+
+            Consulte a
+
+
+            <a
+                href="politica-de-privacidade.html"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Política de Privacidade
+            </a>
+
+
+            para saber mais.
+
+        </p>
+
+
+
+        <div class="cookie-buttons">
+
+
+            <button
+                type="button"
+                class="accept"
+                id="cookie-accept"
+            >
+                Aceitar
+            </button>
+
+
+            <button
+                type="button"
+                id="cookie-reject"
+            >
+                Recusar
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     SCRIPT DE CONSENTIMENTO
+====================================================== -->
+
+<script>
+
+(function() {
+
+
+    var banner =
+        document.getElementById(
+            'cookie-consent-banner'
+        );
+
+
+    var accept =
+        document.getElementById(
+            'cookie-accept'
+        );
+
+
+    var reject =
+        document.getElementById(
+            'cookie-reject'
+        );
+
+
+    var settingsLink =
+        document.getElementById(
+            'cookie-settings-link'
+        );
+
+
+
+    if (!banner) {
+        return;
+    }
+
+
+
+    /*
+     * ABRIR CONFIGURAÇÕES
+     */
+
+    window.duanyOpenCookieSettings =
+        function(event) {
+
+
+            if (event) {
+                event.preventDefault();
+            }
+
+
+            banner.style.display =
+                'block';
+
+
+        };
+
+
+
+    /*
+     * VERIFICAR ESCOLHA SALVA
+     */
+
+    var consent =
+        localStorage.getItem(
+            'duany_cookie_consent'
+        );
+
+
+    if (
+        consent === 'accepted' ||
+        consent === 'rejected'
+    ) {
+
+
+        banner.style.display =
+            'none';
+
+
+    }
+
+
+
+    /*
+     * ATUALIZAR CONSENTIMENTO
+     */
+
+    function updateConsent(value) {
+
+
+        var analyticsStorage =
+            value === 'accepted'
+                ? 'granted'
+                : 'denied';
+
+
+
+        /*
+         * GOOGLE CONSENT MODE
+         */
+
+        if (
+            typeof gtag === 'function'
+        ) {
+
+
+            gtag(
+                'consent',
+                'update',
+                {
+
+                    analytics_storage:
+                        analyticsStorage
+
+                }
+            );
+
+
+        }
+
+
+
+        /*
+         * EVENTO PARA O GTM
+         */
+
+        window.dataLayer =
+            window.dataLayer || [];
+
+
+        window.dataLayer.push({
+
+            event:
+                'cookie_consent_update',
+
+            consent_status:
+                value
+
+        });
+
+
+
+        /*
+         * SALVAR ESCOLHA
+         */
+
+        localStorage.setItem(
+            'duany_cookie_consent',
+            value
+        );
+
+
+
+        /*
+         * FECHAR BANNER
+         */
+
+        banner.style.display =
+            'none';
+
+
+    }
+
+
+
+    /*
+     * ACEITAR
+     */
+
+    if (accept) {
+
+
+        accept.addEventListener(
+            'click',
+            function() {
+
+
+                updateConsent(
+                    'accepted'
+                );
+
+
+            }
+        );
+
+
+    }
+
+
+
+    /*
+     * RECUSAR
+     */
+
+    if (reject) {
+
+
+        reject.addEventListener(
+            'click',
+            function() {
+
+
+                updateConsent(
+                    'rejected'
+                );
+
+
+            }
+        );
+
+
+    }
+
+
+
+    /*
+     * CONFIGURAR COOKIES
+     * DENTRO DO BANNER
+     */
+
+    if (settingsLink) {
+
+
+        settingsLink.addEventListener(
+            'click',
+            function(event) {
+
+
+                event.preventDefault();
+
+
+                window.duanyOpenCookieSettings(
+                    event
+                );
+
+
+            }
+        );
+
+
+    }
+
+
+})();
+
+</script>
 
 
 </body>
 
 </html>
-
+```
