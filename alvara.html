@@ -1,316 +1,465 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5FSSFNDD');</script>
-<!-- End Google Tag Manager -->
-    
+
+    <!-- =====================================================
+         GOOGLE CONSENT MODE
+         Deve ser executado ANTES do Google Tag Manager
+    ====================================================== -->
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        var savedConsent = localStorage.getItem('duany_cookie_consent');
+
+        gtag('consent', 'default', {
+            analytics_storage: savedConsent === 'accepted' ? 'granted' : 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            wait_for_update: 500
+        });
+    </script>
+
+
+    <!-- =====================================================
+         GOOGLE TAG MANAGER
+    ====================================================== -->
+
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event:'gtm.js'
+            });
+
+            var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),
+                dl=l!='dataLayer'?'&l='+l:'';
+
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5FSSFNDD');
+    </script>
+
+
+    <!-- =====================================================
+         METADADOS
+    ====================================================== -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
         content="Alvará judicial para crianças e adolescentes – orientação e atuação jurídica no ambiente digital."
     >
 
-    <title>Alvará Judicial | Duany Schenkel</title>
+    <title>
+        Alvará Judicial | Duany Schenkel
+    </title>
 
-    <link rel="stylesheet" href="style.css">
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
 
+
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSSFNDD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
-
-    <header class="header">
-
-        <a href="index.html" class="brand">
-
-            <div class="brand-avatar">
-                <img
-                    src="https://i.ibb.co/mFt1FcRg/biopic01.jpg"
-                    alt="Duany Schenkel"
-                >
-            </div>
-
-            <div class="brand-text">
-                <strong>DUANY SCHENKEL</strong>
-                <span>ADVOGADA | OAB/SC 42.321</span>
-            </div>
-
-        </a>
-
-        <nav class="nav">
-            <a href="index.html#atuacao">Atuação</a>
-            <a href="index.html#sobre">Sobre</a>
-            <a href="index.html#conteudo">Conteúdo</a>
-        </nav>
-
-    </header>
 
 
-    <main>
+<!-- =====================================================
+     GOOGLE TAG MANAGER – NOSCRIPT
+====================================================== -->
 
-        <!-- =====================================================
-             ALVARÁ JUDICIAL
-        ====================================================== -->
+<noscript>
 
-        <section id="atuacao" class="services alvara-services">
+    <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5FSSFNDD"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+    ></iframe>
 
-            <div class="section-intro">
-
-                <p class="eyebrow">
-                    ALVARÁ JUDICIAL | CRIANÇAS E ADOLESCENTES
-                </p>
-
-                <h2>
-                    Do primeiro diagnóstico ao acompanhamento do processo.
-                </h2>
-
-            </div>
+</noscript>
 
 
-            <div class="service-list">
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
-                <!-- 01 -->
-
-              <a
-    href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20sobre%20uma%20situa%C3%A7%C3%A3o%20envolvendo%20crian%C3%A7a%20ou%20adolescente%20no%20ambiente%20digital%20e%20verificar%20se%20%C3%A9%20necess%C3%A1rio%20alvar%C3%A1%20judicial."
-    class="service-card"
-    target="_blank"
-    rel="noopener noreferrer"
->
-
-                    <div class="service-number">
-                        01
-                    </div>
-
-                    <div class="service-content">
-
-                        <h3>
-                            Consulta e análise jurídica
-                        </h3>
-
-                        <p>
-                            Avaliação da situação concreta para identificar
-                            se há necessidade de autorização judicial e quais
-                            medidas podem ser adotadas.
-                        </p>
-
-                    </div>
-
-                    <span class="arrow" aria-hidden="true">
-                        ↗
-                    </span>
-
-                </a>
-
-
-                <!-- 02 -->
-<a
-    href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20alvar%C3%A1%20judicial%20para%20uma%20crian%C3%A7a%20ou%20adolescente%20participar%20de%20uma%20atividade%20no%20ambiente%20digital."
-    class="service-card"
-    target="_blank"
-    rel="noopener noreferrer"
->
-
-                    <div class="service-number">
-                        02
-                    </div>
-
-                    <div class="service-content">
-
-                        <h3>
-                            Pedido de alvará judicial
-                        </h3>
-
-                        <p>
-                            Elaboração, protocolo e acompanhamento do pedido
-                            de autorização judicial, considerando a atividade
-                            desenvolvida pela criança ou adolescente.
-                        </p>
-
-                    </div>
-
-                    <span class="arrow" aria-hidden="true">
-                        ↗
-                    </span>
-
-                </a>
-
-
-                <!-- 03 -->
-<a
-    href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20seu%20site.%20J%C3%A1%20tenho%20uma%20autoriza%C3%A7%C3%A3o%20judicial%20para%20uma%20crian%C3%A7a%20ou%20adolescente%20e%20gostaria%20de%20saber%20se%20%C3%A9%20necess%C3%A1rio%20renov%C3%A1-la%20ou%20adequ%C3%A1-la%20%C3%A0%20atividade%20atual."
-    class="service-card"
-    target="_blank"
-    rel="noopener noreferrer"
->
-
-                    <div class="service-number">
-                        03
-                    </div>
-
-                    <div class="service-content">
-
-                        <h3>
-                            Revisão e adequação da autorização
-                        </h3>
-
-                        <p>
-                            Análise de autorização já concedida diante de
-                            mudanças na atividade ou nas condições
-                            originalmente autorizadas.
-                        </p>
-
-                    </div>
-
-                    <span class="arrow" aria-hidden="true">
-                        ↗
-                    </span>
-
-                </a>
-
-
-               
-
-
-<div class="unsure">
-
-    <p>
-        Não sabe qual caminho se aplica ao seu caso?
-    </p>
+<header class="header">
 
     <a
-        href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20seu%20site%20e%20gostaria%20de%20explicar%20uma%20situa%C3%A7%C3%A3o%20envolvendo%20crian%C3%A7a%20ou%20adolescente%20no%20ambiente%20digital%20para%20entender%20qual%20medida%20jur%C3%ADdica%20%C3%A9%20necess%C3%A1ria."
-        class="text-link"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="index.html"
+        class="brand"
     >
-        Fale comigo →
-    </a>
 
-</div>
+        <div class="brand-avatar">
 
-        </section>
+            <img
+                src="https://i.ibb.co/mFt1FcRg/biopic01.jpg"
+                alt="Duany Schenkel"
+            >
 
-    </main>
+        </div>
 
-
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer class="footer">
-
-        <div class="footer-brand">
+        <div class="brand-text">
 
             <strong>
                 DUANY SCHENKEL
             </strong>
 
+            <span>
+                ADVOGADA | OAB/SC 42.321
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <nav class="nav">
+
+        <a href="index.html#atuacao">
+            Atuação
+        </a>
+
+        <a href="index.html#sobre">
+            Sobre
+        </a>
+
+        <a href="index.html#conteudo">
+            Conteúdo
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     ALVARÁ JUDICIAL
+====================================================== -->
+
+<section
+    id="atuacao"
+    class="services alvara-services"
+>
+
+    <div class="section-intro">
+
+        <p class="eyebrow">
+            ALVARÁ JUDICIAL | CRIANÇAS E ADOLESCENTES
+        </p>
+
+        <h2>
+            Do primeiro diagnóstico ao acompanhamento do processo.
+        </h2>
+
+    </div>
+
+
+    <div class="service-list">
+
+
+        <!-- =================================================
+             01 – CONSULTA
+        ================================================== -->
+
+        <a
+            href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20sobre%20uma%20situa%C3%A7%C3%A3o%20envolvendo%20crian%C3%A7a%20ou%20adolescente%20no%20ambiente%20digital%20e%20verificar%20se%20%C3%A9%20necess%C3%A1rio%20alvar%C3%A1%20judicial."
+            class="service-card"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="service-number">
+                01
+            </div>
+
+            <div class="service-content">
+
+                <h3>
+                    Consulta e análise jurídica
+                </h3>
+
+                <p>
+                    Avaliação da situação concreta para identificar
+                    se há necessidade de autorização judicial e quais
+                    medidas podem ser adotadas.
+                </p>
+
+            </div>
+
+            <span
+                class="arrow"
+                aria-hidden="true"
+            >
+                ↗
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             02 – PEDIDO DE ALVARÁ
+        ================================================== -->
+
+        <a
+            href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20alvar%C3%A1%20judicial%20para%20uma%20crian%C3%A7a%20ou%20adolescente%20participar%20de%20uma%20atividade%20no%20ambiente%20digital."
+            class="service-card"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="service-number">
+                02
+            </div>
+
+            <div class="service-content">
+
+                <h3>
+                    Pedido de alvará judicial
+                </h3>
+
+                <p>
+                    Elaboração, protocolo e acompanhamento do pedido
+                    de autorização judicial, considerando a atividade
+                    desenvolvida pela criança ou adolescente.
+                </p>
+
+            </div>
+
+            <span
+                class="arrow"
+                aria-hidden="true"
+            >
+                ↗
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             03 – REVISÃO
+        ================================================== -->
+
+        <a
+            href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20seu%20site.%20J%C3%A1%20tenho%20uma%20autoriza%C3%A7%C3%A3o%20judicial%20para%20uma%20crian%C3%A7a%20ou%20adolescente%20e%20gostaria%20de%20saber%20se%20%C3%A9%20necess%C3%A1rio%20renov%C3%A1-la%20ou%20adequ%C3%A1-la%20%C3%A0%20atividade%20atual."
+            class="service-card"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="service-number">
+                03
+            </div>
+
+            <div class="service-content">
+
+                <h3>
+                    Revisão e adequação da autorização
+                </h3>
+
+                <p>
+                    Análise de autorização já concedida diante de
+                    mudanças na atividade ou nas condições
+                    originalmente autorizadas.
+                </p>
+
+            </div>
+
+            <span
+                class="arrow"
+                aria-hidden="true"
+            >
+                ↗
+            </span>
+
+        </a>
+
+
+        <!-- =================================================
+             DÚVIDAS
+        ================================================== -->
+
+        <div class="unsure">
+
             <p>
-                Advogada | Direito Digital
+                Não sabe qual caminho se aplica ao seu caso?
             </p>
 
-            <p>
-                Atendimento online para todo o Brasil.
-            </p>
-
-        </div>
-
-
-        <div class="footer-contacts">
-
-            <a href="contato@duanyschenkel.adv.br">
-                contato@duanyschenkel.adv.br
-            </a>
-
             <a
-                href="https://wa.me/5549988133451"
+                href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20seu%20site%20e%20gostaria%20de%20explicar%20uma%20situa%C3%A7%C3%A3o%20envolvendo%20crian%C3%A7a%20ou%20adolescente%20no%20ambiente%20digital%20para%20entender%20qual%20medida%20jur%C3%ADdica%20%C3%A9%20necess%C3%A1ria."
+                class="text-link"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                WhatsApp: (49) 98813-3451
+                Fale comigo →
             </a>
 
         </div>
 
+    </div>
 
-        <div class="footer-social">
+</section>
 
-            <a
-                href="https://www.instagram.com/dudablinda"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+
+    <div class="footer-brand">
+
+        <strong>
+            DUANY SCHENKEL
+        </strong>
+
+        <p>
+            Advogada | Direito Digital
+        </p>
+
+        <p>
+            Atendimento online para todo o Brasil.
+        </p>
+
+    </div>
+
+
+    <div class="footer-contacts">
+
+        <a
+            href="mailto:contato@duanyschenkel.adv.br"
+        >
+            contato@duanyschenkel.adv.br
+        </a>
+
+        <a
+            href="https://wa.me/5549988133451"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            WhatsApp: (49) 98813-3451
+        </a>
+
+    </div>
+
+
+    <div class="footer-social">
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            href="https://www.instagram.com/dudablinda"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+        >
+
+            <img
+                src="https://cdn-icons-png.flaticon.com/512/3621/3621435.png"
+                alt=""
             >
-                <img
-                    src="https://cdn-icons-png.flaticon.com/512/3621/3621435.png"
-                    alt=""
-                >
-            </a>
 
-            <a
-                href="https://www.tiktok.com/@duda.blinda"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
+        </a>
+
+
+        <!-- TIKTOK -->
+
+        <a
+            href="https://www.tiktok.com/@duda.blinda"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+        >
+
+            <img
+                src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
+                alt=""
             >
-                <img
-                    src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
-                    alt=""
-                >
-            </a>
 
-            <a
-                href="https://www.youtube.com/dudablinda"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
+        </a>
+
+
+        <!-- YOUTUBE -->
+
+        <a
+            href="https://www.youtube.com/dudablinda"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+        >
+
+            <img
+                src="https://cdn-icons-png.flaticon.com/512/174/174883.png"
+                alt=""
             >
-                <img
-                    src="https://cdn-icons-png.flaticon.com/512/174/174883.png"
-                    alt=""
-                >
-            </a>
 
-            <a
-                href="https://wa.me/5549988133451"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="https://wa.me/5549988133451"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+        >
+
+            <img
+                src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png"
+                alt=""
             >
-                <img
-                    src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png"
-                    alt=""
-                >
-            </a>
 
-        </div>
+        </a>
+
+    </div>
 
 
-        <div class="footer-bottom">
+    <div class="footer-bottom">
 
-            <p>
-                © 2026 Duany Schenkel. Todos os direitos reservados.
-            </p>
+        <p>
+            © 2026 Duany Schenkel. Todos os direitos reservados.
+        </p>
 
-        </div>
+    </div>
 
-    </footer>
+</footer>
+
 
 </body>
 
 </html>
+
