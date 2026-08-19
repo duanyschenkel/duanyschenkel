@@ -38,50 +38,471 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Brevo Form -->
+```html
+<!-- =====================================================
+     BREVO | FORMULÁRIO DE INSCRIÇÃO
+====================================================== -->
+
 <style>
-  @font-face {
-    font-display: block;
-    font-family: Roboto;
-    src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
-         url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
+
+  /* =====================================================
+     CONTAINER
+  ====================================================== */
+
+  .duany-newsletter {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3F2E2E;
   }
 
-  @font-face {
-    font-display: fallback;
-    font-family: Roboto;
-    font-weight: 600;
-    src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
-         url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
+
+  /* =====================================================
+     TÍTULO
+  ====================================================== */
+
+  .duany-newsletter .sib-form-block-title {
+    margin: 0 0 18px;
+    padding: 0;
   }
 
-  @font-face {
-    font-display: fallback;
-    font-family: Roboto;
+  .duany-newsletter .sib-form-block-title p {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1.2;
     font-weight: 700;
-    src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
-         url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
+    color: #3F2E2E;
   }
 
-  #sib-container input:-ms-input-placeholder {
-    font-family: Helvetica, sans-serif;
-    text-align: left;
-    color: #c0ccda;
+
+  /* =====================================================
+     TEXTO
+  ====================================================== */
+
+  .duany-newsletter .sib-form-block-text {
+    margin: 0 0 30px;
+    padding: 0;
   }
 
-  #sib-container input::placeholder {
-    font-family: Helvetica, sans-serif;
-    text-align: left;
-    color: #c0ccda;
+  .duany-newsletter .sib-form-block-text p {
+    margin: 0;
+    max-width: 650px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #5A4A4A;
   }
 
-  #sib-container a {
-    text-decoration: underline;
-    color: #2BB2FC;
+
+  /* =====================================================
+     LABEL
+  ====================================================== */
+
+  .duany-newsletter .entry__label {
+    display: block;
+    margin-bottom: 9px;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.5;
+    font-weight: 700 !important;
+    color: #3F2E2E !important;
   }
+
+
+  /* Remove o asterisco automático da Brevo */
+
+  .duany-newsletter .entry__label::after {
+    content: none !important;
+  }
+
+
+  /* =====================================================
+     CAMPO DE E-MAIL
+  ====================================================== */
+
+  .duany-newsletter .entry__field {
+    width: 100%;
+  }
+
+  .duany-newsletter input[type="text"],
+  .duany-newsletter input[type="email"] {
+    width: 100% !important;
+    height: 52px !important;
+    padding: 0 16px !important;
+    border: 1px solid #D8CFC6 !important;
+    border-radius: 2px !important;
+    background: #FFFFFF !important;
+    color: #3F2E2E !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 15px !important;
+    outline: none;
+    box-shadow: none !important;
+  }
+
+  .duany-newsletter input[type="text"]:focus,
+  .duany-newsletter input[type="email"]:focus {
+    border-color: #9C5A3C !important;
+    box-shadow: 0 0 0 1px #9C5A3C !important;
+  }
+
+  .duany-newsletter input::placeholder {
+    color: #9A8D86 !important;
+    opacity: 1;
+  }
+
+
+  /* =====================================================
+     TEXTO ABAIXO DO CAMPO
+  ====================================================== */
+
+  .duany-newsletter .entry__specification {
+    display: block;
+    margin-top: 8px;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 12px !important;
+    line-height: 1.5;
+    color: #756762 !important;
+  }
+
+
+  /* =====================================================
+     CHECKBOX
+  ====================================================== */
+
+  .duany-newsletter .entry__choice {
+    margin-top: 5px;
+  }
+
+  .duany-newsletter .entry__choice label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  .duany-newsletter .entry__choice input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .duany-newsletter .entry__choice .checkbox {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin: 2px 0 0 !important;
+    border: 1px solid #B9AAA2;
+    border-radius: 2px;
+    background: #FFFFFF;
+  }
+
+  .duany-newsletter .entry__choice input[type="checkbox"]:checked + .checkbox {
+    background-color: #9C5A3C;
+    border-color: #9C5A3C;
+  }
+
+  .duany-newsletter .entry__choice span:last-child {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.55;
+    color: #4F4141 !important;
+  }
+
+  .duany-newsletter .entry__choice span:last-child p {
+    margin: 0;
+  }
+
+
+  /* =====================================================
+     BOTÃO
+  ====================================================== */
+
+  .duany-newsletter .sib-form-block__button {
+    width: auto !important;
+    min-width: 180px;
+    height: 50px !important;
+    padding: 0 26px !important;
+    border: 0 !important;
+    border-radius: 2px !important;
+    background-color: #3F2E2E !important;
+    color: #FFFFFF !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.8px;
+    text-align: center !important;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .duany-newsletter .sib-form-block__button:hover {
+    background-color: #9C5A3C !important;
+  }
+
+
+  /* =====================================================
+     ERROS
+  ====================================================== */
+
+  .duany-newsletter .entry__error {
+    margin-top: 8px;
+    padding: 10px 12px;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.5;
+    color: #661D1D !important;
+    background-color: #F8ECE8 !important;
+    border: 1px solid #D7A99A !important;
+    border-radius: 2px !important;
+  }
+
+
+  /* =====================================================
+     RESPONSIVO
+  ====================================================== */
+
+  @media (max-width: 600px) {
+
+    .duany-newsletter .sib-form-block-title p {
+      font-size: 27px;
+      line-height: 1.25;
+    }
+
+    .duany-newsletter .sib-form-block-text p {
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .duany-newsletter .sib-form-block__button {
+      width: 100% !important;
+    }
+
+  }
+
 </style>
 
-<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+<div class="duany-newsletter">
+
+  <div id="sib-form-container" class="sib-form-container">
+
+    <div id="sib-container">
+
+      <form
+        id="sib-form"
+        method="POST"
+        action="https://6ed90395.sibforms.com/serve/MUIFAFt9jVHIqXUYBTo3IAt-a2oNRD1dTXTNhpMf764o-wjBD69uJoqbQjqbDZ7EC_1GUTBH6VyQc56B5vyyN8v6HUv1ALo4kj--wTZoGzVJtbYXuepD4gHKr9jH5dmRBcvzKTd5WKiDxYvo6Kt-I4wFueV7QeK3Dbwz0IXt-O6hqf0Rn-CVOTRphmIITEe2CmWMWTWVLUZFPyI9rw=="
+      >
+
+
+        <!-- =================================================
+             TÍTULO
+        ================================================== -->
+
+        <div class="sib-form-block-title">
+
+          <p>
+            Quer entender melhor o que acontece nas plataformas?
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             DESCRIÇÃO
+        ================================================== -->
+
+        <div class="sib-form-block-text">
+
+          <p>
+            Receba conteúdos sobre Direito Digital, redes sociais,
+            plataformas e os conflitos jurídicos que aparecem nesse ambiente.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             E-MAIL
+        ================================================== -->
+
+        <div class="sib-input sib-form-block">
+
+          <div class="form__entry entry_block">
+
+            <div class="form__label-row">
+
+              <label
+                class="entry__label"
+                for="EMAIL"
+                data-required=""
+              >
+                Insira seu e-mail
+              </label>
+
+
+              <div class="entry__field">
+
+                <input
+                  class="input"
+                  type="email"
+                  id="EMAIL"
+                  name="EMAIL"
+                  autocomplete="email"
+                  value=""
+                  placeholder="seuemail@exemplo.com"
+                  data-required="true"
+                  required
+                />
+
+              </div>
+
+            </div>
+
+
+            <label
+              class="entry__error entry__error--primary"
+            ></label>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CONSENTIMENTO
+        ================================================== -->
+
+        <div class="sib-optin sib-form-block">
+
+          <div class="form__entry entry_mcq">
+
+            <div class="form__label-row">
+
+              <div class="entry__choice">
+
+                <label>
+
+                  <input
+                    type="checkbox"
+                    class="input_replaced"
+                    value="1"
+                    id="OPT_IN"
+                    name="OPT_IN"
+                    required
+                  />
+
+                  <span
+                    class="checkbox checkbox_tick_positive"
+                  ></span>
+
+                  <span>
+
+                    <p>
+                      Quero receber conteúdos e comunicações da
+                      Duany Schenkel por e-mail. Estou ciente de que
+                      posso cancelar minha inscrição a qualquer momento.
+                    </p>
+
+                  </span>
+
+                </label>
+
+              </div>
+
+            </div>
+
+
+            <label
+              class="entry__error entry__error--primary"
+            ></label>
+
+
+            <label class="entry__specification">
+
+              Ao se cadastrar, você concorda com o tratamento do
+              seu e-mail para essa finalidade, conforme nossa
+              <a
+                href="politica-de-privacidade.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Política de Privacidade
+              </a>.
+
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             BOTÃO
+        ================================================== -->
+
+        <div class="sib-form-block">
+
+          <button
+            class="sib-form-block__button sib-form-block__button-with-loader"
+            form="sib-form"
+            type="submit"
+          >
+
+            <svg
+              class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+              viewBox="0 0 512 512"
+              aria-hidden="true"
+            >
+
+              <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+
+            </svg>
+
+            QUERO RECEBER
+
+          </button>
+
+        </div>
+
+
+        <!-- =================================================
+             CAMPOS OCULTOS DA BREVO
+        ================================================== -->
+
+        <input
+          type="text"
+          name="email_address_check"
+          value=""
+          class="input--hidden"
+        >
+
+        <input
+          type="hidden"
+          name="locale"
+          value="pt"
+        >
+
+        <input
+          type="hidden"
+          name="html_type"
+          value="simple"
+        >
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- =====================================================
+     FIM BREVO
+====================================================== -->
+
+
 
 </head>
 
