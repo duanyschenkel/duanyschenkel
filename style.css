@@ -1858,11 +1858,15 @@ h3 {
 }
 
 .alvara-services .unsure {
+    background: var(--cream);
     color: var(--deep);
+
+    border-top-color: var(--neutral);
+    border-bottom-color: var(--neutral);
 }
 
 .alvara-services .unsure p {
-    color: var(--deep);
+    color: rgba(63, 46, 46, 0.7);
 }
 
 .alvara-services .text-link {
@@ -1873,6 +1877,11 @@ h3 {
     transition:
         color 0.25s ease,
         border-color 0.25s ease;
+}
+
+.alvara-services .text-link:hover {
+    color: var(--terracotta);
+    border-bottom-color: var(--terracotta);
 }
 
 .alvara-services .text-link:hover {
