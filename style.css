@@ -917,8 +917,6 @@ h3 {
    ========================================================= */
 
 .priority-button {
-    position: relative;
-
     display: inline-flex;
 
     align-items: center;
@@ -928,7 +926,7 @@ h3 {
 
     min-height: 52px;
 
-    padding: 0 52px 0 22px;
+    padding: 0 22px;
 
     border: 1px solid var(--cream);
 
@@ -941,42 +939,6 @@ h3 {
     transition:
         background 0.2s ease,
         color 0.2s ease;
-}
-
-/*
-   A seta é criada exclusivamente pelo CSS.
-   O HTML não deve conter uma seta "→" adicional.
-*/
-
-.priority-button::after {
-    content: "";
-
-    position: absolute;
-
-    width: 8px;
-    height: 8px;
-
-    right: 19px;
-    top: 17px;
-
-    border-top: 1.5px solid currentColor;
-    border-right: 1.5px solid currentColor;
-}
-
-.priority-button::before {
-    content: "";
-
-    position: absolute;
-
-    width: 15px;
-    height: 1.5px;
-
-    right: 16px;
-    top: 27px;
-
-    background: currentColor;
-
-    transform: rotate(-45deg);
 }
 
 .priority-button:hover {
@@ -1857,6 +1819,11 @@ h3 {
     border-color: var(--deep) !important;
 }
 
+
+/* =========================================================
+   ALVARÁ | TRIAGEM CLARA
+   ========================================================= */
+
 .alvara-services .unsure {
     background: var(--cream);
     color: var(--deep);
@@ -1877,11 +1844,6 @@ h3 {
     transition:
         color 0.25s ease,
         border-color 0.25s ease;
-}
-
-.alvara-services .text-link:hover {
-    color: var(--terracotta);
-    border-bottom-color: var(--terracotta);
 }
 
 .alvara-services .text-link:hover {
@@ -2804,7 +2766,7 @@ h3 {
         width: 100%;
 
         padding-left: 18px;
-        padding-right: 48px;
+        padding-right: 18px;
     }
 
     .other-case {
