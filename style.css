@@ -1979,6 +1979,16 @@ h3 {
     line-height: 1.7;
 }
 
+.client-support .button {
+    background: var(--deep);
+    color: var(--cream);
+}
+
+.client-support .button:hover {
+    background: var(--terracotta);
+    color: var(--cream);
+}
+
 @media (max-width: 1244px) and (min-width: 801px) {
 
     .header {
