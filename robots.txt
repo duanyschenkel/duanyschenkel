@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://duanyschenkel.adv.br/sitemap.xml
