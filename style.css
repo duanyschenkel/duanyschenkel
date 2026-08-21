@@ -416,7 +416,8 @@ h3 {
     width: 100%;
     max-width: var(--max-width);
 
-    margin: 42px auto 0;
+    /* AJUSTE: mais respiro após o último serviço */
+    margin: 65px auto 0;
 
     padding: 28px 10px;
 
@@ -2056,7 +2057,8 @@ h3 {
         width: 100%;
         max-width: none;
 
-        margin: 38px 0 0;
+        /* AJUSTE: mais respiro após o último serviço */
+        margin: 55px 0 0;
 
         padding: 25px 0;
 
