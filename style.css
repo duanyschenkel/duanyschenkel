@@ -162,6 +162,31 @@ h3 {
     opacity: 1;
 }
 
+.client-link {
+    flex-shrink: 0;
+
+    padding: 10px 14px;
+
+    border: 1px solid rgba(63, 46, 46, 0.22);
+
+    color: var(--deep);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.client-link:hover {
+    background: var(--deep);
+    color: var(--cream);
+    border-color: var(--deep);
+}
+
 
 /* =========================================================
    HERO
@@ -1862,6 +1887,98 @@ h3 {
    TABLETS
    ========================================================= */
 
+/* =========================================================
+   URGÊNCIA E CLIENTES
+   ========================================================= */
+
+.urgent-case {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: 42px auto 0;
+    padding: 28px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-top: 1px solid rgba(243, 238, 232, 0.2);
+}
+
+.urgent-case p {
+    margin: 0;
+
+    color: rgba(243, 238, 232, 0.7);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.urgent-case-link {
+    flex-shrink: 0;
+
+    color: var(--cream);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--soft-terracotta);
+
+    padding-bottom: 3px;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.urgent-case-link:hover {
+    color: var(--soft-terracotta);
+}
+
+.client-support {
+    width: 100%;
+
+    padding: 110px 32px;
+
+    background: var(--neutral);
+    color: var(--deep);
+}
+
+.client-support-content {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+}
+
+.client-support .eyebrow {
+    margin-bottom: 18px;
+}
+
+.client-support h2 {
+    max-width: 700px;
+
+    margin: 0 0 24px;
+
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+    font-weight: 500;
+}
+
+.client-support p:not(.eyebrow) {
+    max-width: 620px;
+
+    margin: 0 0 34px;
+
+    color: rgba(63, 46, 46, 0.75);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
 @media (max-width: 1244px) and (min-width: 801px) {
 
     .header {
@@ -1913,6 +2030,12 @@ h3 {
 
     .brand {
         max-width: 100%;
+    }
+
+    .client-link {
+        padding: 9px 11px;
+
+        font-size: 10px;
     }
 
 
@@ -2323,6 +2446,38 @@ h3 {
         max-width: 100%;
 
         justify-content: flex-start;
+    }
+
+
+    /* =====================================================
+       URGÊNCIA E CLIENTES
+       ===================================================== */
+
+    .urgent-case {
+        width: 100%;
+        max-width: none;
+
+        margin-top: 32px;
+        padding: 25px 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 12px;
+    }
+
+    .client-support {
+        padding: 80px 20px;
+    }
+
+    .client-support h2 {
+        font-size: 40px;
+    }
+
+    .client-support p:not(.eyebrow) {
+        font-size: 16px;
     }
 
 
