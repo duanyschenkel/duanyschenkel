@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -28,6 +29,7 @@
         href="favicon.png"
         type="image/png"
     >
+
 
     <style>
 
@@ -70,12 +72,17 @@
         :root {
             --background: #F3EEE8;
             --background-dark: #E8DED6;
+
             --brown: #3F2E2E;
             --brown-light: #654B48;
+
             --rose: #C58A76;
             --rose-dark: #A96F5D;
+
             --border: rgba(63, 46, 46, .18);
+
             --white: #FBF8F5;
+
             --max-width: 1180px;
         }
 
@@ -98,7 +105,9 @@
             letter-spacing: .14em;
             font-weight: 700;
             text-transform: uppercase;
+
             color: var(--brown-light);
+
             margin-bottom: 22px;
         }
 
@@ -108,6 +117,7 @@
             justify-content: center;
 
             min-height: 52px;
+
             padding: 0 28px;
 
             background: var(--brown);
@@ -129,7 +139,9 @@
         .button:hover {
             background: var(--rose);
             border-color: var(--rose);
+
             color: var(--brown);
+
             transform: translateY(-1px);
         }
 
@@ -171,6 +183,7 @@
         .brand {
             display: flex;
             align-items: center;
+
             gap: 13px;
         }
 
@@ -187,6 +200,7 @@
         .brand-avatar img {
             width: 100%;
             height: 100%;
+
             object-fit: cover;
         }
 
@@ -204,6 +218,7 @@
 
             font-size: 10px;
             letter-spacing: .08em;
+
             text-transform: uppercase;
 
             color: var(--brown-light);
@@ -212,6 +227,7 @@
         .nav {
             display: flex;
             align-items: center;
+
             gap: 30px;
 
             font-size: 13px;
@@ -226,13 +242,17 @@
         }
 
         .header-cta {
-            font-size: 12px;
-            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
 
             padding: 11px 18px;
 
             border: 1px solid var(--brown);
             border-radius: 3px;
+
+            font-size: 12px;
+            font-weight: 700;
         }
 
 
@@ -246,8 +266,11 @@
 
         .hero-grid {
             display: grid;
+
             grid-template-columns: 1.25fr .75fr;
+
             gap: 90px;
+
             align-items: end;
         }
 
@@ -261,12 +284,15 @@
             );
 
             line-height: .98;
+
             letter-spacing: -.045em;
+
             font-weight: 500;
         }
 
         .hero h1 em {
             font-style: normal;
+
             color: var(--rose-dark);
         }
 
@@ -276,6 +302,7 @@
             margin-top: 32px;
 
             font-size: 18px;
+
             line-height: 1.65;
 
             color: var(--brown-light);
@@ -283,6 +310,19 @@
 
         .hero-action {
             margin-top: 34px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+        .hero-secondary {
+            color: var(--brown);
+
+            font-size: 13px;
         }
 
         .hero-note {
@@ -293,6 +333,7 @@
             color: var(--brown-light);
 
             font-size: 14px;
+
             line-height: 1.7;
         }
 
@@ -302,6 +343,7 @@
             color: var(--brown);
 
             font-size: 15px;
+
             margin-bottom: 9px;
         }
 
@@ -314,12 +356,15 @@
             padding: 100px 0;
 
             background: var(--brown);
+
             color: var(--white);
         }
 
         .intro-grid {
             display: grid;
+
             grid-template-columns: .8fr 1.2fr;
+
             gap: 100px;
         }
 
@@ -328,9 +373,16 @@
         }
 
         .intro h2 {
-            font-size: clamp(32px, 4vw, 53px);
+            font-size: clamp(
+                32px,
+                4vw,
+                53px
+            );
+
             line-height: 1.05;
+
             letter-spacing: -.035em;
+
             font-weight: 500;
         }
 
@@ -340,7 +392,9 @@
 
         .intro-content p {
             font-size: 17px;
+
             line-height: 1.75;
+
             color: #E7DDD7;
         }
 
@@ -359,13 +413,21 @@
 
         .section-heading {
             max-width: 720px;
+
             margin-bottom: 60px;
         }
 
         .section-heading h2 {
-            font-size: clamp(35px, 4.5vw, 58px);
+            font-size: clamp(
+                35px,
+                4.5vw,
+                58px
+            );
+
             line-height: 1.04;
+
             letter-spacing: -.04em;
+
             font-weight: 500;
         }
 
@@ -375,7 +437,9 @@
 
         .situation {
             display: grid;
+
             grid-template-columns: 80px 1fr 30px;
+
             gap: 25px;
 
             padding: 32px 0;
@@ -387,6 +451,7 @@
 
         .situation-number {
             font-size: 13px;
+
             font-weight: 700;
 
             color: var(--rose-dark);
@@ -394,6 +459,7 @@
 
         .situation h3 {
             font-size: 20px;
+
             font-weight: 600;
 
             margin-bottom: 8px;
@@ -409,6 +475,7 @@
 
         .situation-arrow {
             font-size: 20px;
+
             color: var(--rose-dark);
         }
 
@@ -425,14 +492,23 @@
 
         .how-grid {
             display: grid;
+
             grid-template-columns: .7fr 1.3fr;
+
             gap: 100px;
         }
 
         .how h2 {
-            font-size: clamp(35px, 4vw, 54px);
+            font-size: clamp(
+                35px,
+                4vw,
+                54px
+            );
+
             line-height: 1.05;
+
             letter-spacing: -.04em;
+
             font-weight: 500;
         }
 
@@ -442,6 +518,7 @@
 
         .step {
             display: grid;
+
             grid-template-columns: 55px 1fr;
 
             gap: 25px;
@@ -453,24 +530,29 @@
 
         .step-number {
             font-size: 12px;
+
             font-weight: 700;
+
             color: var(--rose-dark);
         }
 
         .step h3 {
             font-size: 18px;
+
             margin-bottom: 7px;
         }
 
         .step p {
             font-size: 15px;
+
             color: var(--brown-light);
+
             max-width: 620px;
         }
 
 
         /* =====================================================
-           DIFFERENTIAL
+           ANALYSIS
         ====================================================== */
 
         .analysis {
@@ -479,21 +561,33 @@
 
         .analysis-grid {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 80px;
+
             align-items: center;
         }
 
         .analysis h2 {
-            font-size: clamp(35px, 4vw, 54px);
+            font-size: clamp(
+                35px,
+                4vw,
+                54px
+            );
+
             line-height: 1.05;
+
             letter-spacing: -.04em;
+
             font-weight: 500;
         }
 
         .analysis-text p {
             font-size: 16px;
+
             color: var(--brown-light);
+
             line-height: 1.75;
         }
 
@@ -521,7 +615,9 @@
 
         .analysis-box p {
             font-size: 14px;
+
             line-height: 1.6;
+
             color: var(--brown-light);
         }
 
@@ -534,13 +630,17 @@
             padding: 110px 0;
 
             background: var(--brown);
+
             color: var(--white);
         }
 
         .about-grid {
             display: grid;
+
             grid-template-columns: .75fr 1.25fr;
+
             gap: 90px;
+
             align-items: center;
         }
 
@@ -550,6 +650,7 @@
 
         .about-photo img {
             width: 100%;
+
             aspect-ratio: 4 / 5;
 
             object-fit: cover;
@@ -560,9 +661,16 @@
         }
 
         .about h2 {
-            font-size: clamp(36px, 4vw, 56px);
+            font-size: clamp(
+                36px,
+                4vw,
+                56px
+            );
+
             line-height: 1;
+
             letter-spacing: -.04em;
+
             font-weight: 500;
 
             margin-bottom: 28px;
@@ -574,6 +682,7 @@
             color: #E7DDD7;
 
             font-size: 16px;
+
             line-height: 1.75;
         }
 
@@ -592,14 +701,23 @@
 
         .faq-grid {
             display: grid;
+
             grid-template-columns: .7fr 1.3fr;
+
             gap: 100px;
         }
 
         .faq h2 {
-            font-size: clamp(35px, 4vw, 54px);
+            font-size: clamp(
+                35px,
+                4vw,
+                54px
+            );
+
             line-height: 1.05;
+
             letter-spacing: -.04em;
+
             font-weight: 500;
         }
 
@@ -609,30 +727,39 @@
 
         .faq-item {
             padding: 27px 0;
+
             border-bottom: 1px solid var(--border);
         }
 
         .faq-item h3 {
             font-size: 17px;
+
             font-weight: 600;
+
             margin-bottom: 9px;
         }
 
         .faq-item p {
             font-size: 15px;
+
             line-height: 1.7;
+
             color: var(--brown-light);
         }
 
 
         /* =====================================================
-           CTA
+           FINAL CTA – CLARO
         ====================================================== */
 
         .final-cta {
-            padding: 105px 0;
+            padding: 110px 0;
 
-            background: var(--rose);
+            background: var(--background);
+
+            color: var(--brown);
+
+            border-top: 1px solid var(--border);
         }
 
         .final-cta-content {
@@ -640,13 +767,20 @@
         }
 
         .final-cta .eyebrow {
-            color: var(--brown);
+            color: var(--brown-light);
         }
 
         .final-cta h2 {
-            font-size: clamp(38px, 5vw, 65px);
+            font-size: clamp(
+                38px,
+                5vw,
+                65px
+            );
+
             line-height: 1;
+
             letter-spacing: -.045em;
+
             font-weight: 500;
         }
 
@@ -656,6 +790,7 @@
             margin-top: 25px;
 
             font-size: 17px;
+
             color: var(--brown-light);
         }
 
@@ -669,7 +804,10 @@
             max-width: 600px;
 
             font-size: 12px !important;
+
             line-height: 1.55 !important;
+
+            color: var(--brown-light) !important;
         }
 
 
@@ -681,12 +819,15 @@
             padding: 60px 0 25px;
 
             background: var(--brown);
+
             color: var(--white);
         }
 
         .footer-grid {
             display: grid;
+
             grid-template-columns: 1fr auto;
+
             gap: 50px;
 
             padding-bottom: 50px;
@@ -696,6 +837,7 @@
             display: block;
 
             font-size: 14px;
+
             letter-spacing: .07em;
         }
 
@@ -703,6 +845,7 @@
             margin-top: 7px;
 
             font-size: 12px;
+
             color: #D9CCC5;
         }
 
@@ -721,13 +864,21 @@
         .footer-bottom {
             padding-top: 22px;
 
-            border-top: 1px solid rgba(255,255,255,.15);
+            border-top: 1px solid rgba(
+                255,
+                255,
+                255,
+                .15
+            );
 
             display: flex;
+
             justify-content: space-between;
+
             gap: 20px;
 
             font-size: 11px;
+
             color: #CDBDB5;
         }
 
@@ -737,7 +888,7 @@
 
 
         /* =====================================================
-           RESPONSIVE
+           RESPONSIVE – TABLET
         ====================================================== */
 
         @media (max-width: 850px) {
@@ -765,6 +916,7 @@
             .about-grid,
             .faq-grid {
                 grid-template-columns: 1fr;
+
                 gap: 50px;
             }
 
@@ -811,10 +963,16 @@
 
             .footer-bottom a {
                 margin-left: 0;
+
                 margin-right: 15px;
             }
+
         }
 
+
+        /* =====================================================
+           RESPONSIVE – MOBILE
+        ====================================================== */
 
         @media (max-width: 560px) {
 
@@ -836,6 +994,7 @@
 
             .header-cta {
                 font-size: 10px;
+
                 padding: 8px 10px;
             }
 
@@ -847,12 +1006,25 @@
                 font-size: 16px;
             }
 
-            .button {
+            .hero-action {
+                align-items: stretch;
+
+                flex-direction: column;
+
+                gap: 18px;
+            }
+
+            .hero-action .button {
                 width: 100%;
+            }
+
+            .hero-secondary {
+                align-self: flex-start;
             }
 
             .situation {
                 grid-template-columns: 45px 1fr;
+
                 gap: 15px;
             }
 
@@ -862,15 +1034,22 @@
 
             .step {
                 grid-template-columns: 40px 1fr;
+
                 gap: 15px;
             }
 
             .final-cta {
                 padding: 75px 0;
             }
+
+            .final-cta .button {
+                width: 100%;
+            }
+
         }
 
     </style>
+
 </head>
 
 
@@ -934,10 +1113,12 @@
 
 
     <a
-        href="#contato"
+        href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20sua%20p%C3%A1gina%20sobre%20recupera%C3%A7%C3%A3o%20de%20contas%20e%20gostaria%20de%20explicar%20o%20que%20aconteceu%20com%20a%20minha%20conta."
+        target="_blank"
+        rel="noopener noreferrer"
         class="header-cta"
     >
-        Falar sobre meu caso
+        Falar pelo WhatsApp
     </a>
 
 </header>
@@ -956,11 +1137,13 @@
 
         <div class="hero-grid">
 
+
             <div>
 
                 <p class="eyebrow">
                     DIREITO DIGITAL | CONTAS E PLATAFORMAS
                 </p>
+
 
                 <h1>
                     Sua conta foi suspensa,
@@ -968,19 +1151,31 @@
                     ou você perdeu o acesso?
                 </h1>
 
+
                 <p class="hero-text">
                     Entenda quais medidas jurídicas podem ser adotadas
                     diante de uma restrição ou desativação de conta
                     em uma plataforma digital.
                 </p>
 
+
                 <div class="hero-action">
 
                     <a
-                        href="#contato"
+                        href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20sua%20p%C3%A1gina%20sobre%20recupera%C3%A7%C3%A3o%20de%20contas%20e%20gostaria%20de%20explicar%20o%20que%20aconteceu%20com%20a%20minha%20conta."
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="button"
                     >
-                        QUERO ANALISAR MEU CASO
+                        FALAR PELO WHATSAPP
+                    </a>
+
+
+                    <a
+                        href="#como-funciona"
+                        class="text-link hero-secondary"
+                    >
+                        Entender como funciona →
                     </a>
 
                 </div>
@@ -1000,6 +1195,7 @@
 
             </div>
 
+
         </div>
 
     </div>
@@ -1016,6 +1212,7 @@
     <div class="container">
 
         <div class="intro-grid">
+
 
             <div>
 
@@ -1039,11 +1236,13 @@
                     oportunidades comerciais e informações importantes.
                 </p>
 
+
                 <p>
                     Por isso, uma suspensão ou desativação pode gerar
                     consequências que ultrapassam o simples acesso
                     ao aplicativo.
                 </p>
+
 
                 <p>
                     A partir das circunstâncias do caso, é possível
@@ -1052,6 +1251,7 @@
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1070,6 +1270,7 @@
 >
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -1093,6 +1294,7 @@
                     01
                 </div>
 
+
                 <div>
 
                     <h3>
@@ -1107,6 +1309,7 @@
 
                 </div>
 
+
                 <div class="situation-arrow">
                     ↗
                 </div>
@@ -1119,6 +1322,7 @@
                 <div class="situation-number">
                     02
                 </div>
+
 
                 <div>
 
@@ -1134,6 +1338,7 @@
 
                 </div>
 
+
                 <div class="situation-arrow">
                     ↗
                 </div>
@@ -1146,6 +1351,7 @@
                 <div class="situation-number">
                     03
                 </div>
+
 
                 <div>
 
@@ -1160,6 +1366,7 @@
 
                 </div>
 
+
                 <div class="situation-arrow">
                     ↗
                 </div>
@@ -1172,6 +1379,7 @@
                 <div class="situation-number">
                     04
                 </div>
+
 
                 <div>
 
@@ -1187,6 +1395,7 @@
 
                 </div>
 
+
                 <div class="situation-arrow">
                     ↗
                 </div>
@@ -1199,6 +1408,7 @@
                 <div class="situation-number">
                     05
                 </div>
+
 
                 <div>
 
@@ -1213,6 +1423,7 @@
                     </p>
 
                 </div>
+
 
                 <div class="situation-arrow">
                     ↗
@@ -1240,6 +1451,7 @@
     <div class="container">
 
         <div class="how-grid">
+
 
             <div>
 
@@ -1367,6 +1579,7 @@
 
         <div class="analysis-grid">
 
+
             <div>
 
                 <p class="eyebrow">
@@ -1388,11 +1601,13 @@
                     a restrição ou desativação.
                 </p>
 
+
                 <p>
                     Por isso, a análise considera o que foi informado,
                     o histórico da conta, os registros disponíveis
                     e as tentativas já realizadas.
                 </p>
+
 
                 <div class="analysis-box">
 
@@ -1409,6 +1624,7 @@
                 </div>
 
             </div>
+
 
         </div>
 
@@ -1430,6 +1646,7 @@
 
         <div class="about-grid">
 
+
             <div class="about-photo">
 
                 <img
@@ -1447,15 +1664,18 @@
                     SOBRE A ADVOGADA
                 </p>
 
+
                 <h2>
                     Duany Schenkel
                 </h2>
+
 
                 <p>
                     Advogada inscrita na OAB/SC desde 2015, com experiência
                     em diferentes ambientes profissionais, incluindo
                     advocacia, serviço público, CLT e empreendedorismo.
                 </p>
+
 
                 <p>
                     Atualmente, concentra sua atuação em Direito Digital,
@@ -1464,6 +1684,7 @@
                     de conteúdo e negócios desenvolvidos na internet.
                 </p>
 
+
                 <p>
                     O trabalho envolve compreender o problema jurídico
                     e também o ambiente tecnológico em que esse conflito
@@ -1471,6 +1692,7 @@
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1491,6 +1713,7 @@
     <div class="container">
 
         <div class="faq-grid">
+
 
             <div>
 
@@ -1610,7 +1833,7 @@
 
 
 <!-- =====================================================
-     CTA
+     CTA FINAL – CLARO
 ====================================================== -->
 
 <section
@@ -1622,13 +1845,16 @@
 
         <div class="final-cta-content">
 
+
             <p class="eyebrow">
-                SUA CONTA ESTÁ ENFRENTANDO UMA RESTRIÇÃO?
+                FALE SOBRE O SEU CASO
             </p>
+
 
             <h2>
                 Explique o que aconteceu.
             </h2>
+
 
             <p>
                 Entre em contato para verificar a possibilidade
@@ -1636,20 +1862,23 @@
                 ser avaliados no seu caso.
             </p>
 
+
             <a
-                href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20sua%20p%C3%A1gina%20sobre%20contas%20e%20plataformas%20e%20gostaria%20de%20explicar%20o%20que%20aconteceu%20com%20a%20minha%20conta."
+                href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20sua%20p%C3%A1gina%20sobre%20recupera%C3%A7%C3%A3o%20de%20contas%20e%20gostaria%20de%20explicar%20o%20que%20aconteceu%20com%20a%20minha%20conta."
                 target="_blank"
                 rel="noopener noreferrer"
                 class="button"
             >
-                FALAR SOBRE MEU CASO
+                FALAR PELO WHATSAPP
             </a>
+
 
             <p class="cta-note">
                 O envio das informações não implica contratação
                 de serviços jurídicos. O atendimento está sujeito
                 à análise do caso e à disponibilidade profissional.
             </p>
+
 
         </div>
 
@@ -1669,7 +1898,9 @@
 
     <div class="container">
 
+
         <div class="footer-grid">
+
 
             <div>
 
@@ -1694,6 +1925,7 @@
                     contato@duanyschenkel.adv.br
                 </a>
 
+
                 <a
                     href="https://wa.me/5549988133451"
                     target="_blank"
@@ -1704,6 +1936,7 @@
 
             </div>
 
+
         </div>
 
 
@@ -1713,11 +1946,13 @@
                 © 2026 Duany Schenkel. Todos os direitos reservados.
             </span>
 
+
             <span>
 
                 <a href="politica-de-privacidade.html">
                     Política de Privacidade
                 </a>
+
 
                 <a href="termos-de-uso.html">
                     Termos de Uso
@@ -1727,10 +1962,12 @@
 
         </div>
 
+
     </div>
 
 </footer>
 
 
 </body>
+
 </html>
