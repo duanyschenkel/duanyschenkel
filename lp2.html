@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Atuação jurídica em conflitos envolvendo contas suspensas, desativadas ou restritas em plataformas digitais."
+    >
+
+    <title>
+        Recuperação de Contas | Duany Schenkel – Advogada
+    </title>
+
+    <link
+        rel="canonical"
+        href="https://duanyschenkel.adv.br/recuperacao-de-contas.html"
+    >
+
+    <link
+        rel="icon"
+        href="favicon.png"
+        type="image/png"
+    >
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #F3EEE8;
+            color: #3F2E2E;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =====================================================
+           VARIABLES
+        ====================================================== */
+
+        :root {
+            --background: #F3EEE8;
+            --background-dark: #E8DED6;
+            --brown: #3F2E2E;
+            --brown-light: #654B48;
+            --rose: #C58A76;
+            --rose-dark: #A96F5D;
+            --border: rgba(63, 46, 46, .18);
+            --white: #FBF8F5;
+            --max-width: 1180px;
+        }
+
+
+        /* =====================================================
+           GLOBAL
+        ====================================================== */
+
+        .container {
+            width: min(
+                calc(100% - 48px),
+                var(--max-width)
+            );
+
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: .14em;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--brown-light);
+            margin-bottom: 22px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 52px;
+            padding: 0 28px;
+
+            background: var(--brown);
+            color: var(--white);
+
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .04em;
+
+            border: 1px solid var(--brown);
+            border-radius: 3px;
+
+            transition:
+                background .2s ease,
+                color .2s ease,
+                transform .2s ease;
+        }
+
+        .button:hover {
+            background: var(--rose);
+            border-color: var(--rose);
+            color: var(--brown);
+            transform: translateY(-1px);
+        }
+
+        .text-link {
+            display: inline-block;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            border-bottom: 1px solid var(--brown);
+
+            padding-bottom: 3px;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        .header {
+            width: min(
+                calc(100% - 48px),
+                var(--max-width)
+            );
+
+            margin: 0 auto;
+
+            min-height: 92px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+        }
+
+        .brand-avatar {
+            width: 44px;
+            height: 44px;
+
+            border-radius: 50%;
+            overflow: hidden;
+
+            flex-shrink: 0;
+        }
+
+        .brand-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .brand-text strong {
+            display: block;
+
+            font-size: 14px;
+            letter-spacing: .06em;
+        }
+
+        .brand-text span {
+            display: block;
+
+            margin-top: 2px;
+
+            font-size: 10px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+
+            color: var(--brown-light);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            font-size: 13px;
+        }
+
+        .nav a {
+            transition: opacity .2s ease;
+        }
+
+        .nav a:hover {
+            opacity: .55;
+        }
+
+        .header-cta {
+            font-size: 12px;
+            font-weight: 700;
+
+            padding: 11px 18px;
+
+            border: 1px solid var(--brown);
+            border-radius: 3px;
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+            padding: 105px 0 115px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.25fr .75fr;
+            gap: 90px;
+            align-items: end;
+        }
+
+        .hero h1 {
+            max-width: 800px;
+
+            font-size: clamp(
+                42px,
+                6vw,
+                78px
+            );
+
+            line-height: .98;
+            letter-spacing: -.045em;
+            font-weight: 500;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--rose-dark);
+        }
+
+        .hero-text {
+            max-width: 650px;
+
+            margin-top: 32px;
+
+            font-size: 18px;
+            line-height: 1.65;
+
+            color: var(--brown-light);
+        }
+
+        .hero-action {
+            margin-top: 34px;
+        }
+
+        .hero-note {
+            padding-left: 28px;
+
+            border-left: 1px solid var(--rose);
+
+            color: var(--brown-light);
+
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .hero-note strong {
+            display: block;
+
+            color: var(--brown);
+
+            font-size: 15px;
+            margin-bottom: 9px;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ====================================================== */
+
+        .intro {
+            padding: 100px 0;
+
+            background: var(--brown);
+            color: var(--white);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 100px;
+        }
+
+        .intro .eyebrow {
+            color: #D9B8AA;
+        }
+
+        .intro h2 {
+            font-size: clamp(32px, 4vw, 53px);
+            line-height: 1.05;
+            letter-spacing: -.035em;
+            font-weight: 500;
+        }
+
+        .intro-content {
+            max-width: 650px;
+        }
+
+        .intro-content p {
+            font-size: 17px;
+            line-height: 1.75;
+            color: #E7DDD7;
+        }
+
+        .intro-content p + p {
+            margin-top: 22px;
+        }
+
+
+        /* =====================================================
+           SITUATIONS
+        ====================================================== */
+
+        .situations {
+            padding: 110px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 60px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(35px, 4.5vw, 58px);
+            line-height: 1.04;
+            letter-spacing: -.04em;
+            font-weight: 500;
+        }
+
+        .situations-list {
+            border-top: 1px solid var(--border);
+        }
+
+        .situation {
+            display: grid;
+            grid-template-columns: 80px 1fr 30px;
+            gap: 25px;
+
+            padding: 32px 0;
+
+            border-bottom: 1px solid var(--border);
+
+            align-items: start;
+        }
+
+        .situation-number {
+            font-size: 13px;
+            font-weight: 700;
+
+            color: var(--rose-dark);
+        }
+
+        .situation h3 {
+            font-size: 20px;
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+        .situation p {
+            max-width: 720px;
+
+            color: var(--brown-light);
+
+            font-size: 15px;
+        }
+
+        .situation-arrow {
+            font-size: 20px;
+            color: var(--rose-dark);
+        }
+
+
+        /* =====================================================
+           HOW IT WORKS
+        ====================================================== */
+
+        .how {
+            padding: 110px 0;
+
+            background: var(--background-dark);
+        }
+
+        .how-grid {
+            display: grid;
+            grid-template-columns: .7fr 1.3fr;
+            gap: 100px;
+        }
+
+        .how h2 {
+            font-size: clamp(35px, 4vw, 54px);
+            line-height: 1.05;
+            letter-spacing: -.04em;
+            font-weight: 500;
+        }
+
+        .steps {
+            border-top: 1px solid var(--border);
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 55px 1fr;
+
+            gap: 25px;
+
+            padding: 28px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step-number {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--rose-dark);
+        }
+
+        .step h3 {
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
+
+        .step p {
+            font-size: 15px;
+            color: var(--brown-light);
+            max-width: 620px;
+        }
+
+
+        /* =====================================================
+           DIFFERENTIAL
+        ====================================================== */
+
+        .analysis {
+            padding: 110px 0;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .analysis h2 {
+            font-size: clamp(35px, 4vw, 54px);
+            line-height: 1.05;
+            letter-spacing: -.04em;
+            font-weight: 500;
+        }
+
+        .analysis-text p {
+            font-size: 16px;
+            color: var(--brown-light);
+            line-height: 1.75;
+        }
+
+        .analysis-text p + p {
+            margin-top: 20px;
+        }
+
+        .analysis-box {
+            margin-top: 30px;
+
+            padding: 25px 28px;
+
+            border-left: 2px solid var(--rose);
+
+            background: var(--background-dark);
+        }
+
+        .analysis-box strong {
+            display: block;
+
+            font-size: 15px;
+
+            margin-bottom: 7px;
+        }
+
+        .analysis-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--brown-light);
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ====================================================== */
+
+        .about {
+            padding: 110px 0;
+
+            background: var(--brown);
+            color: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .about-photo {
+            max-width: 400px;
+        }
+
+        .about-photo img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+        }
+
+        .about .eyebrow {
+            color: #D9B8AA;
+        }
+
+        .about h2 {
+            font-size: clamp(36px, 4vw, 56px);
+            line-height: 1;
+            letter-spacing: -.04em;
+            font-weight: 500;
+
+            margin-bottom: 28px;
+        }
+
+        .about p {
+            max-width: 670px;
+
+            color: #E7DDD7;
+
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .about p + p {
+            margin-top: 20px;
+        }
+
+
+        /* =====================================================
+           FAQ
+        ====================================================== */
+
+        .faq {
+            padding: 110px 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: .7fr 1.3fr;
+            gap: 100px;
+        }
+
+        .faq h2 {
+            font-size: clamp(35px, 4vw, 54px);
+            line-height: 1.05;
+            letter-spacing: -.04em;
+            font-weight: 500;
+        }
+
+        .faq-list {
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-item {
+            padding: 27px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-item h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 9px;
+        }
+
+        .faq-item p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--brown-light);
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .final-cta {
+            padding: 105px 0;
+
+            background: var(--rose);
+        }
+
+        .final-cta-content {
+            max-width: 850px;
+        }
+
+        .final-cta .eyebrow {
+            color: var(--brown);
+        }
+
+        .final-cta h2 {
+            font-size: clamp(38px, 5vw, 65px);
+            line-height: 1;
+            letter-spacing: -.045em;
+            font-weight: 500;
+        }
+
+        .final-cta p {
+            max-width: 650px;
+
+            margin-top: 25px;
+
+            font-size: 17px;
+            color: var(--brown-light);
+        }
+
+        .final-cta .button {
+            margin-top: 30px;
+        }
+
+        .cta-note {
+            margin-top: 20px;
+
+            max-width: 600px;
+
+            font-size: 12px !important;
+            line-height: 1.55 !important;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .footer {
+            padding: 60px 0 25px;
+
+            background: var(--brown);
+            color: var(--white);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 50px;
+
+            padding-bottom: 50px;
+        }
+
+        .footer strong {
+            display: block;
+
+            font-size: 14px;
+            letter-spacing: .07em;
+        }
+
+        .footer p {
+            margin-top: 7px;
+
+            font-size: 12px;
+            color: #D9CCC5;
+        }
+
+        .footer-contact {
+            text-align: right;
+        }
+
+        .footer-contact a {
+            display: block;
+
+            font-size: 13px;
+
+            color: #E7DDD7;
+        }
+
+        .footer-bottom {
+            padding-top: 22px;
+
+            border-top: 1px solid rgba(255,255,255,.15);
+
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            font-size: 11px;
+            color: #CDBDB5;
+        }
+
+        .footer-bottom a {
+            margin-left: 20px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 850px) {
+
+            .header {
+                min-height: 76px;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .header-cta {
+                padding: 9px 13px;
+            }
+
+            .hero {
+                padding: 75px 0 80px;
+            }
+
+            .hero-grid,
+            .intro-grid,
+            .how-grid,
+            .analysis-grid,
+            .about-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .hero-grid {
+                align-items: start;
+            }
+
+            .hero h1 {
+                font-size: clamp(
+                    42px,
+                    12vw,
+                    65px
+                );
+            }
+
+            .hero-note {
+                max-width: 550px;
+            }
+
+            .intro,
+            .situations,
+            .how,
+            .analysis,
+            .about,
+            .faq {
+                padding: 80px 0;
+            }
+
+            .about-photo {
+                max-width: 300px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-contact {
+                text-align: left;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .footer-bottom a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+        }
+
+
+        @media (max-width: 560px) {
+
+            .container,
+            .header {
+                width: min(
+                    calc(100% - 32px),
+                    var(--max-width)
+                );
+            }
+
+            .brand-text strong {
+                font-size: 12px;
+            }
+
+            .brand-text span {
+                font-size: 9px;
+            }
+
+            .header-cta {
+                font-size: 10px;
+                padding: 8px 10px;
+            }
+
+            .hero {
+                padding: 65px 0 70px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .situation {
+                grid-template-columns: 45px 1fr;
+                gap: 15px;
+            }
+
+            .situation-arrow {
+                display: none;
+            }
+
+            .step {
+                grid-template-columns: 40px 1fr;
+                gap: 15px;
+            }
+
+            .final-cta {
+                padding: 75px 0;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="header">
+
+    <a
+        href="index.html"
+        class="brand"
+    >
+
+        <div class="brand-avatar">
+
+            <img
+                src="https://i.ibb.co/mFt1FcRg/biopic01.jpg"
+                alt="Duany Schenkel"
+            >
+
+        </div>
+
+        <div class="brand-text">
+
+            <strong>
+                DUANY SCHENKEL
+            </strong>
+
+            <span>
+                ADVOGADA | OAB/SC 42.321
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <nav class="nav">
+
+        <a href="#situacoes">
+            Situações
+        </a>
+
+        <a href="#como-funciona">
+            Como funciona
+        </a>
+
+        <a href="#sobre">
+            Sobre
+        </a>
+
+        <a href="#faq">
+            Dúvidas
+        </a>
+
+    </nav>
+
+
+    <a
+        href="#contato"
+        class="header-cta"
+    >
+        Falar sobre meu caso
+    </a>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+            <div>
+
+                <p class="eyebrow">
+                    DIREITO DIGITAL | CONTAS E PLATAFORMAS
+                </p>
+
+                <h1>
+                    Sua conta foi suspensa,
+                    <em>desativada</em>
+                    ou você perdeu o acesso?
+                </h1>
+
+                <p class="hero-text">
+                    Entenda quais medidas jurídicas podem ser adotadas
+                    diante de uma restrição ou desativação de conta
+                    em uma plataforma digital.
+                </p>
+
+                <div class="hero-action">
+
+                    <a
+                        href="#contato"
+                        class="button"
+                    >
+                        QUERO ANALISAR MEU CASO
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-note">
+
+                <strong>
+                    Cada caso precisa ser analisado individualmente.
+                </strong>
+
+                A avaliação considera as informações fornecidas
+                pela plataforma, o histórico da conta, as tentativas
+                de recuperação e as circunstâncias da restrição.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+====================================================== -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="intro-grid">
+
+            <div>
+
+                <p class="eyebrow">
+                    O PROBLEMA
+                </p>
+
+                <h2>
+                    Uma conta pode representar muito mais do que um login.
+                </h2>
+
+            </div>
+
+
+            <div class="intro-content">
+
+                <p>
+                    Para quem trabalha, vende, cria conteúdo ou mantém
+                    uma atividade profissional na internet, uma conta
+                    pode concentrar conteúdo, contatos, histórico,
+                    oportunidades comerciais e informações importantes.
+                </p>
+
+                <p>
+                    Por isso, uma suspensão ou desativação pode gerar
+                    consequências que ultrapassam o simples acesso
+                    ao aplicativo.
+                </p>
+
+                <p>
+                    A partir das circunstâncias do caso, é possível
+                    avaliar quais medidas jurídicas podem ser adotadas
+                    diante da decisão da plataforma.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SITUAÇÕES
+====================================================== -->
+
+<section
+    class="situations"
+    id="situacoes"
+>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                SITUAÇÕES QUE PODEM SER ANALISADAS
+            </p>
+
+            <h2>
+                Talvez o seu caso esteja aqui.
+            </h2>
+
+        </div>
+
+
+        <div class="situations-list">
+
+
+            <div class="situation">
+
+                <div class="situation-number">
+                    01
+                </div>
+
+                <div>
+
+                    <h3>
+                        Conta suspensa ou desativada
+                    </h3>
+
+                    <p>
+                        A plataforma restringiu ou desativou sua conta
+                        e as tentativas realizadas pelos canais
+                        disponibilizados não solucionaram a situação.
+                    </p>
+
+                </div>
+
+                <div class="situation-arrow">
+                    ↗
+                </div>
+
+            </div>
+
+
+            <div class="situation">
+
+                <div class="situation-number">
+                    02
+                </div>
+
+                <div>
+
+                    <h3>
+                        Conta profissional afetada
+                    </h3>
+
+                    <p>
+                        Você utiliza a conta para divulgar seu trabalho,
+                        vender produtos, prestar serviços ou desenvolver
+                        sua atividade profissional.
+                    </p>
+
+                </div>
+
+                <div class="situation-arrow">
+                    ↗
+                </div>
+
+            </div>
+
+
+            <div class="situation">
+
+                <div class="situation-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h3>
+                        Conta restaurada e suspensa novamente
+                    </h3>
+
+                    <p>
+                        A plataforma reconheceu ou reverteu uma decisão,
+                        mas a conta voltou a sofrer restrições posteriormente.
+                    </p>
+
+                </div>
+
+                <div class="situation-arrow">
+                    ↗
+                </div>
+
+            </div>
+
+
+            <div class="situation">
+
+                <div class="situation-number">
+                    04
+                </div>
+
+                <div>
+
+                    <h3>
+                        Recursos recusados
+                    </h3>
+
+                    <p>
+                        Você contestou a decisão da plataforma, recebeu
+                        uma resposta negativa ou não conseguiu solucionar
+                        o problema pelos canais disponíveis.
+                    </p>
+
+                </div>
+
+                <div class="situation-arrow">
+                    ↗
+                </div>
+
+            </div>
+
+
+            <div class="situation">
+
+                <div class="situation-number">
+                    05
+                </div>
+
+                <div>
+
+                    <h3>
+                        Conflito com a plataforma
+                    </h3>
+
+                    <p>
+                        Você questiona uma decisão de moderação,
+                        restrição ou encerramento da conta e precisa
+                        avaliar quais medidas jurídicas podem ser adotadas.
+                    </p>
+
+                </div>
+
+                <div class="situation-arrow">
+                    ↗
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     COMO FUNCIONA
+====================================================== -->
+
+<section
+    class="how"
+    id="como-funciona"
+>
+
+    <div class="container">
+
+        <div class="how-grid">
+
+            <div>
+
+                <p class="eyebrow">
+                    COMO FUNCIONA
+                </p>
+
+                <h2>
+                    Primeiro, entendemos o que aconteceu.
+                </h2>
+
+            </div>
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Você explica a situação
+                        </h3>
+
+                        <p>
+                            São reunidas as informações e os documentos
+                            relacionados à conta e à restrição.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            O caso é analisado
+                        </h3>
+
+                        <p>
+                            São avaliados o histórico da conta,
+                            as comunicações da plataforma,
+                            os recursos realizados e as circunstâncias
+                            apresentadas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Você recebe orientação jurídica
+                        </h3>
+
+                        <p>
+                            A partir da análise, são indicadas as medidas
+                            juridicamente cabíveis para o caso.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            A atuação é realizada
+                        </h3>
+
+                        <p>
+                            Havendo contratação, as medidas são definidas
+                            de acordo com as características concretas
+                            da situação.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ANÁLISE
+====================================================== -->
+
+<section class="analysis">
+
+    <div class="container">
+
+        <div class="analysis-grid">
+
+            <div>
+
+                <p class="eyebrow">
+                    ANÁLISE DO CASO
+                </p>
+
+                <h2>
+                    A justificativa da plataforma também precisa ser compreendida.
+                </h2>
+
+            </div>
+
+
+            <div class="analysis-text">
+
+                <p>
+                    Nem sempre a mensagem apresentada pela plataforma
+                    permite compreender com precisão o que motivou
+                    a restrição ou desativação.
+                </p>
+
+                <p>
+                    Por isso, a análise considera o que foi informado,
+                    o histórico da conta, os registros disponíveis
+                    e as tentativas já realizadas.
+                </p>
+
+                <div class="analysis-box">
+
+                    <strong>
+                        Antes de definir uma medida
+                    </strong>
+
+                    <p>
+                        É necessário compreender as circunstâncias
+                        concretas do caso e avaliar quais caminhos
+                        jurídicos estão disponíveis.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SOBRE
+====================================================== -->
+
+<section
+    class="about"
+    id="sobre"
+>
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-photo">
+
+                <img
+                    src="https://i.ibb.co/mFt1FcRg/biopic01.jpg"
+                    alt="Duany Schenkel – Advogada"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div>
+
+                <p class="eyebrow">
+                    SOBRE A ADVOGADA
+                </p>
+
+                <h2>
+                    Duany Schenkel
+                </h2>
+
+                <p>
+                    Advogada inscrita na OAB/SC desde 2015, com experiência
+                    em diferentes ambientes profissionais, incluindo
+                    advocacia, serviço público, CLT e empreendedorismo.
+                </p>
+
+                <p>
+                    Atualmente, concentra sua atuação em Direito Digital,
+                    especialmente nas questões jurídicas relacionadas
+                    a redes sociais, plataformas digitais, criadores
+                    de conteúdo e negócios desenvolvidos na internet.
+                </p>
+
+                <p>
+                    O trabalho envolve compreender o problema jurídico
+                    e também o ambiente tecnológico em que esse conflito
+                    acontece.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FAQ
+====================================================== -->
+
+<section
+    class="faq"
+    id="faq"
+>
+
+    <div class="container">
+
+        <div class="faq-grid">
+
+            <div>
+
+                <p class="eyebrow">
+                    DÚVIDAS FREQUENTES
+                </p>
+
+                <h2>
+                    Antes de entrar em contato.
+                </h2>
+
+            </div>
+
+
+            <div class="faq-list">
+
+
+                <div class="faq-item">
+
+                    <h3>
+                        Minha conta foi suspensa. Vocês conseguem recuperar?
+                    </h3>
+
+                    <p>
+                        A possibilidade de recuperação depende das
+                        circunstâncias de cada caso e das medidas
+                        disponíveis. A atuação jurídica não permite
+                        garantir previamente o resultado.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <h3>
+                        Vocês trabalham com Instagram e TikTok?
+                    </h3>
+
+                    <p>
+                        Sim. A atuação é voltada a conflitos envolvendo
+                        plataformas digitais, incluindo redes sociais
+                        como Instagram e TikTok.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <h3>
+                        Preciso ter tentado recorrer antes?
+                    </h3>
+
+                    <p>
+                        Não necessariamente. O histórico de tentativas
+                        realizadas pode ser relevante para a análise
+                        do caso.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <h3>
+                        Minha conta é profissional. Isso muda alguma coisa?
+                    </h3>
+
+                    <p>
+                        Pode mudar a análise, especialmente quando
+                        a conta está relacionada à atividade profissional
+                        ou comercial. Essa circunstância será considerada
+                        na avaliação do caso.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <h3>
+                        O atendimento é online?
+                    </h3>
+
+                    <p>
+                        Sim. O atendimento é realizado online,
+                        para clientes de todo o Brasil.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <h3>
+                        Quanto custa?
+                    </h3>
+
+                    <p>
+                        Os honorários dependem da natureza e da
+                        complexidade da demanda. Os valores e condições
+                        de contratação são informados após a análise
+                        necessária para definir o serviço adequado.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+====================================================== -->
+
+<section
+    class="final-cta"
+    id="contato"
+>
+
+    <div class="container">
+
+        <div class="final-cta-content">
+
+            <p class="eyebrow">
+                SUA CONTA ESTÁ ENFRENTANDO UMA RESTRIÇÃO?
+            </p>
+
+            <h2>
+                Explique o que aconteceu.
+            </h2>
+
+            <p>
+                Entre em contato para verificar a possibilidade
+                de atendimento jurídico e os caminhos que podem
+                ser avaliados no seu caso.
+            </p>
+
+            <a
+                href="https://wa.me/5549988133451?text=Ol%C3%A1%2C%20Duany%21%20Encontrei%20sua%20p%C3%A1gina%20sobre%20contas%20e%20plataformas%20e%20gostaria%20de%20explicar%20o%20que%20aconteceu%20com%20a%20minha%20conta."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+            >
+                FALAR SOBRE MEU CASO
+            </a>
+
+            <p class="cta-note">
+                O envio das informações não implica contratação
+                de serviços jurídicos. O atendimento está sujeito
+                à análise do caso e à disponibilidade profissional.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <strong>
+                    DUANY SCHENKEL
+                </strong>
+
+                <p>
+                    Advogada | OAB/SC nº 42.321
+                </p>
+
+                <p>
+                    Direito Digital. Atendimento online para todo o Brasil.
+                </p>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <a href="mailto:contato@duanyschenkel.adv.br">
+                    contato@duanyschenkel.adv.br
+                </a>
+
+                <a
+                    href="https://wa.me/5549988133451"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp: (49) 98813-3451
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Duany Schenkel. Todos os direitos reservados.
+            </span>
+
+            <span>
+
+                <a href="politica-de-privacidade.html">
+                    Política de Privacidade
+                </a>
+
+                <a href="termos-de-uso.html">
+                    Termos de Uso
+                </a>
+
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
